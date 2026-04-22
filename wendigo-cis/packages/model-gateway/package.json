@@ -1,0 +1,12 @@
+{
+  "name": "@wendigo/model-gateway",
+  "version": "0.0.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": { "build": "tsc" },
+  "dependencies": {
+    "openai": "^4.24.1",
+    "@anthropic-ai/sdk": "^0.14.1",
+    "@wendigo/contracts": "workspace:*"
+  }
+}

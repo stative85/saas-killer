@@ -1,0 +1,20 @@
+{
+  "name": "wendigo-cis",
+  "private": true,
+  "packageManager": "yarn@4.1.1",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "npm run build --workspaces",
+    "dev": "tsx scripts/dev-up.ts",
+    "simulate": "tsx scripts/simulate-snyk-alert.ts",
+    "migrate": "tsx infra/migrations/run.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "tsx": "^4.7.1",
+    "typescript": "^5.3.3"
+  }
+}

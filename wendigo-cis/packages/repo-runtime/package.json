@@ -1,0 +1,10 @@
+{
+  "name": "@wendigo/repo-runtime",
+  "version": "0.0.0",
+  "main": "dist/index.js",
+  "scripts": { "build": "tsc" },
+  "dependencies": {
+    "execa": "^8.0.1",
+    "fs-extra": "^11.2.0"
+  }
+}

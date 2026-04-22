@@ -1,0 +1,10 @@
+{
+  "name": "@wendigo/slicer",
+  "version": "0.0.0",
+  "main": "dist/index.js",
+  "scripts": { "build": "tsc" },
+  "dependencies": {
+    "ts-morph": "^21.0.1",
+    "@wendigo/contracts": "workspace:*"
+  }
+}

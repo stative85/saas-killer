@@ -1,0 +1,23 @@
+# WENDIGO / HARVESTER PROTECTIONS
+node_modules/
+.artifacts/
+.crucible/
+.tmp_recon/
+harvester_venv/
+__pycache__/
+*.mp3
+*.m4a
+*.pdf
+*.json
+!package.json
+!tsconfig.json
+.env
+.DS_Store
+dist/
+build/
+knowledge_vault/distilled_concepts.txt
+knowledge_vault/esoteric_essence.txt
+narrative_harvester/audio/
+narrative_harvester/transcripts/
+narrative_harvester/metadata/
+narrative_harvester/raw_subs/
