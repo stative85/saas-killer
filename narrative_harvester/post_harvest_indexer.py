@@ -188,20 +188,11 @@ def main():
     with open(args.output_dir / "index" / "ledger.json", "w", encoding="utf-8") as f:
         json.dump([asdict(d) for d in processed_docs], f, indent=2, default=str)
     
-    # Promote Hot Index (Top 15% by quality score)
-    all_chunks.sort(key=lambda x: x.quality_score, reverse=True)
-    hot_slice_count = max(1, int(len(all_chunks) * 0.15))
-    hot_chunks = all_chunks[:hot_slice_count]
-    
     with open(args.output_dir / "index" / "chunks.jsonl", "w", encoding="utf-8") as f:
         for c in all_chunks:
             f.write(json.dumps(asdict(c)) + "\n")
-            
-    with open(args.output_dir / "index" / "chunks_hot.jsonl", "w", encoding="utf-8") as f:
-        for c in hot_chunks:
-            f.write(json.dumps(asdict(c)) + "\n")
 
-    print(f"[+] Indexing Complete. {len(processed_docs)} indexed, {len(all_chunks)} total chunks, {len(hot_chunks)} hot chunks promoted.")
+    print(f"[+] Indexing Complete. {len(processed_docs)} indexed, {len(all_chunks)} chunks generated.")
 
 if __name__ == "__main__":
     main()

@@ -18,28 +18,6 @@ class NarrativeCompiler:
     def __init__(self, chunks_path: Path):
         self.chunks = self._load_jsonl(chunks_path)
         self.intersections = self._load_intersections()
-        self.bias_terms = self._load_feedback_bias()
-
-    def _load_feedback_bias(self):
-        """Extracts high-resonance terms from prior winners to bias future runs."""
-        best_dir = Path(__file__).parent.parent / "outputs" / "best"
-        bias = Counter()
-        if best_dir.exists():
-            for f in best_dir.glob("*.txt"):
-                text = f.read_text(encoding="utf-8").lower()
-                # Extract words longer than 4 chars
-                words = re.findall(r"\b\w{5,}\b", text)
-                bias.update(words)
-        return bias
-
-    def _get_resonance_score(self, chunk):
-        """Weights a chunk based on quality and alignment with prior winners."""
-        base_score = chunk['quality_score']
-        text = chunk['text'].lower()
-        # Bias bonus: +0.01 for every prior winner term found
-        bias_bonus = sum(0.01 for term in self.bias_terms if term in text)
-        bias_cap = 0.20 # Standard v0 cap
-        return base_score + min(bias_cap, bias_bonus)
         
     def _load_jsonl(self, path: Path):
         data = []

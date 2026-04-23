@@ -4,91 +4,108 @@ import subprocess
 import os
 import json
 import csv
+import math
 from pathlib import Path
 from datetime import datetime
+
+# --- CONFIG ---
+MIN_TOTAL_SCORE = 0.50
+SIMILARITY_THRESHOLD = 0.80
 
 # --- PATHS ---
 BASE_DIR = Path(__file__).parent
 SCRIPTS_DIR = BASE_DIR / "scripts"
-CONFIG_DIR = BASE_DIR / "configs"
 OUTPUTS_DIR = BASE_DIR / "outputs"
 RUNS_DIR = OUTPUTS_DIR / "runs"
-LEDGER_FILE = OUTPUTS_DIR / "run_ledger.csv"
+REGISTRY_FILE = OUTPUTS_DIR / "runs_registry.csv"
 
-def run_step(name, cmd):
+def get_jaccard_sim(str1, str2):
+    a = set(str1.lower().split())
+    b = set(str2.lower().split())
+    c = a.intersection(b)
+    return float(len(c)) / (len(a) + len(b) - len(c))
+
+def validate_script(text, score, run_id):
+    # 1. Arc Balance Gate
+    need = ["[HOOK]", "[BUILD", "[COLLISION]", "[RESOLUTION]"]
+    if not all(k in text for k in need):
+        return False, "MISSING_ARCS"
+    
+    # 2. Score Gate
+    if score < MIN_TOTAL_SCORE:
+        return False, f"LOW_SCORE_{score:.2f}"
+    
+    # 3. Similarity Gate (Anti-Echo)
+    best_dir = OUTPUTS_DIR / "best"
+    if best_dir.exists():
+        for prior in best_dir.glob("*.txt"):
+            prior_text = prior.read_text(encoding="utf-8")
+            sim = get_jaccard_sim(text, prior_text)
+            if sim > SIMILARITY_THRESHOLD:
+                return False, f"SIMILARITY_STRIKE_{sim:.2f}"
+                
+    return True, "ACCEPTED"
+
+def run_step(name, cmd, cwd=None):
     print(f"[*] Executing {name}...")
-    result = subprocess.run(cmd, capture_output=True, text=True, encoding="utf-8", errors="replace")
+    result = subprocess.run(cmd, capture_output=True, text=True, encoding="utf-8", errors="replace", cwd=cwd)
     if result.returncode != 0:
         print(f"[!] Error in {name}: {result.stderr}")
         return False
     return True
 
 def main():
-    parser = argparse.ArgumentParser(description="NARRATIVE FORGE - FULL PIPELINE")
-    parser.add_argument("--playlist", help="YouTube Playlist URL to harvest")
-    parser.add_argument("--run-id", default="auto", help="Custom Run ID")
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--playlist", help="Playlist URL")
+    parser.add_argument("--run-id", default="auto")
     args = parser.parse_args()
 
-    # 1. Setup Run ID
     run_id = args.run_id if args.run_id != "auto" else datetime.now().strftime("%Y-%m-%d_%H%M%S")
     run_path = RUNS_DIR / run_id
     run_path.mkdir(parents=True, exist_ok=True)
     
-    raw_dir = run_path / "raw"
-    repaired_dir = run_path / "repaired"
-    corpus_dir = run_path / "corpus"
+    print(f"\n🐺 NARRATIVE FORGE RUN: {run_id}")
+
+    # HARVEST -> REPAIR -> INDEX -> EVOLVE
+    # (Simplified sequence calls scripts/ stubs for v1)
+    python_exe = "python"
     
-    print(f"\n🐺 WENDIGO NARRATIVE FORGE - RUN: {run_id}")
-    print("-" * 50)
+    # Run the chain (Checkpoints would be added here)
+    run_step("HARVEST/REPAIR/INDEX", [python_exe, "scripts/headless_harvester_v3.py"], cwd=BASE_DIR) 
 
-    # 2. HARVEST (Optional if playlist provided)
-    if args.playlist:
-        raw_dir.mkdir(exist_ok=True)
-        # Use our headless parallel harvester
-        run_step("HARVEST", ["python", str(SCRIPTS_DIR / "headless_harvester_v3.py"), "--url", args.playlist, "--out", str(raw_dir)])
-    else:
-        # Fallback: assume data exists in common store or user provided
-        print("[!] No playlist provided. Skipping harvest. Using existing raw data if available.")
+    # EVOLVE
+    run_step("A/B HARNESS", [python_exe, "scripts/ab_harness.py", "--n", "5"], cwd=BASE_DIR)
 
-    # 3. REPAIR
-    run_step("REPAIR", ["python", str(SCRIPTS_DIR / "repair_forge.py"), "--input-dir", str(raw_dir), "--output-dir", str(repaired_dir)])
+    # GATE KEEPER
+    best_file = BASE_DIR / "outputs/scripts/generated_script_fracture_aggressive.txt" # Harness output
+    score_file = BASE_DIR / "outputs/scripts/best_scores.json" # Harness output
+    
+    accepted = False
+    status = "REJECTED"
+    final_score = 0.0
 
-    # 4. INDEX
-    run_step("INDEX", ["python", str(SCRIPTS_DIR / "post_harvest_indexer.py"), "--input-dir", str(repaired_dir), "--output-dir", str(corpus_dir)])
-
-    # 5. EVOLVE (A/B HARNESS)
-    # The A/B Harness already coordinates generator + scorer
-    print("[*] Engaging Evolutionary Harness...")
-    subprocess.run([
-        "python", str(SCRIPTS_DIR / "ab_harness.py"),
-        "--n", "5",
-        "--chunks", str(corpus_dir / "index" / "chunks.jsonl"),
-        "--out-dir", str(run_path / "generation")
-    ])
-
-    # 6. EXTRACT BEST
-    # We move the winning script and scores to the run root
-    gen_dir = run_path / "generation"
-    best_file = gen_dir / "best_variant.txt"
     if best_file.exists():
-        best_file.replace(run_path / "best_narrative.txt")
-        (gen_dir / "best_scores.json").replace(run_path / "scores.json")
+        text = best_file.read_text(encoding="utf-8")
+        with open(score_file, "r") as f:
+            scores = json.load(f)
+            final_score = scores.get("total", 0.0)
+        
+        ok, reason = validate_script(text, final_score, run_id)
+        status = reason
+        if ok:
+            accepted = True
+            (OUTPUTS_DIR / "best").mkdir(exist_ok=True)
+            best_file.replace(OUTPUTS_DIR / "best" / f"{run_id}_best.txt")
+            print(f"[✅] SCRIPT ACCEPTED: {final_score:.2f}")
+        else:
+            print(f"[🛑] SCRIPT REJECTED: {reason}")
 
-    # 7. LOG TO LEDGER
-    score = 0.0
-    if (run_path / "scores.json").exists():
-        with open(run_path / "scores.json", "r") as f:
-            score = json.load(f).get("total", 0.0)
-
-    with open(LEDGER_FILE, "a", newline="") as f:
+    # REGISTRY
+    with open(REGISTRY_FILE, "a", newline="") as f:
         writer = csv.writer(f)
         if f.tell() == 0:
-            writer.writerow(["run_id", "timestamp", "score", "status"])
-        writer.writerow([run_id, datetime.now().isoformat(), score, "COMPLETE"])
-
-    print("-" * 50)
-    print(f"[✅] PIPELINE COMPLETE: {run_path / 'best_narrative.txt'}")
-    print(f"[✅] FINAL SCORE: {score:.2f}")
+            writer.writerow(["run_id", "timestamp", "score", "status", "accepted"])
+        writer.writerow([run_id, datetime.now().isoformat(), final_score, status, accepted])
 
 if __name__ == "__main__":
     main()
