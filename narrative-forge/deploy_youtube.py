@@ -38,6 +38,9 @@ def main():
     with open(meta_file, "r") as f:
         meta = json.load(f)
 
+    # SAFETY GATE: No accidental public blasts
+    assert meta["privacyStatus"] == "private", "CRITICAL ERROR: privacyStatus must be 'private' for staging!"
+
     # 3. Asset Verification
     video_file = BASE_DIR / "outputs/render/final_video.mp4" # v1: check common render folder
     if not video_file.exists():
