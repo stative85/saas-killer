@@ -1,0 +1,31 @@
+--- WENDIGO NARRATIVE COMPILATION [Mode: FRACTURE | Style: AGGRESSIVE] ---
+
+[HOOK] (Source: How He Beat Everyone To Tesla's Next Roadster  - Episode 42 Konstantin Othmer.repaired)
+Arcs: threat, truth, science
+> the first you know video compressor for uh QuickTime at Apple and uh they started this company Rocket Science game that was making these like video game kind of things. If you remember goes back this shows how old am Dragons Layer. You remember that game? Yeah. Yeah. Yeah. &gt;&gt; But it wasn't really a video game, but it was it looked great, but it was kind of So, they were coming out with that for Sega and uh the company had just rocks. I mean, there's a good Silicon Valley lesson here. Like rock stars on every aspect of it, but when the games came out, it was like &gt;&gt; it was tough. Yeah. Yeah. &gt;&gt; They weren't fun to play. &gt;&gt; Yeah. &gt;&gt; But those guys were phenomenal. &gt;&gt; And you guys were friends or you were an investor? &gt;&gt; Uh I knew I knew Bruce from uh Apple. Okay. From well before that. And uh Peter Barrett was at Superm. Okay. Which was
+
+[BUILD_HUMAN] (Source: How He Beat Everyone To Tesla's Next Roadster  - Episode 42 Konstantin Othmer.repaired)
+Arcs: human
+> the day when Elon was a pup and all that. And then as this is why this is an emergency podcast is as I was getting into so my book came out in 2015. I was probably talking to you in like 13 14. &gt;&gt; 2013 is when we when we had that conversation. &gt;&gt; Okay. So &gt;&gt; when you came by cloud car, &gt;&gt; right? And then and so Elon, so in the book I write that you had the first order on the Tesla Roadster Model 2. So this is how far back this goes. So Tesla was already &gt;&gt; Tell me the story. Okay, this is this is what &gt;&gt; How far back do you want to go? I've got a little bit of a &gt;&gt; long you early Tesla Roadster buyer to begin with and investor &gt;&gt; and investor. Okay, so yeah. Okay, I'm going to set everybody up for one second. So, what we're going to get into now is the
+
+[BUILD_TRUTH] (Source: How He Beat Everyone To Tesla's Next Roadster  - Episode 42 Konstantin Othmer.repaired)
+Arcs: threat, truth
+> worked out okay, [laughter] you know, kind of anything. &gt;&gt; So, ups and downs along the way, but uh but not pretty good. And then Okay, so you've got this relationship going. When do you actually end up getting your Roadster One? &gt;&gt; I think that came 2008, I think. 3 years later or so. That was probably 2005. &gt;&gt; And you end up with number 50. &gt;&gt; Number 50. &gt;&gt; Okay. And do you still have it? &gt;&gt; I do. A mouse kind of got in there and did a little number on it, but it's beautiful. It's in great shape. What color? &gt;&gt; Signature. &gt;&gt; Okay. &gt;&gt; Signature green. I think there's 30 of those. &gt;&gt; Yeah. Bruce has one that he's still &gt;&gt; But he got I was really surprised he got the British racing green. &gt;&gt; Okay. Yeah. Okay. &gt;&gt; But that's Bruce, you know, I'm like this limited edition of signature green. I got to have that. &gt;&gt; So, and does
+
+[COLLISION] (Source: How He Beat Everyone To Tesla's Next Roadster  - Episode 42 Konstantin Othmer.repaired)
+Arcs: human, threat, truth, future
+> or an electric car and like he's like you know here are the trade-offs and we're really considering this. I want to get everybody's input, you know, and stupid me. I'm glad I didn't say anything, but I'm think of course you go hybrid. I mean, no range anxiety. Just put gas in. It solves every question, right? I didn't say anything. Thankfully, I'm being quite stupid revealing my ignorance now. Um, but anyway, it was this discussion and there was no real conclusion. And then, as I remembered, I should find this email. Elon sends an email and says, "Hey, I don't know if it's the right thing or not, but we're going to be the best electric car company. I don't want to be a frog. You know, it's not good on land. It's not good on sea on sea. they're going to be the best electric car company there is. And there was another argument which is very interesting which is a battery
+
+[RESOLUTION] (Source: Why Test Pilots Are Being Replaced by Drones - EP 4 Elliot Seguin.repaired)
+Arcs: threat, future
+> I guess since I'm still here, like since I was able to get the thing down, um everything's fine. But um no, all the cases we're talking about um effectively a hard offair airport landing uh that destroyed uh the vehicle or total the aircraft. &gt;&gt; But and you walked away. &gt;&gt; Yeah. All so far. Yeah. &gt;&gt; Yeah. It's good. We do actually we have a at least like a foe would go with it. Um, and like is is this the type of job because you're dependent on these new programs and it's it has these ups and downs, do you have to do stuff in the interim between gigs? &gt;&gt; Yeah. Yeah. I there's always other stuff kicking around. The um the air show company that I mentioned before, that was there was a lot less flight testing in that job and a lot more technical sales. Um the uh if we're being honest uh right now I've been spending a lot of
+
+
+[DIAGNOSTICS]
+{
+  "mode": "fracture",
+  "hook_length_chars": 888,
+  "total_script_chars": 4352,
+  "clarity_score": 0.7,
+  "early_conflict_score": 0.6
+}

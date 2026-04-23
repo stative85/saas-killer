@@ -1,0 +1,23 @@
+--- WENDIGO NARRATIVE COMPILATION [Mode: RETENTION_AGGRESSIVE | Style: AGGRESSIVE] ---
+
+[HOOK] (Source: How He Beat Everyone To Tesla's Next Roadster  - Episode 42 Konstantin Othmer.repaired)
+Arcs: threat, truth, science
+> the first you know video compressor for uh QuickTime at Apple and uh they started this company Rocket Science game that was making these like video game kind of things. If you remember goes back this shows how old am Dragons Layer. You remember that game? Yeah. Yeah. Yeah. &gt;&gt; But it wasn't really a video game, but it was it looked great, but it was kind of So, they were coming out with that for Sega and uh the company had just rocks. I mean, there's a good Silicon Valley lesson here. Like rock stars on every aspect of it, but when the games came out, it was like &gt;&gt; it was tough. Yeah. Yeah. &gt;&gt; They weren't fun to play. &gt;&gt; Yeah. &gt;&gt; But those guys were phenomenal. &gt;&gt; And you guys were friends or you were an investor? &gt;&gt; Uh I knew I knew Bruce from uh Apple. Okay. From well before that. And uh Peter Barrett was at Superm. Okay. Which was
+
+[COLLISION] (Source: How He Beat Everyone To Tesla's Next Roadster  - Episode 42 Konstantin Othmer.repaired)
+Arcs: human, threat, truth, future
+> a tiny little battery this plane flying for 25 minutes. And I asked Will &gt;&gt; someone's got to put this thing into cars like and I didn't really know anything about cars, right? But I kind of go from hobby to hobby. And uh Will said, "Oh, a matter of fact, uh good friend of mine's neighbor is doing that. He's putting them in this uh Lotus." I'm like, "You got to introduce me. You got to introduce Okay, introduce me to this guy. I got to get one of these cars." Um &gt;&gt; this is ever harder to carpeting. Yeah, &gt;&gt; it was Martin. Um it was a was a neighbor of a friend of Wills. But I'm asking everybody about this and uh so I asked Bruce and like, "Hey, you know, do you know this guy? Do you know this guy?" Um I asked Andy Rubin who was at uh doing Android at Google at the time. And Andy said, "Oh, you don't
+
+[RESOLUTION] (Source: Why Test Pilots Are Being Replaced by Drones - EP 4 Elliot Seguin.repaired)
+Arcs: threat, human
+> was out of town and I just the night it came out or whatever me and some homies went and looked at it and that's fine. Um and then I came back I was home for the weekend and I grabbed my boys and we went to a movie theater here in town or nearby and um &gt;&gt; so this is the new one. &gt;&gt; This is the new one because I mean there's they weren't around first one. Um, and we saw on screen, you know, a dramatic uh, interpretation of something they see me do and we're sitting in theater seats underneath the supersonic corridor of Edwards. Something I didn't even know about when I saw the movie myself. I just thought the stuff was cool. Now they have like all this cool context and uh it was cool uh moment of like feeling like I was sharing with them and feeling like, you know, like maybe we did something, you know, I was
+
+
+[DIAGNOSTICS]
+{
+  "mode": "retention_aggressive",
+  "hook_length_chars": 888,
+  "total_script_chars": 2546,
+  "clarity_score": 0.85,
+  "early_conflict_score": 0.9
+}

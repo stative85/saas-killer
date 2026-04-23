@@ -1,0 +1,31 @@
+--- WENDIGO NARRATIVE COMPILATION [Mode: FRACTURE | Style: AGGRESSIVE] ---
+
+[HOOK] (Source: How He Beat Everyone To Tesla's Next Roadster  - Episode 42 Konstantin Othmer.repaired)
+Arcs: human, threat, truth, future
+> a tiny little battery this plane flying for 25 minutes. And I asked Will &gt;&gt; someone's got to put this thing into cars like and I didn't really know anything about cars, right? But I kind of go from hobby to hobby. And uh Will said, "Oh, a matter of fact, uh good friend of mine's neighbor is doing that. He's putting them in this uh Lotus." I'm like, "You got to introduce me. You got to introduce Okay, introduce me to this guy. I got to get one of these cars." Um &gt;&gt; this is ever harder to carpeting. Yeah, &gt;&gt; it was Martin. Um it was a was a neighbor of a friend of Wills. But I'm asking everybody about this and uh so I asked Bruce and like, "Hey, you know, do you know this guy? Do you know this guy?" Um I asked Andy Rubin who was at uh doing Android at Google at the time. And Andy said, "Oh, you don't
+
+[BUILD_HUMAN] (Source: How He Beat Everyone To Tesla's Next Roadster  - Episode 42 Konstantin Othmer.repaired)
+Arcs: human
+> the day when Elon was a pup and all that. And then as this is why this is an emergency podcast is as I was getting into so my book came out in 2015. I was probably talking to you in like 13 14. &gt;&gt; 2013 is when we when we had that conversation. &gt;&gt; Okay. So &gt;&gt; when you came by cloud car, &gt;&gt; right? And then and so Elon, so in the book I write that you had the first order on the Tesla Roadster Model 2. So this is how far back this goes. So Tesla was already &gt;&gt; Tell me the story. Okay, this is this is what &gt;&gt; How far back do you want to go? I've got a little bit of a &gt;&gt; long you early Tesla Roadster buyer to begin with and investor &gt;&gt; and investor. Okay, so yeah. Okay, I'm going to set everybody up for one second. So, what we're going to get into now is the
+
+[BUILD_TRUTH] (Source: How He Beat Everyone To Tesla's Next Roadster  - Episode 42 Konstantin Othmer.repaired)
+Arcs: truth
+> number. And &gt;&gt; so that afterwards Tim and I were just racing it around the parking lot. &gt;&gt; Okay. [laughter] &gt;&gt; That's really &gt;&gt; So you always wanted a zero though. You couldn't have zero. So you took 10, right? 50 and then 10. &gt;&gt; Here's another little piece of trivia. So when they put the license plates on, so they're dealer plates. They're the original plates from the factory. I don't know exactly how it works, but apparently they stacked them upside down. So 10 got 000. &gt;&gt; Oh. &gt;&gt; And you know, nine got one. if you didn't have a custom plate, which I didn't. So, my my license plate is 000. &gt;&gt; Okay. And do you still have that one? &gt;&gt; Um, it's actually parked out in the parking lot. &gt;&gt; It's parked out. Okay. All right. &gt;&gt; It runs great. &gt;&gt; You're still going. All right. And then it &gt;&gt; So, around this time, I mean, Elon announces that there's going to
+
+[COLLISION] (Source: How He Beat Everyone To Tesla's Next Roadster  - Episode 42 Konstantin Othmer.repaired)
+Arcs: human, threat, truth, future
+> or an electric car and like he's like you know here are the trade-offs and we're really considering this. I want to get everybody's input, you know, and stupid me. I'm glad I didn't say anything, but I'm think of course you go hybrid. I mean, no range anxiety. Just put gas in. It solves every question, right? I didn't say anything. Thankfully, I'm being quite stupid revealing my ignorance now. Um, but anyway, it was this discussion and there was no real conclusion. And then, as I remembered, I should find this email. Elon sends an email and says, "Hey, I don't know if it's the right thing or not, but we're going to be the best electric car company. I don't want to be a frog. You know, it's not good on land. It's not good on sea on sea. they're going to be the best electric car company there is. And there was another argument which is very interesting which is a battery
+
+[RESOLUTION] (Source: Why Test Pilots Are Being Replaced by Drones - EP 4 Elliot Seguin.repaired)
+Arcs: threat, truth, future
+> in that job and a lot more technical sales. Um the uh if we're being honest uh right now I've been spending a lot of time uh moving airplanes for people. Uh I spent a lot of time as a tester you're sort of orbiting over the same airport all the time. You know you're working something in the cockpit so where you are geographically doesn't matter. So why add any risk? So you stay over the so I had some time um I had a profitable summer and so I I taken some time to just move airplanes for people. So like for the last 3 four months I've just been flying around the country moving weird stuff. &gt;&gt; Who wants airplanes moved? Well, it turns out there's a lot of people that need airplanes moved and um the reality is it's not really great paying work. Um so it ends it typically goes to sort of lower level guys. Um and so if you
+
+
+[DIAGNOSTICS]
+{
+  "mode": "fracture",
+  "hook_length_chars": 827,
+  "total_script_chars": 4292,
+  "clarity_score": 0.7,
+  "early_conflict_score": 0.6
+}

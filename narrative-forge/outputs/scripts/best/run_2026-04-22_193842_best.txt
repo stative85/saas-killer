@@ -1,0 +1,37 @@
+--- WENDIGO NARRATIVE COMPILATION [Mode: FRACTURE | Style: AGGRESSIVE] ---
+
+[HOOK] (Source: How He Beat Everyone To Tesla's Next Roadster  - Episode 42 Konstantin Othmer.repaired)
+Arcs: threat, truth, science
+> the first you know video compressor for uh QuickTime at Apple and uh they started this company Rocket Science game that was making these like video game kind of things. If you remember goes back this shows how old am Dragons Layer. You remember that game? Yeah. Yeah. Yeah. &gt;&gt; But it wasn't really a video game, but it was it looked great, but it was kind of So, they were coming out with that for Sega and uh the company had just rocks. I mean, there's a good Silicon Valley lesson here. Like rock stars on every aspect of it, but when the games came out, it was like &gt;&gt; it was tough. Yeah. Yeah. &gt;&gt; They weren't fun to play. &gt;&gt; Yeah. &gt;&gt; But those guys were phenomenal. &gt;&gt; And you guys were friends or you were an investor? &gt;&gt; Uh I knew I knew Bruce from uh Apple. Okay. From well before that. And uh Peter Barrett was at Superm. Okay. Which was
+
+[BUILD_FUTURE] (Source: How He Beat Everyone To Tesla's Next Roadster  - Episode 42 Konstantin Othmer.repaired)
+Arcs: future
+> see the car." And u they're like, "Yeah, well, who are you?" And I didn't know this at the time, but Elon had worked for Bruce. So, there must have been something in that Wall Street Journal that said something about Elon investing or whatever. And Bruce is like, "Yeah, you know, Elon, I know Elon D." And the guy's like, "Uh, okay." He went back in. Some other guy comes out. Same story. Repeat the same story, right? And then Elon and Martin come out. Okay. And Elon and Bruce like, "Oh, hey. How's it going?" &gt;&gt; Amazing, man. They're actually there. Okay. &gt;&gt; They're having a board meeting. &gt;&gt; Yeah. Okay. [laughter] &gt;&gt; They were super cool. I mean, these two random guys, completely random. I was completely random. Uh, show up at their door and uh like, "Hey, we'll finish a board meeting and we'll show you the stuff." And so, we spent the afternoon with them, you know, driving the, you know,
+
+[BUILD_CONTROL] (Source: He Turned Police Tasers Into A $55 Billion Business - Rick Smith.repaired)
+Arcs: control, threat
+> done all this technology. I mean, you've been on this quest to to rem to lessen gun violence. Obviously, you know, you've been at this for 25 30 years. It's like we're not doing great as a country at large. I mean, you guys are doing your part, but and I know at one point you were looking at some technology to stop shootings at at schools. That ended up being a little controversial. You were talking about like an automated kind of drone taser system that would spot these people coming in. But like my big question to you is yeah, we're clearly not in a better place with all this stuff. You guys have invented these tools to help along the way, but yeah. So, how does that make you how do you assess all this and like have you fulfilled your goal and is are there still is there anything that can be done? &gt;&gt; Oh man. Uh, no, we have not fulfilled
+
+[COLLISION] (Source: He Turned Police Tasers Into A $55 Billion Business - Rick Smith.repaired)
+Arcs: truth, control, human, threat, future
+> I'm not like doing angles and trying to figure out where the person is. I can just pick my two locations and I go pop." Yeah. &gt;&gt; And it works. So, and now we train them in VR where we can put them through a bunch of repetitive training skills. Uh and so with 10 shots with good training and a 45 ft range, you know, we we believe we have the potential to be up in the 99% plus effectiveness rate. We have one remaining hurdle and that's heavy clothing because we have to get a contact to the body. Uh and so this winter we are beginning testing what we're calling the Apollo dart. We ourselves pay this homage to the moonshot the moon landing that our moonshots to cut gun deaths and policing in half. Uh, and so the Apollo Dart is our new dart system that is designed to penetrate through heavy clothing very reliably. It's actually easy to get through clothing.
+
+[RESOLUTION] (Source: Why Test Pilots Are Being Replaced by Drones - EP 4 Elliot Seguin.repaired)
+Arcs: truth
+> that's that's just &gt;&gt; unfortunately it's or fortunately the fire's still pretty. Um, I've asked you the big questions I want to ask you. I'm gonna ask you a couple dumb last questions. Um, &gt;&gt; so when you watch Top Gun, have you watched &gt;&gt; I have. &gt;&gt; Okay. Yeah. I mean, are you are you uh are you enjoying it like many of the rest of us or it's just goofy and or annoying because these are the annoying guys who show up for the for the jobs with their &gt;&gt; Well, there's that bit, but um hopefully I'm mature enough to handle that. On my best days, we'll say I'm mature enough to handle that. No, I think the um it was a really poignant moment. I saw the movie like um I was on a gig so I was out of town and I just the night it came out or whatever me and some homies went and looked at it and that's
+
+
+[DIAGNOSTICS]
+{
+  "mode": "fracture",
+  "hook_length_chars": 888,
+  "total_script_chars": 4367,
+  "clarity_score": 0.7,
+  "early_conflict_score": 0.6
+}
+
+
+[PROVENANCE]
+run_id=run_2026-04-22_193842
+mode=fracture_aggressive
+score=0.69

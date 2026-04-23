@@ -1,0 +1,31 @@
+--- WENDIGO NARRATIVE COMPILATION [Mode: RETENTION | Style: AGGRESSIVE] ---
+
+[HOOK] (Source: How He Beat Everyone To Tesla's Next Roadster  - Episode 42 Konstantin Othmer.repaired)
+Arcs: threat, truth, science
+> the first you know video compressor for uh QuickTime at Apple and uh they started this company Rocket Science game that was making these like video game kind of things. If you remember goes back this shows how old am Dragons Layer. You remember that game? Yeah. Yeah. Yeah. &gt;&gt; But it wasn't really a video game, but it was it looked great, but it was kind of So, they were coming out with that for Sega and uh the company had just rocks. I mean, there's a good Silicon Valley lesson here. Like rock stars on every aspect of it, but when the games came out, it was like &gt;&gt; it was tough. Yeah. Yeah. &gt;&gt; They weren't fun to play. &gt;&gt; Yeah. &gt;&gt; But those guys were phenomenal. &gt;&gt; And you guys were friends or you were an investor? &gt;&gt; Uh I knew I knew Bruce from uh Apple. Okay. From well before that. And uh Peter Barrett was at Superm. Okay. Which was
+
+[BUILD_SCIENCE] (Source: He Turned Police Tasers Into A $55 Billion Business - Rick Smith.repaired)
+Arcs: science, future
+> think of it very positively and people that have negative views of policing think of it very negatively and it it just was something we finally said, you know what? Let's let that be the product. People associated with it. We need a a broader umbrella brand where we can do more things. &gt;&gt; Then you got to Axon. Yeah. &gt;&gt; I didn't know until last night researching this that I &gt;&gt; I can't tell if I should be ashamed or not. Taser is an acronym. &gt;&gt; Uh that is uh you shouldn't be ashamed. It's a it's a little bit of trivia, but Yeah. &gt;&gt; Yeah. And so so and it goes you guys were there at the beginning. So there's this there's a NASA scientist that comes up with this idea and then and then it seemed like he you and your dad co-founded the company along alongside him. &gt;&gt; Yeah. So uh so if we roll back, Taser actually came from Tom Swift
+
+[BUILD_TRUTH] (Source: How He Beat Everyone To Tesla's Next Roadster  - Episode 42 Konstantin Othmer.repaired)
+Arcs: threat, truth
+> Yeah. Okay. &gt;&gt; But that's Bruce, you know, I'm like this limited edition of signature green. I got to have that. &gt;&gt; So, and does it Bruce is drives? Well, you have you have mouse issues, but it drive it drives okay. &gt;&gt; She doesn't have mouse issues. Yeah. [laughter] Mine was driving great. Oh, the battery is fine. Everything is great on that thing. Okay. Um, love that car. &gt;&gt; All right. [snorts] So, you're in it. I remember back then in those days, I think Tesla was really struggling to get that first Roadster out. Obviously, Martin doesn't end up lasting. And then &gt;&gt; Martin has actually helped me with that mouse issue. He was great. He came up and we're going through the car. &gt;&gt; That guy is just amazing. I mean, [laughter] &gt;&gt; he and he and Elon get along great. &gt;&gt; And then and then I remember back then people like Larry like Tesla was struggling to to make ends meet
+
+[COLLISION] (Source: How He Beat Everyone To Tesla's Next Roadster  - Episode 42 Konstantin Othmer.repaired)
+Arcs: human, threat, truth, future
+> or an electric car and like he's like you know here are the trade-offs and we're really considering this. I want to get everybody's input, you know, and stupid me. I'm glad I didn't say anything, but I'm think of course you go hybrid. I mean, no range anxiety. Just put gas in. It solves every question, right? I didn't say anything. Thankfully, I'm being quite stupid revealing my ignorance now. Um, but anyway, it was this discussion and there was no real conclusion. And then, as I remembered, I should find this email. Elon sends an email and says, "Hey, I don't know if it's the right thing or not, but we're going to be the best electric car company. I don't want to be a frog. You know, it's not good on land. It's not good on sea on sea. they're going to be the best electric car company there is. And there was another argument which is very interesting which is a battery
+
+[RESOLUTION] (Source: The Man Who Says AI Code Will Break Everything - EP 59 Will Wilson.repaired)
+Arcs: future
+> AGAIN.
+
+
+[DIAGNOSTICS]
+{
+  "mode": "retention",
+  "hook_length_chars": 888,
+  "total_script_chars": 3576,
+  "clarity_score": 0.7,
+  "early_conflict_score": 0.6
+}

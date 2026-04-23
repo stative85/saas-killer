@@ -114,7 +114,7 @@ def main():
             for i, h in enumerate(top_results[:5], 1):
                 f.write(f"{i}. {h['text']}\n\n")
 
-    print(f"[✅] Hook Ranking Complete. Ranked {len(ranked)} candidates. Results: {args.out}")
+    print(f"[OK] Hook Ranking Complete. Ranked {len(ranked)} candidates. Results: {args.out}")
 
 if __name__ == "__main__":
     main()

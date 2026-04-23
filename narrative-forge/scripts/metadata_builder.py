@@ -105,7 +105,7 @@ def main():
     with open(args.out, "w", encoding="utf-8") as f:
         json.dump(metadata, f, indent=2)
 
-    print(f"[✅] Metadata Forge Complete. Results: {args.out}")
+    print(f"[OK] Metadata Forge Complete. Results: {args.out}")
 
 if __name__ == "__main__":
     main()

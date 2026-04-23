@@ -1,0 +1,31 @@
+--- WENDIGO NARRATIVE COMPILATION [Mode: FRACTURE | Style: AGGRESSIVE] ---
+
+[HOOK] (Source: How He Beat Everyone To Tesla's Next Roadster  - Episode 42 Konstantin Othmer.repaired)
+Arcs: threat, truth, science
+> the first you know video compressor for uh QuickTime at Apple and uh they started this company Rocket Science game that was making these like video game kind of things. If you remember goes back this shows how old am Dragons Layer. You remember that game? Yeah. Yeah. Yeah. &gt;&gt; But it wasn't really a video game, but it was it looked great, but it was kind of So, they were coming out with that for Sega and uh the company had just rocks. I mean, there's a good Silicon Valley lesson here. Like rock stars on every aspect of it, but when the games came out, it was like &gt;&gt; it was tough. Yeah. Yeah. &gt;&gt; They weren't fun to play. &gt;&gt; Yeah. &gt;&gt; But those guys were phenomenal. &gt;&gt; And you guys were friends or you were an investor? &gt;&gt; Uh I knew I knew Bruce from uh Apple. Okay. From well before that. And uh Peter Barrett was at Superm. Okay. Which was
+
+[BUILD_SCIENCE] (Source: He Turned Police Tasers Into A $55 Billion Business - Rick Smith.repaired)
+Arcs: science, future
+> think of it very positively and people that have negative views of policing think of it very negatively and it it just was something we finally said, you know what? Let's let that be the product. People associated with it. We need a a broader umbrella brand where we can do more things. &gt;&gt; Then you got to Axon. Yeah. &gt;&gt; I didn't know until last night researching this that I &gt;&gt; I can't tell if I should be ashamed or not. Taser is an acronym. &gt;&gt; Uh that is uh you shouldn't be ashamed. It's a it's a little bit of trivia, but Yeah. &gt;&gt; Yeah. And so so and it goes you guys were there at the beginning. So there's this there's a NASA scientist that comes up with this idea and then and then it seemed like he you and your dad co-founded the company along alongside him. &gt;&gt; Yeah. So uh so if we roll back, Taser actually came from Tom Swift
+
+[BUILD_FUTURE] (Source: How He Beat Everyone To Tesla's Next Roadster  - Episode 42 Konstantin Othmer.repaired)
+Arcs: truth, future
+> we'll finish a board meeting and we'll show you the stuff." And so, we spent the afternoon with them, you know, driving the, you know, what are those development prototype? &gt;&gt; Yeah. The Elise or the mule. The mule. &gt;&gt; Yeah. The mules. We were we were not allowed to drive them, but you know, Martin was driving us around. Um, super cool, right? &gt;&gt; And at the time, I don't I don't This is probably in the book, too. Um, well, you would know, but you they were not allowed to sell cars, &gt;&gt; right? Well, and those ones you were driving were probably like close to catching on fire at all at all. &gt;&gt; I've got another story. If you want another story, I got another story about that one. Um, so they said uh um you know, well, we both said we'll take one. Like, really? You know, yeah, we'll both take one. Okay. And so you joined a club and one of
+
+[COLLISION] (Source: How He Beat Everyone To Tesla's Next Roadster  - Episode 42 Konstantin Othmer.repaired)
+Arcs: human, threat, truth, future
+> or an electric car and like he's like you know here are the trade-offs and we're really considering this. I want to get everybody's input, you know, and stupid me. I'm glad I didn't say anything, but I'm think of course you go hybrid. I mean, no range anxiety. Just put gas in. It solves every question, right? I didn't say anything. Thankfully, I'm being quite stupid revealing my ignorance now. Um, but anyway, it was this discussion and there was no real conclusion. And then, as I remembered, I should find this email. Elon sends an email and says, "Hey, I don't know if it's the right thing or not, but we're going to be the best electric car company. I don't want to be a frog. You know, it's not good on land. It's not good on sea on sea. they're going to be the best electric car company there is. And there was another argument which is very interesting which is a battery
+
+[RESOLUTION] (Source: Why Test Pilots Are Being Replaced by Drones - EP 4 Elliot Seguin.repaired)
+Arcs: threat, human
+> was out of town and I just the night it came out or whatever me and some homies went and looked at it and that's fine. Um and then I came back I was home for the weekend and I grabbed my boys and we went to a movie theater here in town or nearby and um &gt;&gt; so this is the new one. &gt;&gt; This is the new one because I mean there's they weren't around first one. Um, and we saw on screen, you know, a dramatic uh, interpretation of something they see me do and we're sitting in theater seats underneath the supersonic corridor of Edwards. Something I didn't even know about when I saw the movie myself. I just thought the stuff was cool. Now they have like all this cool context and uh it was cool uh moment of like feeling like I was sharing with them and feeling like, you know, like maybe we did something, you know, I was
+
+
+[DIAGNOSTICS]
+{
+  "mode": "fracture",
+  "hook_length_chars": 888,
+  "total_script_chars": 4348,
+  "clarity_score": 0.7,
+  "early_conflict_score": 0.6
+}

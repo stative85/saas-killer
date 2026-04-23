@@ -1,0 +1,31 @@
+--- WENDIGO NARRATIVE COMPILATION [Mode: FRACTURE | Style: AGGRESSIVE] ---
+
+[HOOK] (Source: How He Beat Everyone To Tesla's Next Roadster  - Episode 42 Konstantin Othmer.repaired)
+Arcs: human, threat, truth, future
+> or an electric car and like he's like you know here are the trade-offs and we're really considering this. I want to get everybody's input, you know, and stupid me. I'm glad I didn't say anything, but I'm think of course you go hybrid. I mean, no range anxiety. Just put gas in. It solves every question, right? I didn't say anything. Thankfully, I'm being quite stupid revealing my ignorance now. Um, but anyway, it was this discussion and there was no real conclusion. And then, as I remembered, I should find this email. Elon sends an email and says, "Hey, I don't know if it's the right thing or not, but we're going to be the best electric car company. I don't want to be a frog. You know, it's not good on land. It's not good on sea on sea. they're going to be the best electric car company there is. And there was another argument which is very interesting which is a battery
+
+[BUILD_CONTROL] (Source: How He Beat Everyone To Tesla's Next Roadster  - Episode 42 Konstantin Othmer.repaired)
+Arcs: control, future
+> to put up 250. &gt;&gt; Yeah. Okay. Yeah. So what's going to happen, man? who this other investor and then Elon might want, &gt;&gt; you know. Yeah. &gt;&gt; Are you getting zero or are you getting one? &gt;&gt; You want &gt;&gt; I think it says I want zero if there's such a thing. So he could he could out zero me, but I have it on good authority. Actually, it's interesting you bring that up that there is no zero with the Model S, but I guess they could change the rules. They could create a series before this series, but I had founders, you know, there's a lot of games that could be played. &gt;&gt; All right. And for all you guys, I feel like there's there's a group of about I don't know five to 10 of you who are who have been here through these different generations and have been early. I mean, obviously everyone wants, you know, it's a collector's kind of
+
+[BUILD_SCIENCE] (Source: He Turned Police Tasers Into A $55 Billion Business - Rick Smith.repaired)
+Arcs: science, future
+> think of it very positively and people that have negative views of policing think of it very negatively and it it just was something we finally said, you know what? Let's let that be the product. People associated with it. We need a a broader umbrella brand where we can do more things. &gt;&gt; Then you got to Axon. Yeah. &gt;&gt; I didn't know until last night researching this that I &gt;&gt; I can't tell if I should be ashamed or not. Taser is an acronym. &gt;&gt; Uh that is uh you shouldn't be ashamed. It's a it's a little bit of trivia, but Yeah. &gt;&gt; Yeah. And so so and it goes you guys were there at the beginning. So there's this there's a NASA scientist that comes up with this idea and then and then it seemed like he you and your dad co-founded the company along alongside him. &gt;&gt; Yeah. So uh so if we roll back, Taser actually came from Tom Swift
+
+[COLLISION] (Source: He Turned Police Tasers Into A $55 Billion Business - Rick Smith.repaired)
+Arcs: truth, control, human, threat, future
+> I'm not like doing angles and trying to figure out where the person is. I can just pick my two locations and I go pop." Yeah. &gt;&gt; And it works. So, and now we train them in VR where we can put them through a bunch of repetitive training skills. Uh and so with 10 shots with good training and a 45 ft range, you know, we we believe we have the potential to be up in the 99% plus effectiveness rate. We have one remaining hurdle and that's heavy clothing because we have to get a contact to the body. Uh and so this winter we are beginning testing what we're calling the Apollo dart. We ourselves pay this homage to the moonshot the moon landing that our moonshots to cut gun deaths and policing in half. Uh, and so the Apollo Dart is our new dart system that is designed to penetrate through heavy clothing very reliably. It's actually easy to get through clothing.
+
+[RESOLUTION] (Source: Why Test Pilots Are Being Replaced by Drones - EP 4 Elliot Seguin.repaired)
+Arcs: control, future, threat
+> an instructor. I've flown the things before. I'm dealt with the funky systems. And um so it ends up being actually similar to some of the flight test stuff, but you get the payoff of getting to actually go somewhere, which I don't usually get to do. Um which is fun. What's like the most lucrative job you could be doing with your skills that you're not doing because you want to keep &gt;&gt; flying? &gt;&gt; Yeah. &gt;&gt; The um the unmanned uh flight test and in general unmanned operation of aircraft is surprisingly profitable. Um that &gt;&gt; you're in a you're in a building guiding something. &gt;&gt; Yeah. So that's directly flight test. And if you just look at the uh you know aviation then uh like the bisjet guys like if you're um you know all the names u in Southern California you know Kardashian and Ashton Koocher and you know Musk they all have like fleets of jets and people that fly them
+
+
+[DIAGNOSTICS]
+{
+  "mode": "fracture",
+  "hook_length_chars": 881,
+  "total_script_chars": 4404,
+  "clarity_score": 0.7,
+  "early_conflict_score": 0.6
+}
