@@ -1,0 +1,32 @@
+# NARRATIVE FORGE - DEFAULT CONFIG
+# 🐺 The SaaS Killer Physics
+
+pipeline:
+  max_workers: 4
+  min_chars: 200
+
+indexing:
+  chunk_size: 1000
+  chunk_overlap: 150
+
+repair:
+  aggression: medium
+
+generation:
+  mode: fracture
+  style: aggressive
+  top_k_candidates: 5
+
+scoring:
+  weights:
+    hook: 0.25
+    arc_balance: 0.20
+    novelty: 0.20
+    coherence: 0.15
+    punch_density: 0.20
+  thresholds:
+    min_total_score: 0.50
+    similarity_gate: 0.80
+
+benchmarks:
+  v0_baseline_score: 0.70

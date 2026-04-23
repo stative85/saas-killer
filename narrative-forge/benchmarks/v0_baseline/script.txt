@@ -1,0 +1,28 @@
+--- WENDIGO NARRATIVE COMPILATION [Mode: FRACTURE | Style: AGGRESSIVE] ---
+
+[HOOK] (Source: Palmer Luckey On The Military Of The Future.repaired)
+Arcs: truth, control, human, threat, science, future
+> that the their gift to humanity will end up being these open source models that are used in ways that they could never endorse of course but will nonetheless exist in an in an uncontrolled way. And I mean another example of this is um so like I'll give you a really specific example. I've done a lot of work trying to and I I never give it any classified data, never sensitive data. These are using hypothetical construct products that I use just to evaluate these AI systems. I like to work with them and say, "Hey, I I'm a weapons manufacturer and I want to work through how to build this type of novel weapon system." And most of them will just outright say, "I'm sorry, I can't do that." &gt;&gt; You're like, "No, I am Tony." &gt;&gt; And so again, it gets back to the Starship question. Do you want the 4chan AI where there's no rules or do you want or or
+
+[BUILD_THREAT] (Source: He Turned Police Tasers Into A $55 Billion Business - Rick Smith.repaired)
+Arcs: threat, truth
+> Axon. Thank you for joining us. &gt;&gt; Thanks for having me here. &gt;&gt; Appreciate having you here. Um, obviously we're going to get into your life and all that Axon does, but I was going to start this in a slightly different place than usual, which is is that there's a guy named Glenn Kelman. He is the C CEO of of Redfin, although I guess I think they got acquired. So anyway, he started Redf Fin. Um he's a longtime friend of mine. He is unique, I would say, among execs that I know in the sense that he has really good journalistic instincts and he sends me story ideas from time to time. And um I don't want to disparage tech execs and CEOs, but they don't always have a sense for like what appeals to a journalist, but he really he has a good nose for what um journalists are into and what I'm into. And a couple years ago, he sent me
+
+[BUILD_CONTROL] (Source: The Cyber Czar Trying To Protect America  - EP 41 Josh Steinman.repaired)
+Arcs: control
+> movies are to blame for this in a huge way because I think they give people a very wrong impression of what military technology actually looks like. But every time I see a military system, I mean, they're sometimes literally running on like Windows 95 and it &gt;&gt; or not. Some of our best platforms have almost no &gt;&gt; one platform and spec specifically that I'm thinking of almost no compute, &gt;&gt; right? And you have so there's this it becomes very clear that we had from like the rise of the consumer internet through to today this massive um progress with consumer technology and you know it's just like it's almost like non-existent in in defense. And so that means we're like in some cases 25 30 years behind just using tools that we take for granted like in our day-to-day life. They're more sophisticated than what the military has. So, this is a bad situation, right? And you were way ahead of this. I
+
+[COLLISION] (Source: The Factory Of Youth - EP 60 Nabiha Saklayen.repaired)
+Arcs: truth, control, human, threat, science, future
+> be getting very excited about physics and the universe and stars and how did we get here, what happened? That was my childhood fascination. Um and then and then there's within my PhD kind of towards the end I was like wow like our bodies are so complicated. We don't understand much and we can't systemize. We don't have equations that we can write about it. &gt;&gt; Um so it's really interesting. I mean to me what comes to mind is how do we think about you know human intelligence and our ability to to process what's happening at the universe level but also at the inner body level. Um can we really truly understand how we work? Uh the optimist in me I think uh says in the next century we're going to make some big moves. Absolutely. That quality of data will be important. how we understand what's going on will be important. Uh it's it's really hard to measure things in biology like
+
+[RESOLUTION] (Source: Why Test Pilots Are Being Replaced by Drones - EP 4 Elliot Seguin.repaired)
+Arcs: human, future
+> that biz jet job or do you stay as an engineer? Were you able to find a flight test gig? Were you able to get a, you know, FTE thing somewhere? Uh, cuz like it's a it's a wild world. There's lots going on. So, &gt;&gt; well, you make me very jealous. Anytime I've ever been in not like a fancy private plane, but somebody's plane they have in a hanger. It's I'm always like, "Ah, you did life better than I did. You can just go where you want to go when you want to go there." And I wish I had gotten my pilot's license a long time &gt;&gt; code. I mean, you can get it done. You still got time, but it's a cheat code. in especially in an urban area like with a lot of airports like Los Angeles like and with all the traffic in Los Angeles like um it takes me you know I do a lot of work in
+
+
+
+[PROVENANCE]
+run_id=run_2026-04-22_190642
+mode=fracture_aggressive
+score=0.70
