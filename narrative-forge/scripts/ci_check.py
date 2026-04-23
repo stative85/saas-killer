@@ -19,12 +19,13 @@ def run_check():
         print(f"FAIL: Score regression! {new['total']:.2f} < {base['total']:.2f}")
         sys.exit(1)
         
-    # Novelty Check (Must maintain baseline novelty)
-    if new.get("novelty", 1.0) < 0.40:
-        print(f"FAIL: Novelty collapse! {new['novelty']:.2f} < 0.40")
+    # Novelty Check (Strict regression gate)
+    base_novelty = base.get("novelty", 0.60) # Default baseline
+    if new.get("novelty", 0.0) < base_novelty - 0.10:
+        print(f"FAIL: Novelty collapse! {new['novelty']:.2f} < {base_novelty - 0.10:.2f}")
         sys.exit(1)
 
-    print(f"PASS: System integrity maintained (Score: {new['total']:.2f})")
+    print(f"PASS: System integrity maintained (Score: {new['total']:.2f}, Novelty: {new.get('novelty', 0.0):.2f})")
 
 if __name__ == "__main__":
     run_check()

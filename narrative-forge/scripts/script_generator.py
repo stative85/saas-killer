@@ -18,28 +18,38 @@ class NarrativeCompiler:
     def __init__(self, chunks_path: Path):
         self.chunks = self._load_jsonl(chunks_path)
         self.intersections = self._load_intersections()
-        self.bias_terms = self._load_feedback_bias()
+        self.pos_bias, self.neg_bias = self._load_feedback_bias()
 
     def _load_feedback_bias(self):
-        """Extracts high-resonance terms from prior winners to bias future runs."""
+        """Extracts positive and negative linguistic patterns."""
         best_dir = Path(__file__).parent.parent / "outputs" / "best"
-        bias = Counter()
+        failed_dir = Path(__file__).parent.parent / "outputs" / "failed"
+        
+        pos = Counter()
+        neg = Counter()
+
         if best_dir.exists():
             for f in best_dir.glob("*.txt"):
-                text = f.read_text(encoding="utf-8").lower()
-                # Extract words longer than 4 chars
-                words = re.findall(r"\b\w{5,}\b", text)
-                bias.update(words)
-        return bias
+                pos.update(re.findall(r"\b\w{5,}\b", f.read_text(encoding="utf-8").lower()))
+        
+        # Manual negative bias for v0 filler suppression
+        neg.update(['subscribe', 'review', 'sponsor', 'comment', 'below', 'click'])
+        
+        return pos, neg
 
     def _get_resonance_score(self, chunk):
-        """Weights a chunk based on quality and alignment with prior winners."""
+        """Weights a chunk based on quality, positive resonance, and negative suppression."""
         base_score = chunk['quality_score']
         text = chunk['text'].lower()
-        # Bias bonus: +0.01 for every prior winner term found
-        bias_bonus = sum(0.01 for term in self.bias_terms if term in text)
-        bias_cap = 0.20 # Standard v0 cap
-        return base_score + min(bias_cap, bias_bonus)
+        
+        # Steering Logic
+        pos_bonus = sum(0.01 for term in self.pos_bias if term in text)
+        neg_penalty = sum(0.05 for term in self.neg_bias if term in text)
+        
+        bias_cap = 0.20
+        steered_score = base_score + min(bias_cap, pos_bonus) - neg_penalty
+        
+        return max(0.001, steered_score)
         
     def _load_jsonl(self, path: Path):
         data = []
