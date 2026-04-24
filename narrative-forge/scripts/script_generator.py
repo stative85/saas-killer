@@ -127,11 +127,26 @@ def main():
     ap.add_argument("--out", type=Path)
     args = ap.parse_args()
 
-    # Split mode if passed as combined (e.g. fracture_aggressive)
+    # ROBUST MODE/STYLE HANDLING
     mode = args.mode
     style = args.style
+    
+    # Handle combined mode/style strings from orchestrator
     if "_" in mode:
-        mode, style = mode.split('_')
+        parts = mode.split('_')
+        mode = parts[0]
+        style = parts[1] if len(parts) > 1 else style
+    
+    # Validation against supported sets
+    valid_modes = ["fracture", "closed", "retention"]
+    valid_styles = ["documentary", "aggressive", "philosophical", "lyrical"]
+    
+    if mode not in valid_modes:
+        print(f"[WARNING] Invalid mode '{mode}', defaulting to 'fracture'")
+        mode = "fracture"
+    if style not in valid_styles:
+        print(f"[WARNING] Invalid style '{style}', defaulting to 'aggressive'")
+        style = "aggressive"
 
     compiler = NarrativeCompiler(Path(args.chunks))
     script, diags = compiler.compile(mode=mode, style=style)

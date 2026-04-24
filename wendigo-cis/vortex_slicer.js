@@ -1,14 +1,15 @@
-import fs from 'node:fs/promises';
+import fs from 'node:http'; // Placeholder for correct imports
+import fs_p from 'node:fs/promises';
 import path from 'node:path';
 
 /**
- * PROJECT ODIN - THE VORTEX SLICER
+ * PROJECT ODIN - THE VORTEX SLICER v2.0
  * 
- * Slices code based on Centripetal Data Flow (Implosion Logic).
- * Identifies the "Anomaly Point" (Core Resonant Logic) of a repo.
+ * SCHAUBERGER INHALATION MODEL
+ * Slices code based on Centripetal Data Flow.
  */
 async function analyzeVortex(dir) {
-    console.log(`\n[ODIN-VORTEX] Initiating Centripetal Scan of ${dir}...`);
+    console.log(`\n[ODIN-VORTEX] Initiating Inhalation Scan of ${dir}...`);
     
     const manifest = {
         core: null,
@@ -17,49 +18,39 @@ async function analyzeVortex(dir) {
     };
 
     async function walk(currentDir) {
-        const files = await fs.readdir(currentDir, { withFileTypes: true });
+        const files = await fs_p.readdir(currentDir, { withFileTypes: true });
         for (const file of files) {
             const fullPath = path.join(currentDir, file.name);
             if (file.isDirectory()) {
                 if (file.name === 'node_modules' || file.name === '.git') continue;
                 await walk(fullPath);
             } else if (file.name.endsWith('.ts') || file.name.endsWith('.js')) {
-                const content = await fs.readFile(fullPath, 'utf-8');
+                const content = await fs_p.readFile(fullPath, 'utf-8');
                 
-                // Heuristic: Information Density (Resonance)
-                // We look for files with the most exports and complex type definitions.
                 const exportCount = (content.match(/export /g) || []).length;
                 const importCount = (content.match(/import /g) || []).length;
                 const density = (exportCount + importCount) / content.split('\n').length;
+                
+                // INHALATION PULL: Strength of internal logic vs external dependency
+                const inhalation_pull = (exportCount * 15) - (importCount * 2);
 
                 manifest.resonance.push({
                     path: fullPath,
                     density: density.toFixed(4),
-                    score: exportCount * 10 + importCount
+                    score: inhalation_pull
                 });
             }
         }
     }
 
     await walk(dir);
-
-    // Identify the "Anomaly Point" (highest resonance score)
     manifest.resonance.sort((a, b) => b.score - a.score);
     manifest.core = manifest.resonance[0];
-    
-    // Build the Vortex (The centripetal flow toward the core)
-    manifest.vortex = manifest.resonance.slice(0, 5);
+    manifest.vortex = manifest.resonance.slice(0, 10); // Expanded Vortex
 
-    console.log(`[ODIN-VORTEX] Anomaly Point Found: ${manifest.core.path}`);
-    console.log(`[ODIN-VORTEX] Centripetal Flow Established.\n`);
-    
+    console.log(`[ODIN-VORTEX] Anomaly Point Attained: ${manifest.core.path}`);
     return manifest;
 }
 
 const target = './.tmp_recon/Chrysalis-Lattice';
-analyzeVortex(target).then(manifest => {
-    console.log("🛡️ MASTER HARMONIC MAP:");
-    manifest.vortex.forEach((v, i) => {
-        console.log(`${i+1}. [Resonance: ${v.density}] -> ${v.path}`);
-    });
-});
+analyzeVortex(target).then(m => console.log("[+] Inhalation Map Established."));
