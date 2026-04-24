@@ -1,23 +1,25 @@
-# WENDIGO / HARVESTER PROTECTIONS
+# WENDIGO / HARVESTER SOURCE LAW ONLY
 node_modules/
+harvester_venv/
+__pycache__/
+
+# No specimens in the repo
+outputs/
 .artifacts/
 .crucible/
 .tmp_recon/
-harvester_venv/
-__pycache__/
+resurrection_chamber/
+battle_logs/
+
+# No media in the repo
 *.mp3
 *.m4a
+*.wav
+*.mp4
 *.pdf
-*.json
-!package.json
-!tsconfig.json
-.env
-.DS_Store
-dist/
-build/
-knowledge_vault/distilled_concepts.txt
-knowledge_vault/esoteric_essence.txt
-narrative_harvester/audio/
-narrative_harvester/transcripts/
-narrative_harvester/metadata/
-narrative_harvester/raw_subs/
+
+# Preserve only Config and Standard
+!narrative-forge/configs/default.yaml
+!narrative-forge/docs/FORENSIC_STANDARD.md
+!README.md
+!requirements.txt
