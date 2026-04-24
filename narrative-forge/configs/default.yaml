@@ -32,3 +32,7 @@ scoring:
 
 benchmarks:
   v0_baseline_score: 0.70
+
+archive:
+  path: "D:/WENDIGO_ARCHIVE"
+  verify_hashes: true
