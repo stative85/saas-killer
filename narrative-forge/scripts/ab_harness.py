@@ -3,6 +3,7 @@ import subprocess
 import json
 import argparse
 import os
+import re
 from pathlib import Path
 from datetime import datetime
 
@@ -10,12 +11,17 @@ from datetime import datetime
 FORGE_DIR = Path(__file__).parent.parent.absolute()
 ROOT_DIR = FORGE_DIR.parent
 PYTHON_EXE = str(ROOT_DIR / "harvester_venv" / "Scripts" / "python.exe")
+if not Path(PYTHON_EXE).exists():
+    PYTHON_EXE = r"C:\Users\cleve\Downloads\CLI\facebook_reel_harvester\harvester_venv\Scripts\python.exe"
+
 GENERATOR_SCRIPT = str(FORGE_DIR / "scripts" / "script_generator.py")
 SCORER_SCRIPT = str(FORGE_DIR / "scripts" / "script_scorer.py")
-CHUNKS_FILE = r"C:\Users\cleve\OneDrive\Pictures\corpus_run\index\chunks_with_arcs.jsonl"
 BASE_EXPORT_DIR = FORGE_DIR / "outputs" / "scripts"
 
-def run_harness(n_variants=5, mode="fracture", style="aggressive"):
+def run_harness(n_variants=5, mode="fracture", style="aggressive", chunks_file=None):
+    if not chunks_file:
+        chunks_file = r"C:\Users\cleve\OneDrive\Pictures\corpus_run\index\chunks_with_arcs.jsonl"
+    
     timestamp = datetime.now().strftime("%Y-%m-%d_%H%M%S")
     run_id = f"run_{timestamp}"
     candidate_dir = BASE_EXPORT_DIR / "candidates" / run_id
@@ -25,12 +31,11 @@ def run_harness(n_variants=5, mode="fracture", style="aggressive"):
     
     for i in range(1, n_variants + 1):
         print(f"  [>] Generating Variant {i}/{n_variants}...")
-        # Use full mode string for script_generator
         gen_mode = mode if "_" in mode else f"{mode}_aggressive"
         
         subprocess.run([
-            PYTHON_EXE, GENERATOR_SCRIPT,
-            "--chunks", CHUNKS_FILE,
+            str(PYTHON_EXE), str(GENERATOR_SCRIPT),
+            "--chunks", str(chunks_file),
             "--mode", gen_mode,
             "--out", str(BASE_EXPORT_DIR / f"generated_script_{gen_mode}.txt")
         ], check=True, capture_output=True)
@@ -43,7 +48,7 @@ def run_harness(n_variants=5, mode="fracture", style="aggressive"):
     score_report = candidate_dir / "scores.json"
     print(f"[*] Scoring candidates...")
     subprocess.run([
-        PYTHON_EXE, SCORER_SCRIPT,
+        str(PYTHON_EXE), str(SCORER_SCRIPT),
         "--in-dir", str(candidate_dir),
         "--out", str(score_report)
     ], check=True, capture_output=True)
@@ -79,6 +84,7 @@ if __name__ == "__main__":
     parser.add_argument("--n", type=int, default=5)
     parser.add_argument("--mode", default="fracture")
     parser.add_argument("--style", default="aggressive")
+    parser.add_argument("--chunks", help="Path to chunks file")
     args = parser.parse_args()
     
-    run_harness(n_variants=args.n, mode=args.mode, style=args.style)
+    run_harness(n_variants=args.n, mode=args.mode, style=args.style, chunks_file=args.chunks)

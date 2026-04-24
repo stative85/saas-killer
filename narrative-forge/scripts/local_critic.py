@@ -70,7 +70,7 @@ Return JSON with exactly these keys:
         parsed = json.loads(content)
         result = {
             "status": "ok",
-            "critic_model": model, # Standardized field
+            "critic_model": model,
             "predicted_watch_ratio": float(parsed.get("predicted_watch_ratio", 0.0)),
             "slop_detected": bool(parsed.get("slop_detected", False)),
             "critical_flaw": str(parsed.get("critical_flaw", "None")),
@@ -82,7 +82,7 @@ Return JSON with exactly these keys:
     if out_path:
         out_path.parent.mkdir(parents=True, exist_ok=True)
         out_path.write_text(json.dumps(result, indent=2), encoding="utf-8")
-        print(f"[✅] Preflight Artifact Saved: {out_path}")
+        print(f"[OK] Preflight Artifact Saved: {out_path}")
 
     return result
 
