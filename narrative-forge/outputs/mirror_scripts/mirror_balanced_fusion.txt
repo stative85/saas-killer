@@ -1,0 +1,19 @@
+--- THE GREAT MIRROR [BALANCED_FUSION] ---
+Temporal Balance: 50.0% Modern / 50.0% Historical
+
+[HOOK] (MODERN | 20211107 Sun Alex.repaired)
+Arcs: truth
+> best storable food you're going to find for this price. [01:32:38.586 --> 01:32:40.511] This is really good food at a very low price. [01:32:40.811 --> 01:32:41.453] It's ready to ship.
+
+[BUILD] (MODERN | 20230117 Tue Alex.repaired)
+Arcs: control, future
+> battles, but the war has not been won yet. [03:01:49.988 --> 03:01:58.275] Please spread the word about the broadcast and go to InfoWarsTore.com and buy great products today that boost your immune system and empower your life while also keeping InfoWars on the air. [03:01:58.556 --> 03:01:58.996] A true 360 win!
+
+[COLLISION] (HISTORICAL | 54 - Civilization #54：  The German Will to Power.en)
+Arcs: future, human
+> will. Okay. And what this also tells us is these things don't die. Okay. You can kill a civilization, you can destroy a city, you can massacre a people, but you cannot destroy the desire for unity of will because that's what fundamentally makes us human. Okay? Does that make sense? Okay. Great. Any more questions, guys? But but but that's a great question. Thank you. Does this does that make make sense to you? Yeah. Okay. Great. Okay. Any more questions, guys? Okay. So, um next week we will do Kant. Okay. And Kant will lead us to Marx and Freud and uh modernity. Okay.
+
+[RESOLUTION] (HISTORICAL | 51 - Civilization #51：  Shakespeare's Language of Empire.en)
+Arcs: future
+> thing. It's not a racial thing. It's not because he's black. I mean, it's because he's such a uh accomplished individual. Okay. Does that make sense? All right. Great. Okay. So, um next class we do the American Revolution. All right.
+
