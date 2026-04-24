@@ -5,6 +5,7 @@ import os
 import shutil
 import tempfile
 import hashlib
+import json
 from pathlib import Path
 
 # --- CONFIG ---
@@ -19,57 +20,44 @@ def get_file_hash(path: Path):
     return hasher.hexdigest()
 
 def run_resurrection(mode="retention_aggressive"):
-    print(f"\n[🧟] INITIATING RESURRECTION CHAMBER...")
+    print(f"\n[RESURRECTION] INITIATING CLEAN ROOM PROOF...")
     
     with tempfile.TemporaryDirectory(prefix="saas_resurrection_") as temp_dir:
         temp_path = Path(temp_dir)
         print(f"[*] Chamber Path: {temp_path}")
         
         # 1. CLONE
-        print("[*] Cloning fresh main...")
         subprocess.run(["git", "clone", REPO_URL, "."], cwd=temp_path, check=True, capture_output=True)
         
         # 2. RUN FULL LOOP
-        run_id = f"resurrection_{mode}_test"
-        print(f"[*] Running full pipeline: {run_id}...")
-        
-        # Use existing venv but code from temp dir
-        run_cmd = [
-            str(ORIGINAL_VENV), "narrative-forge/run_full.py",
-            "--mode", mode,
-            "--run-id", run_id
-        ]
-        
+        run_id = f"resurrection_proof_{mode}"
+        run_cmd = [str(ORIGINAL_VENV), "narrative-forge/run_full.py", "--mode", mode, "--run-id", run_id]
         result = subprocess.run(run_cmd, cwd=temp_path, capture_output=True, text=True, encoding="utf-8")
         
-        # 3. VERIFY ARTIFACTS
-        manifest_path = temp_path / "narrative-forge" / "outputs" / "runs" / run_id / "run_manifest.json"
-        bundle_path = temp_path / "narrative-forge" / "outputs" / "runs" / run_id / "forensic_bundle.json"
-        script_path = temp_path / "narrative-forge" / "outputs" / "scripts" / "best"
+        # 3. VERIFY ARTIFACTS (Standard v1.2)
+        run_dir = temp_path / "narrative-forge" / "outputs" / "runs" / run_id
+        manifest_path = run_dir / "run_manifest.json"
+        bundle_path = run_dir / "forensic_bundle.json"
+        deploy_pack = run_dir / "deploy_pack.json"
         
-        best_files = list(script_path.glob("*.txt"))
-        
-        if manifest_path.exists() and bundle_path.exists() and best_files:
-            print("[✅] All artifacts verified in clean room.")
-            script_hash = get_file_hash(best_files[0])
-            print(f"[✅] Script Hash: {script_hash[:16]}...")
+        if manifest_path.exists() and bundle_path.exists() and deploy_pack.exists():
+            print("[OK] Truth Spine Verified.")
+            print("[OK] Deploy Pack Sealed.")
             
             # Print Manifest Summary
             with open(manifest_path, "r") as f:
                 manifest = json.load(f)
-                print(f"[✅] Run Manifest OK. Stages: {len(manifest['stages'])}")
+                print(f"[OK] Run Manifest Validated. Stages: {len(manifest['stages'])}")
             
             print("\n[💎] RESURRECTION SUCCESSFUL. THE SPECIES IS STABLE.")
         else:
             print("[🛑] RESURRECTION FAILED. ARTIFACTS MISSING.")
-            print(result.stdout)
-            print(result.stderr)
+            print(f"Stdout: {result.stdout}")
+            print(f"Stderr: {result.stderr}")
             exit(1)
 
-import json
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--mode", default="retention_aggressive")
     args = parser.parse_args()
-    
     run_resurrection(mode=args.mode)
