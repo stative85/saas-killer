@@ -18,8 +18,7 @@ FORGE_DIR = ROOT_DIR / "narrative-forge"
 SCRIPTS_DIR = FORGE_DIR / "scripts"
 OUTPUTS_DIR = FORGE_DIR / "outputs"
 RUNS_DIR = OUTPUTS_DIR / "runs"
-REGISTRY_FILE = OUTPUTS_DIR / "runs_registry.csv"
-FEEDBACK_DIR = OUTPUTS_DIR / "feedback"
+LEDGER_FILE = OUTPUTS_DIR / "master_ledger.json"
 PYTHON_EXE = str(ROOT_DIR / "harvester_venv" / "Scripts" / "python.exe")
 
 def run_step(name, cmd, cwd=None):
@@ -36,118 +35,59 @@ def main():
     parser.add_argument("--playlist", help="YouTube Playlist URL")
     parser.add_argument("--mode", default="fracture_aggressive", choices=["fracture_aggressive", "retention_aggressive"])
     parser.add_argument("--run-id", default="auto")
-    parser.add_argument("--hook-override", action="store_true", help="Force top 1 hook from ranker")
-    parser.add_argument("--hook-text", help="Manually provided hook string")
-    parser.add_argument("--hook-type", default="declarative", help="Category: declarative, confrontational, question")
-    parser.add_argument("--yolo", action="store_true", help="Bypass all gates and auto-render")
+    parser.add_argument("--hook-text", help="Manual hook override")
+    parser.add_argument("--hook-type", default="declarative")
     args = parser.parse_args()
-
-    if args.yolo:
-        print("\n[!!!] YOLO MODE ACTIVATED: ALL GATES OPEN. MAX AGGRESSION. [!!!]")
-        global MIN_TOTAL_SCORE, SIMILARITY_THRESHOLD
-        MIN_TOTAL_SCORE = 0.0
-        SIMILARITY_THRESHOLD = 1.0
 
     run_id = args.run_id if args.run_id != "auto" else datetime.now().strftime("%Y-%m-%d_%H%M%S")
     run_path = RUNS_DIR / run_id
     run_path.mkdir(parents=True, exist_ok=True)
     
-    print(f"\n🐺 NARRATIVE FORGE SPRINT - RUN: {run_id} | MODE: {args.mode}")
-    print("-" * 50)
+    print(f"\n🐺 WENDIGO BUNDLER - RUN: {run_id} | MODE: {args.mode}")
 
-    # 1. EVOLVE (A/B Harness)
+    # 1. EVOLVE
     mode_name, style_name = args.mode.split('_')
-    run_step("EVOLVE", [
-        str(SCRIPTS_DIR / "ab_harness.py"), 
-        "--n", "5", 
-        "--mode", mode_name, 
-        "--style", style_name
-    ], cwd=FORGE_DIR)
+    run_step("EVOLVE", [str(SCRIPTS_DIR / "ab_harness.py"), "--n", "5", "--mode", mode_name, "--style", style_name], cwd=FORGE_DIR)
 
-    # 2. RANK HOOKS
-    latest_best_dir = FORGE_DIR / "outputs" / "scripts" / "best"
-    best_files = sorted(latest_best_dir.glob("*.txt"), key=os.path.getmtime)
-    if not best_files:
-        print("[!] No best scripts found to rank hooks from.")
-        return
-    latest_best = best_files[-1]
+    # 2. FIND ASSETS
+    best_script = sorted((FORGE_DIR / "outputs/scripts/best").glob(f"*{run_id}*_best.txt"), key=os.path.getmtime)
+    if not best_script:
+        # Fallback to absolute latest if run_id timestamp mismatch (common in rapid runs)
+        best_script = sorted((FORGE_DIR / "outputs/scripts/best").glob("*.txt"), key=os.path.getmtime)[-1:]
     
-    hooks_json = run_path / "hooks.json"
-    run_step("RANK_HOOKS", [
-        str(SCRIPTS_DIR / "hook_ranker.py"), 
-        "--script", str(latest_best),
-        "--quotes", r"C:\Users\cleve\OneDrive\Pictures\corpus_run\exports\top_quotes.txt",
-        "--chunks", r"C:\Users\cleve\OneDrive\Pictures\corpus_run\index\chunks_with_arcs.jsonl",
-        "--out", str(hooks_json)
-    ], cwd=FORGE_DIR)
+    latest_best = best_script[0]
+    
+    # 3. PREFLIGHT CRITIC
+    preflight_json = run_path / "preflight.json"
+    run_step("PREFLIGHT", [str(SCRIPTS_DIR / "local_critic.py"), "--script", str(latest_best), "--out", str(preflight_json)], cwd=FORGE_DIR)
 
-    # 3. HOOK OVERRIDE
-    applied_hook = ""
-    if args.hook_text:
-        print(f"[*] Applying Manual Hook Override: {args.hook_text}")
-        script_text = latest_best.read_text(encoding="utf-8")
-        # Ensure we replace ONLY the hook phase
-        new_script = re.sub(r"\[HOOK\].*\nArcs:.*\n> .*\n", f"[HOOK]\nArcs: Manual_Divergence\n> {args.hook_text}\n", script_text)
-        latest_best.write_text(new_script, encoding="utf-8")
-        applied_hook = args.hook_text
-    elif args.hook_override:
-        print("[*] Applying Ranker Hook Override...")
-        with open(hooks_json, "r") as f:
-            hooks = json.load(f)
-        top_hook = hooks[0]['text']
-        script_text = latest_best.read_text(encoding="utf-8")
-        new_script = re.sub(r"\[HOOK\].*\nArcs:.*\n> .*\n", f"[HOOK]\nArcs: Hybrid_Override\n> {top_hook}\n", script_text)
-        latest_best.write_text(new_script, encoding="utf-8")
-        applied_hook = top_hook
-        print(f"  [+] Overrode hook with: {top_hook[:50]}...")
-
-    # 4. BUILD METADATA
-    meta_json = run_path / "metadata.json"
-    run_step("BUILD_METADATA", [
-        str(SCRIPTS_DIR / "metadata_builder.py"),
-        "--script", str(latest_best),
-        "--obsessions", r"C:\Users\cleve\OneDrive\Pictures\corpus_run\exports\obsession_terms.txt",
-        "--hooks", str(hooks_json),
-        "--out", str(meta_json)
-    ], cwd=FORGE_DIR)
-
-    # 5. GENERATE FEEDBACK TEMPLATE
-    FEEDBACK_DIR.mkdir(parents=True, exist_ok=True)
-    with open(meta_json, "r") as f:
-        meta = json.load(f)
-        
-    feedback = {
+    # 4. COMPILE FORENSIC BUNDLE
+    preflight_data = json.loads(preflight_json.read_text()) if preflight_json.exists() else {}
+    
+    bundle = {
         "run_id": run_id,
+        "timestamp": datetime.now().isoformat(),
         "mode": args.mode,
         "hook_type": args.hook_type,
-        "title": meta["title_variants"][0],
-        "hook_used": applied_hook if applied_hook else meta["primary_hook"],
-        "views": 0,
-        "avg_watch_ratio": 0.0,
-        "likes": 0,
-        "script_path": str(latest_best)
+        "script_path": str(latest_best.relative_to(ROOT_DIR)),
+        "status": "VALIDATED" if preflight_data.get("status") == "ok" else "PREFLIGHT_ERROR",
+        "predicted_watch_ratio": preflight_data.get("predicted_watch_ratio", 0.0),
+        "slop_detected": preflight_data.get("slop_detected", False),
+        "critical_flaw": preflight_data.get("critical_flaw", "None"),
+        "winning_line": preflight_data.get("winning_line", "None")
     }
     
-    fb_file = FEEDBACK_DIR / f"{run_id}_feedback.json"
-    with open(fb_file, "w") as f:
-        json.dump(feedback, f, indent=2)
+    bundle_path = run_path / "forensic_bundle.json"
+    bundle_path.write_text(json.dumps(bundle, indent=2), encoding="utf-8")
+    print(f"[✅] Forensic Bundle Sealed: {bundle_path.name}")
 
-    if args.yolo:
-        print("[*] YOLO AUTO-RENDER ENGAGED...")
-        run_step("RENDER_YOLO", [
-            "scripts/tts_render.py",
-            "--in-file", str(latest_best),
-            "--out-file", str(run_path / "audio.wav")
-        ], cwd=FORGE_DIR)
-        run_step("PACKAGE_YOLO", [
-            "scripts/package_video.py",
-            "--audio", str(run_path / "audio.wav"),
-            "--out", str(run_path / "video.mp4")
-        ], cwd=FORGE_DIR)
-
-    print("-" * 50)
-    print(f"[OK] SPRINT CYCLE COMPLETE: {run_id}")
-    print(f"[OK] FEEDBACK TEMPLATE: {fb_file}")
+    # 5. UPDATE MASTER LEDGER
+    ledger = []
+    if LEDGER_FILE.exists():
+        ledger = json.loads(LEDGER_FILE.read_text())
+    
+    ledger.insert(0, bundle) # Latest first
+    LEDGER_FILE.write_text(json.dumps(ledger[:100], indent=2), encoding="utf-8") # Cap at 100
 
 if __name__ == "__main__":
     main()

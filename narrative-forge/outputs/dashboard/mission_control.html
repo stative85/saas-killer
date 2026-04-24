@@ -63,12 +63,46 @@
     </div>
 
     <script>
-        // Placeholder for local data loading logic
-        console.log("[WENDIGO] Dashboard Initialized. Awaiting local JSON link.");
-        
         async function loadData() {
-            // Future: Fetch ledger.csv and arc_density_map.json
+            try {
+                // Fetch Master Ledger
+                const ledgerRes = await fetch('../master_ledger.json');
+                const ledger = await ledgerRes.json();
+                const tbody = document.getElementById('ledger-body');
+                tbody.innerHTML = '';
+
+                ledger.forEach(run => {
+                    const row = `<tr>
+                        <td>${run.run_id}</td>
+                        <td>${new Date(run.timestamp).toLocaleString()}</td>
+                        <td class="${run.slop_detected ? 'status-err' : 'status-ok'}">
+                            ${(run.predicted_watch_ratio * 100).toFixed(0)}%
+                        </td>
+                        <td>${run.status}</td>
+                    </tr>`;
+                    tbody.innerHTML += row;
+                });
+
+                // Fetch Arc Map
+                const arcRes = await fetch('../arcs/arc_density_map.json');
+                const arcs = await arcRes.json();
+                const arcDiv = document.getElementById('arc-map');
+                arcDiv.innerHTML = '';
+                
+                Object.entries(arcs).sort((a,b) => b[1] - a[1]).forEach(([name, count]) => {
+                    arcDiv.innerHTML += `<div style="margin-bottom:8px;">
+                        <span class="tag">${name.toUpperCase()}</span> 
+                        <span style="font-size:0.8em; color:#888;">${count} chunks</span>
+                    </div>`;
+                });
+
+            } catch (err) {
+                console.error("Dashboard Load Error:", err);
+            }
         }
+
+        loadData();
+        setInterval(loadData, 5000); // Polling every 5s
     </script>
 </body>
 </html>
