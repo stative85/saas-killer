@@ -33,25 +33,26 @@
             </div>
             <br>
             <div class="card">
-                <h2>🎬 LATEST RENDERS</h2>
-                <ul class="asset-list" id="asset-list">
-                    <!-- Assets will be injected here -->
-                    <li class="asset-item">Waiting for egress...</li>
-                </ul>
+                <h2>🔬 COUNCIL VERDICT</h2>
+                <div id="latest-verdict">
+                    <p>Awaiting preflight...</p>
+                </div>
             </div>
         </div>
 
         <!-- RIGHT COLUMN: FORENSIC LEDGER -->
         <div class="main-panel">
             <div class="card">
-                <h2>⚖️ FORENSIC RUN LEDGER</h2>
+                <h2>⚖️ FORENSIC RUN LEDGER (v1)</h2>
                 <table class="ledger-table">
                     <thead>
                         <tr>
                             <th>RUN_ID</th>
-                            <th>TIMESTAMP</th>
-                            <th>SCORE</th>
-                            <th>STATUS</th>
+                            <th>MODE</th>
+                            <th>HOOK</th>
+                            <th>CRITIC</th>
+                            <th>PREDICTION</th>
+                            <th>SLOP</th>
                         </tr>
                     </thead>
                     <tbody id="ledger-body">
@@ -74,14 +75,30 @@
                 ledger.forEach(run => {
                     const row = `<tr>
                         <td>${run.run_id}</td>
-                        <td>${new Date(run.timestamp).toLocaleString()}</td>
-                        <td class="${run.slop_detected ? 'status-err' : 'status-ok'}">
+                        <td style="font-size:0.8em; color:#888;">${run.mode}</td>
+                        <td class="tag">${run.hook_type.toUpperCase()}</td>
+                        <td style="font-size:0.8em;">${run.critic_model}</td>
+                        <td class="${run.predicted_watch_ratio > 0.6 ? 'status-ok' : ''}">
                             ${(run.predicted_watch_ratio * 100).toFixed(0)}%
                         </td>
-                        <td>${run.status}</td>
+                        <td class="${run.slop_detected ? 'status-err' : 'status-ok'}">
+                            ${run.slop_detected ? 'FAIL' : 'CLEAN'}
+                        </td>
                     </tr>`;
                     tbody.innerHTML += row;
                 });
+                
+                // Update Latest Verdict
+                if (ledger.length > 0) {
+                    const latest = ledger[0];
+                    document.getElementById('latest-verdict').innerHTML = `
+                        <div style="font-size:0.9em;">
+                            <strong>Run:</strong> ${latest.run_id}<br>
+                            <strong>Winner:</strong> <span style="color:#eee; font-style:italic;">"${latest.winning_line}"</span><br>
+                            <strong>Flaw:</strong> <span class="status-err">${latest.critical_flaw}</span>
+                        </div>
+                    `;
+                }
 
                 // Fetch Arc Map
                 const arcRes = await fetch('../arcs/arc_density_map.json');

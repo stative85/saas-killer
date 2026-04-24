@@ -3,8 +3,6 @@ import argparse
 import subprocess
 import os
 import json
-import csv
-import re
 from pathlib import Path
 from datetime import datetime
 
@@ -43,25 +41,21 @@ def main():
     run_path = RUNS_DIR / run_id
     run_path.mkdir(parents=True, exist_ok=True)
     
-    print(f"\n🐺 WENDIGO BUNDLER - RUN: {run_id} | MODE: {args.mode}")
+    print(f"\n🐺 WENDIGO BUNDLER v1 - RUN: {run_id} | MODE: {args.mode}")
 
-    # 1. EVOLVE
+    # 1. EVOLVE (Using A/B Harness)
     mode_name, style_name = args.mode.split('_')
     run_step("EVOLVE", [str(SCRIPTS_DIR / "ab_harness.py"), "--n", "5", "--mode", mode_name, "--style", style_name], cwd=FORGE_DIR)
 
     # 2. FIND ASSETS
-    best_script = sorted((FORGE_DIR / "outputs/scripts/best").glob(f"*{run_id}*_best.txt"), key=os.path.getmtime)
-    if not best_script:
-        # Fallback to absolute latest if run_id timestamp mismatch (common in rapid runs)
-        best_script = sorted((FORGE_DIR / "outputs/scripts/best").glob("*.txt"), key=os.path.getmtime)[-1:]
-    
-    latest_best = best_script[0]
+    best_scripts = sorted((FORGE_DIR / "outputs/scripts/best").glob("*.txt"), key=os.path.getmtime)
+    latest_best = best_scripts[-1] if best_scripts else None
     
     # 3. PREFLIGHT CRITIC
     preflight_json = run_path / "preflight.json"
     run_step("PREFLIGHT", [str(SCRIPTS_DIR / "local_critic.py"), "--script", str(latest_best), "--out", str(preflight_json)], cwd=FORGE_DIR)
 
-    # 4. COMPILE FORENSIC BUNDLE
+    # 4. COMPILE FORENSIC BUNDLE (v1 Standard)
     preflight_data = json.loads(preflight_json.read_text()) if preflight_json.exists() else {}
     
     bundle = {
@@ -69,25 +63,28 @@ def main():
         "timestamp": datetime.now().isoformat(),
         "mode": args.mode,
         "hook_type": args.hook_type,
-        "script_path": str(latest_best.relative_to(ROOT_DIR)),
-        "status": "VALIDATED" if preflight_data.get("status") == "ok" else "PREFLIGHT_ERROR",
+        "script_path": str(latest_best.relative_to(ROOT_DIR)) if latest_best else "none",
+        "render_path": str((run_path / "video.mp4").relative_to(ROOT_DIR)) if (run_path / "video.mp4").exists() else "none",
+        "critic_model": preflight_data.get("critic_model", "none"),
         "predicted_watch_ratio": preflight_data.get("predicted_watch_ratio", 0.0),
         "slop_detected": preflight_data.get("slop_detected", False),
         "critical_flaw": preflight_data.get("critical_flaw", "None"),
-        "winning_line": preflight_data.get("winning_line", "None")
+        "winning_line": preflight_data.get("winning_line", "None"),
+        "deployment_status": "none", # To be updated by deploy scripts
+        "feedback_status": "pending"
     }
     
     bundle_path = run_path / "forensic_bundle.json"
     bundle_path.write_text(json.dumps(bundle, indent=2), encoding="utf-8")
     print(f"[✅] Forensic Bundle Sealed: {bundle_path.name}")
 
-    # 5. UPDATE MASTER LEDGER
+    # 5. UPDATE MASTER LEDGER (Derived Index)
     ledger = []
     if LEDGER_FILE.exists():
         ledger = json.loads(LEDGER_FILE.read_text())
     
     ledger.insert(0, bundle) # Latest first
-    LEDGER_FILE.write_text(json.dumps(ledger[:100], indent=2), encoding="utf-8") # Cap at 100
+    LEDGER_FILE.write_text(json.dumps(ledger[:100], indent=2), encoding="utf-8")
 
 if __name__ == "__main__":
     main()

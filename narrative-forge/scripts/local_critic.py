@@ -70,6 +70,7 @@ Return JSON with exactly these keys:
         parsed = json.loads(content)
         result = {
             "status": "ok",
+            "critic_model": model, # Standardized field
             "predicted_watch_ratio": float(parsed.get("predicted_watch_ratio", 0.0)),
             "slop_detected": bool(parsed.get("slop_detected", False)),
             "critical_flaw": str(parsed.get("critical_flaw", "None")),
