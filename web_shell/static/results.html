@@ -15,10 +15,14 @@
         h3 { color: var(--accent); text-transform: uppercase; letter-spacing: 1px; margin-top: 0; }
         .status-pill { padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: bold; background: #333; }
         .status-ok { background: #2ed573; color: #000; }
+        nav { margin-bottom: 20px; }
+        nav a { color: #888; text-decoration: none; font-size: 0.9rem; margin-right: 20px; }
+        nav a:hover { color: var(--accent); }
     </style>
 </head>
 <body>
     <div class="container">
+        <nav><a href="index.html">&larr; Home</a> <a href="upload.html">New Run</a></nav>
         <div class="header">
             <h1>RUN RESULTS</h1>
             <span class="run-id" id="run-display">---</span>
@@ -36,9 +40,9 @@
         </div>
 
         <div class="pack-box">
-            <h3>⚖️ COUNCIL VERDICT</h3>
+            <h3>⚖️ RUN MANIFEST</h3>
             <div id="verdict-status" style="margin-bottom: 15px;"></div>
-            <pre id="verdict-content">Loading preflight evidence...</pre>
+            <pre id="verdict-content">Loading forensic evidence...</pre>
         </div>
     </div>
 
@@ -51,18 +55,18 @@
             document.getElementById('run-display').textContent = runId;
 
             try {
-                const res = await fetch(`/api/bundle/${runId}`);
+                // FIXED: Call /api/manifest instead of /api/bundle
+                const res = await fetch(`/api/manifest/${runId}`);
+                if (!res.ok) throw new Error("Manifest not found");
                 const data = await res.json();
-                
-                if (data.status === "error") {
-                    document.getElementById('verdict-content').textContent = data.message;
-                    return;
-                }
 
-                // Hydrate Script (assuming script_path is relative to app root)
-                const scriptRes = await fetch(`/api/file?path=${data.script_path}`);
-                const scriptText = await scriptRes.text();
-                document.getElementById('script-content').textContent = scriptText;
+                // Hydrate Script (assuming script_path returned in manifest)
+                // Note: v1.2 manifest script_path is relative to FORGE_DIR.parent
+                if (data.script_path && data.script_path !== "none") {
+                    const scriptRes = await fetch(`/api/file?path=${encodeURIComponent(data.script_path)}`);
+                    const scriptText = await scriptRes.text();
+                    document.getElementById('script-content').textContent = scriptText;
+                }
 
                 // Hydrate Deploy Pack
                 const packRes = await fetch(`/api/deploy-pack/${runId}`);
@@ -70,19 +74,14 @@
                 document.getElementById('pack-content').textContent = JSON.stringify(packData, null, 2);
 
                 // Hydrate Verdict
-                document.getElementById('verdict-content').textContent = JSON.stringify({
-                    predicted_watch_ratio: data.predicted_watch_ratio,
-                    slop_detected: data.slop_detected,
-                    critical_flaw: data.critical_flaw,
-                    winning_line: data.winning_line
-                }, null, 2);
+                document.getElementById('verdict-content').textContent = JSON.stringify(data, null, 2);
                 
                 const statusPill = document.getElementById('verdict-status');
-                statusPill.innerHTML = `<span class="status-pill ${data.status === 'VALIDATED' ? 'status-ok' : ''}">${data.status}</span>`;
+                statusPill.innerHTML = `<span class="status-pill ${data.final_ok ? 'status-ok' : ''}">${data.final_ok ? 'SUCCESS' : 'FAILED'}</span>`;
 
             } catch (err) {
                 console.error("Hydration Error:", err);
-                document.getElementById('verdict-content').textContent = "Forensic hydration failed.";
+                document.getElementById('verdict-content').textContent = "Forensic hydration failed. " + err.message;
             }
         }
         loadResults();

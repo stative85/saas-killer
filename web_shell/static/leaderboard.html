@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SAAS KILLER - Leaderboard</title>
+    <style>
+        :root { --bg: #0d0e12; --fg: #e0e0e0; --accent: #3a86ff; }
+        body { font-family: -apple-system, BlinkMacSystemFont, sans-serif; background: var(--bg); color: var(--fg); padding: 40px; margin: 0; }
+        .container { max-width: 1100px; margin: auto; }
+        h1 { margin-top: 0; letter-spacing: -1px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 30px; background: #1a1b23; border-radius: 12px; overflow: hidden; }
+        th, td { text-align: left; padding: 15px 20px; border-bottom: 1px solid #2a2b35; }
+        th { background: #2a2b35; text-transform: uppercase; font-size: 0.8rem; color: #888; }
+        .winner { color: #2ed573; font-weight: bold; }
+        .failure { color: #ff4757; }
+        .neutral { color: #888; }
+        .run-link { color: var(--accent); text-decoration: none; font-family: monospace; }
+        nav { margin-bottom: 30px; }
+        nav a { color: #888; text-decoration: none; font-size: 0.9rem; margin-right: 20px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav><a href="index.html">&larr; Home</a> <a href="upload.html">New Run</a></nav>
+        <h1>LEADERBOARD</h1>
+        <p style="color: #888;">The competitive performance of the refinery species.</p>
+
+        <table id="leader-table">
+            <thead>
+                <tr>
+                    <th>Run ID</th>
+                    <th>Hook Class</th>
+                    <th>Views</th>
+                    <th>Watch Ratio</th>
+                    <th>Status</th>
+                    <th>Mutation</th>
+                </tr>
+            </thead>
+            <tbody id="leader-body">
+                <!-- Data goes here -->
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        async function loadLeaderboard() {
+            try {
+                const res = await fetch('/api/ledger');
+                const data = await res.json();
+                const body = document.getElementById('leader-body');
+
+                data.forEach(run => {
+                    const row = document.createElement('tr');
+                    const statusClass = run.final_ok ? 'winner' : 'failure';
+                    
+                    row.innerHTML = `
+                        <td><a class="run-link" href="results.html?run_id=${run.run_id}">${run.run_id}</a></td>
+                        <td>${run.hook_type || 'N/A'}</td>
+                        <td>${run.views || 'Pending'}</td>
+                        <td>${run.avg_watch_ratio ? (run.avg_watch_ratio * 100).toFixed(1) + '%' : 'Pending'}</td>
+                        <td class="${statusClass}">${run.final_ok ? 'STABLE' : 'FAILED'}</td>
+                        <td>${run.bias_delta_applied ? 'APPLIED' : 'NONE'}</td>
+                    `;
+                    body.appendChild(row);
+                });
+            } catch (err) {
+                console.error("Leaderboard Error:", err);
+            }
+        }
+        loadLeaderboard();
+    </script>
+</body>
+</html>
