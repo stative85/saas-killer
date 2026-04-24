@@ -73,7 +73,7 @@ def main():
         "final_ok": False
     }
 
-    print(f"\n🐺 WENDIGO FORGE v1.2 - SPRINT RUN: {run_id}")
+    print(f"\n[WENDIGO FORGE] v1.2 - SPRINT RUN: {run_id}")
 
     # 1. EVOLVE
     mode_name, style_name = args.mode.split('_')
@@ -113,11 +113,11 @@ def main():
                 "thumbnail_text": meta.get("thumbnail_text_variants", ["THE TRUTH"])[0]
             }
             (run_path / "deploy_pack.json").write_text(json.dumps(deploy_pack, indent=2))
-            print(f"[✅] Deploy Pack Sealed.")
+            print(f"[OK] Deploy Pack Sealed.")
 
     manifest["final_ok"] = all(s["ok"] for s in manifest["stages"])
     (run_path / "run_manifest.json").write_text(json.dumps(manifest, indent=2))
-    print(f"[✅] Run Manifest Written: {run_id}")
+    print(f"[OK] Run Manifest Written: {run_id}")
 
 if __name__ == "__main__":
     main()
