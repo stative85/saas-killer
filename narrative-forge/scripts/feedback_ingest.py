@@ -6,100 +6,102 @@ from pathlib import Path
 from typing import List, Dict, Any
 from datetime import datetime
 
-# --- CONFIGURATION ---
+# --- CONFIG ---
 MAX_BIAS_TERMS = 300
-DECAY_RATE = 0.9 # Factor to multiply current resonance by before update
+DECAY_RATE = 0.9
+VIEW_FLOOR = 500 # Must have at least 500 views to be a 'Winner'
+WATCH_RATIO_THRESHOLD = 0.45 # Must beat 40% watch ratio
+
+# --- PATHS ---
+FORGE_DIR = Path(__file__).parent.parent.absolute()
+BIAS_CONFIG = FORGE_DIR / "configs" / "bias_store.json"
+LEADERBOARD_FILE = FORGE_DIR / "outputs" / "leaderboard.json"
 
 def compute_engagement_score(views: int, watch_ratio: float, like_ratio: float) -> float:
-    # Watch ratio is prioritized heavily
     return (0.6 * watch_ratio + 0.3 * (min(views, 5000) / 5000) + 0.1 * like_ratio)
 
 def extract_patterns(text: str) -> List[str]:
-    # Extract recurring strong nouns/verbs (len > 5)
     return list(set(re.findall(r"\b\w{6,}\b", text.lower())))
 
 def update_bias(current: Dict[str, float], new_terms: List[str], weight: float):
-    # Decay existing
-    for t in current:
-        current[t] *= DECAY_RATE
-        
-    # Add/Update new
-    for t in new_terms:
-        current[t] = current.get(t, 0.0) + weight
-    
-    # Cap and Clean
+    for t in current: current[t] *= DECAY_RATE
+    for t in new_terms: current[t] = current.get(t, 0.0) + weight
     sorted_terms = sorted(current.items(), key=lambda x: x[1], reverse=True)[:MAX_BIAS_TERMS]
     return {k: round(v, 3) for k, v in sorted_terms if v > 0.01}
+
+def update_leaderboard(entry):
+    leaderboard = []
+    if LEADERBOARD_FILE.exists():
+        leaderboard = json.loads(LEADERBOARD_FILE.read_text())
+    
+    # Check if run already exists
+    leaderboard = [r for r in leaderboard if r['run_id'] != entry['run_id']]
+    leaderboard.append(entry)
+    leaderboard.sort(key=lambda x: x.get('avg_watch_ratio', 0), reverse=True)
+    
+    LEADERBOARD_FILE.write_text(json.dumps(leaderboard, indent=2), encoding="utf-8")
 
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--feedback", type=Path, required=True)
-    parser.add_argument("--positive", type=Path, required=True)
-    parser.add_argument("--negative", type=Path, required=True)
-    parser.add_argument("--hook-patterns", type=Path, required=True)
     parser.add_argument("--out-dir", type=Path, required=True)
     args = parser.parse_args()
 
-    # Load Inputs
-    with open(args.feedback, "r") as f:
+    # 1. LOAD DATA
+    with open(args.feedback, "r", encoding="utf-8-sig") as f:
         fb = json.load(f)
     
-    pos_bias = json.loads(args.positive.read_text()) if args.positive.exists() else {}
-    neg_bias = json.loads(args.negative.read_text()) if args.negative.exists() else {}
-    hook_patterns = json.loads(args.hook_patterns.read_text()) if args.hook_patterns.exists() else []
-
-    # Process Performance
-    likes = fb.get('likes', 0)
-    views = fb.get('views', 1)
-    like_ratio = likes / views
-    engagement = compute_engagement_score(views, fb.get('avg_watch_ratio', 0.0), like_ratio)
+    pos_path = FORGE_DIR / "configs" / "positive_bias_terms.json"
+    neg_path = FORGE_DIR / "configs" / "negative_bias_terms.json"
     
-    # Determine Class
-    if engagement > 0.5:
-        mode = "WINNER"
-        weight = 0.2
-    elif engagement < 0.2:
-        mode = "FAILURE"
-        weight = -0.2
-    else:
-        mode = "NEUTRAL"
-        weight = 0.0
+    pos_bias = json.loads(pos_path.read_text()) if pos_path.exists() else {}
+    neg_bias = json.loads(neg_path.read_text()) if neg_path.exists() else {}
 
-    print(f"[*] Ingesting {fb['run_id']} | Mode: {mode} | Engagement: {engagement:.2f}")
+    # 2. THE WINNER GATE
+    views = fb.get('views', 0)
+    watch_ratio = fb.get('avg_watch_ratio', 0.0)
+    likes = fb.get('likes', 0)
+    like_ratio = likes / views if views > 0 else 0
+    engagement = compute_engagement_score(views, watch_ratio, like_ratio)
 
-    # Extract Text for Bias
+    is_winner = (views >= VIEW_FLOOR and watch_ratio >= WATCH_RATIO_THRESHOLD)
+    is_failure = (views >= VIEW_FLOOR and watch_ratio < 0.20)
+    
+    status = "WINNER" if is_winner else "FAILURE" if is_failure else "NEUTRAL"
+    print(f"[*] Analyzing Run: {fb['run_id']} | Status: {status} | Engagement: {engagement:.2f}")
+
+    # 3. MUTATE MEMORY (ONLY ON WINNER/FAILURE GATES)
+    bias_applied = False
     script_path = Path(fb['script_path'])
-    if script_path.exists():
+    if script_path.exists() and (is_winner or is_failure):
         text = script_path.read_text(encoding="utf-8")
         terms = extract_patterns(text)
-        
-        if mode == "WINNER":
-            pos_bias = update_bias(pos_bias, terms, weight)
-            # Add hook to memory
-            hook_patterns.append({
-                "run_id": fb['run_id'],
-                "hook": fb['hook_used'],
-                "score": engagement,
-                "date": datetime.now().isoformat()
-            })
-        elif mode == "FAILURE":
-            neg_bias = update_bias(neg_bias, terms, abs(weight))
+        if is_winner:
+            pos_bias = update_bias(pos_bias, terms, 0.2)
+        else:
+            neg_bias = update_bias(neg_bias, terms, 0.2)
+        bias_applied = True
 
-    # Save Outputs
-    args.out_dir.mkdir(parents=True, exist_ok=True)
-    with open(args.out_dir / "positive_bias_updated.json", "w") as f: json.dump(pos_bias, f, indent=2)
-    with open(args.out_dir / "negative_bias_updated.json", "w") as f: json.dump(neg_bias, f, indent=2)
-    with open(args.out_dir / "hook_patterns_updated.json", "w") as f: json.dump(hook_patterns[:100], f, indent=2)
-    
-    summary = {
+    # 4. UPDATE LEADERBOARD
+    leaderboard_entry = {
         "run_id": fb['run_id'],
-        "engagement_score": engagement,
-        "performance_class": mode,
-        "terms_processed": len(terms) if 'terms' in locals() else 0
+        "hook": fb['hook_used'],
+        "mode": fb.get('mode', 'unknown'),
+        "hook_type": fb.get('hook_type', 'unknown'),
+        "views": views,
+        "avg_watch_ratio": watch_ratio,
+        "likes": likes,
+        "bias_delta_applied": bias_applied,
+        "status": status,
+        "timestamp": datetime.now().isoformat()
     }
-    with open(args.out_dir / "feedback_summary.json", "w") as f: json.dump(summary, f, indent=2)
+    update_leaderboard(leaderboard_entry)
 
-    print(f"[✅] Feedback Ingestion Complete. Performance: {mode}. Updates in: {args.out_dir}")
+    # 5. PERSIST
+    pos_path.write_text(json.dumps(pos_bias, indent=2))
+    neg_path.write_text(json.dumps(neg_bias, indent=2))
+    
+    print(f"[✅] Feedback Loop Closed. Bias Applied: {bias_applied}. Leaderboard Updated.")
 
 if __name__ == "__main__":
     main()
