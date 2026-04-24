@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SAAS KILLER - Run Results</title>
+    <style>
+        :root { --bg: #0d0e12; --fg: #e0e0e0; --accent: #3a86ff; }
+        body { font-family: sans-serif; background: var(--bg); color: var(--fg); padding: 40px; }
+        .container { max-width: 900px; margin: auto; }
+        .header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #333; padding-bottom: 20px; }
+        .run-id { font-family: monospace; color: #888; }
+        .pack-box { background: #1a1b23; padding: 20px; border-radius: 12px; margin-top: 30px; }
+        pre { background: #000; padding: 15px; border-radius: 6px; white-space: pre-wrap; font-size: 0.9rem; border: 1px solid #222; }
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>RUN RESULTS</h1>
+            <span class="run-id" id="run-display">Loading...</span>
+        </div>
+
+        <div class="grid">
+            <div class="pack-box">
+                <h3>📝 SCRIPT APEX</h3>
+                <pre id="script-content">Loading script...</pre>
+            </div>
+            <div class="pack-box">
+                <h3>🚀 DEPLOY PACK</h3>
+                <pre id="pack-content">Loading metadata...</pre>
+            </div>
+        </div>
+
+        <div class="pack-box">
+            <h3>⚖️ COUNCIL VERDICT</h3>
+            <pre id="verdict-content">Awaiting preflight...</pre>
+        </div>
+    </div>
+
+    <script>
+        async function loadResults() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const runId = urlParams.get('run_id');
+            document.getElementById('run-display').textContent = runId;
+
+            // In v1, we fetch the bundle via ledger or direct file if served
+            // For MVP simplicity, we assume the run finished and data is in the bundle
+            // This would normally be another API call
+        }
+        loadResults();
+    </script>
+</body>
+</html>

@@ -1,0 +1,1351 @@
+# ODIN ESOTERIC PHYSICS DISTILLATION
+
+## SOURCE: the-geometry-of-proton-and-the-tetryen-shape-v1-1+(1).pdf
+
+See discussions, st ats, and author pr ofiles f or this public ation at : https://www .researchgate.ne t/public ation/340741231
+The Geometry of the Proton and the Tetryen Shape
+Preprint  · April 2020
+DOI: 10.13140/RG.2.2.25543.44964
+CITATIONS
+0READS
+710
+3 author s:
+Some o f the author s of this public ation ar e also w orking on these r elat ed pr ojects:
+Ener gy Wave Theor y View pr oject
+Terrence Dashon Ho ward
+Terryen W ave Fields, Unit ed St ates, L os Ang eles
+2 PUBLICA TIONS    3 CITATIONS    
+SEE PROFILE
+Chris D Seely
+The Chur ch of T ruth, L ove and Consciousness
+1 PUBLICA TION    0 CITATIONS    
+SEE PROFILE
+Jeff Y ee
+ZTE Corpor ation
+18 PUBLICA TIONS    0 CITATIONS    
+SEE PROFILE
+All c ontent f ollo wing this p age was uplo aded b y Jeff Y ee on 19 April 2020.
+The user has r equest ed enhanc ement of the do wnlo aded file.
+1 The Geometry of the Proton and the Tetryen Shape T. Dashon Howard, Chris Seely, Jeff Yee  April 18, 2020  Abstract:  The geometry of the proton is unique relative to its same-charge counterpart known as the positron.  The proton’s structure and its forces on an electron are modeled in this paper, analyzing why the proton has the ability to create an atom necessary for molecules and life to form, when the positron of identical charge interacts with an electron and matter seemingly vanishes.  1. Electron and Positron The proton is a known composite particle, currently believed to be a formation of multiple quarks.  However, quarks are never found in isolation as standalone particles [1], leading to the possibility that quarks are high-energy versions of another known and stable particle.  The electron is one such stable particle.  In The Relationship of Gravity and Magnetism, the electron was described with the following figure as electrical waves with amplitude of Planck charge (qP) converging on a core of one or more spheres with radius of Planck length (lP), reflecting such electric waves while introducing the spin of the particle and a new magnetic wave [2].  The values and units for all constants in this paper are found in the Appendix and are based on CODATA values [3].  In-wave energy and out-wave energy is perfectly conserved, but amplitude changes in Fig. 1.1. (b) and (c) as a ratio of the square root of the fine structure constant (ae).     
+ Fig. 1.1 – Longitudinal waves converging and reflecting on a sphere with radius of Planck length In that paper, the electron particle was described as standing waves, resulting in the combination of longitudinal in-waves and out-waves, and its energy and mass were accurately calculated.  A standing wave contains energy due to its in-waves and out-waves, but it is stored energy within a defined structure because there is no net propagation of energy within the volume [4].  Beyond the electron’s standing wave boundary, longitudinal traveling waves were derived to be Coulomb’s electrical force law and the transverse traveling waves as a result of a spinning particle were derived to be the electric’s magnetic moment.  This is described in Fig. 1.2.
+2  Fig. 1.2 – The electron particle formed from standing waves and its forces as traveling waves The electron has an antimatter equivalent known as the positron, which is identical in energy and mass.  The positron has the opposite charge, meaning that the positron is attracted to an electron, whereas two electrons or two positrons repel each other.  If electrons and positrons are formed from longitudinal standing waves, this can be explained by a phenomenon of standing waves in which two nodes form per wavelength where there is zero amplitude (no displacement).  This creates a stable position in a standing wave for a core.  These two nodes are separated a half-wavelength from each other – a 180-degree phase shift on the wave.  At this phase shift, the core of an electron and positron would have destructive wave interference measured between the two particles.  Without the phase shift, when two particles such as two electrons from the same node position interact, constructive wave interference would be measured.  Particles move to minimize amplitude and this causes motion in the direction where it is minimal.       Fig. 1.3 – The two zero-amplitude nodes in a wavelength of a standing wave (-) and (+) The wave amplitude of Fig. 1.1 (b) is better known as the elementary charge (ee).  Using the Coulomb constant (ke) and the distance between two particles (r), the equation for the electric force is shown for two particles.    (1.1)  Electric force (1.2) Because charge can be constructive or destructive, which is additive, the number (n) of particles in each group is multiplied by the elementary charge.  This variable (q) is used in Coulomb’s law, found in Eq. 1.4.  (1.3)
+3  Coulomb’s Law (1.4) The wave amplitude of Fig. 1.1 (c) was used in the aforementioned paper on magnetism to derive the electron’s magnetic moment, the Bohr magneton.  Two transverse waves leave at two poles as a result of a spinning electron.  When one pole (½) is measured at the electron’s radius (re), for a wave traveling at the speed of light (c), the following is the derivation of the Bohr magneton (refer to the Appendix about units).  Bohr magneton (1.5) The electron’s magnetic moment is a flow rate of magnetic wave energy.  In terms of a force, the magnetic force of a monopole is similar to the electric force from Eq. 1.2, but with the wave amplitude from Fig. 1.1 (c), as it is a conservation of energy of the electron’s out-waves.    (1.6) Magnetic monopoles with one pole are not found in nature.  Magnetism is commonly found with two poles, typically labelled as north (N) and south (S).  The following figure describes a simple dipole with a single positron (+) and electron (-).     
+  Fig. 1.4 – A magnetic dipole with one positive and one negative charge The equation for a magnetic dipole force extends the monopole force (Fm) by a ratio of the electron’s radius (re) and the distance (r) to the particle that the force is being measured.  As a result, the force now has r3 in the denominator.  Static magnets follow this rule, where the magnetic force decreases at the cube of distance [5].    Magnetic dipole force (1.7) A second electron, bottom of Fig. 1.5, is described at this distance (r) from the static magnet.  The repelling, magnetic dipole force is labeled as Fo, for an orbital force.  Meanwhile, the electric force (Fe) between the second electron and positron is attractive.  This scenario is not expected to occur due to the annihilation of an electron and positron, yet it will be used to describe equations that can be used to describe orbitals.
+4  Fig. 1.5 – An attractive electrical force and repelling magnetic force on a second electron The position of the second electron can be described in mechanics using the sum of forces rule.  Its position is found where the attractive electrical force and the repulsive orbital force are equal.  In mathematical terms, Fe=Fo.  Eqs. 1.2 and 1.7 are inserted for these forces in Eq. 1.9.   (1.8)  (1.9) Solving for distance (r) in the previous equation, for a single positive charge and negative charge, results in the most probable orbital distance for an electron in hydrogen.  This distance is known as the Bohr radius.    Bohr radius (1.10) Yet, an electron does not have a stable orbit around a positron.  The two particles seemingly annihilate because there is nothing to prevent the cores of these particles from reaching an extremely close distance to each other such that the electric waves that are reflected from both cores are perfectly destructive.  Not only would this collapse the standing waves of each particle such that no energy could be detected, but there would be no forces from traveling waves to attract or repel the second electron illustrated in Fig. 1.5.  This scenario is impossible.  2. Proton The positron and proton have the same positive charge, but there is a key difference between these two particles.  The proton is a known composite particle, currently believed to be made of three quarks.  More recently, five-quark (pentaquark) arrangements have been detected in proton colliders, consisting of four quarks and one antiquark [6].  Using the latter finding as a model, four particles with negative charges are placed in a three-dimensional arrangement in Fig. 2.1.  It is illustrated with spherical waves on the left of the figure and computer simulated on the right.
+5  Fig. 2.1 – Arrangement of four electron cores placed at standing wave nodes (right – computer simulated) Fig. 2.1 (left) illustrates spherical longitudinal wavelengths as circles, where the intersection of circles represents standing wave node positions where amplitude is zero in the three-dimensional arrangement.  Thus, it could be possible for four same-charge particles, such as four electron cores, to be placed within standing waves at nodes if they can reach this point.  Two electrons repel due to traveling waves that are constructive.  Yet, if there is significant energy forcing two electrons to the point where they are within each other’s standing waves, at nodes, it would meet the requirement for stability as zero wave amplitude.  Four such electrons would create a three-dimensionally stable object described in Fig. 2.1.  They would have significantly more energy than a standalone electron, stored from motion to reach the node, and its radius may shrink to the size of the particle core and not the electron’s standing wave radius as it no longer reflects longitudinal waves.  The in-wave amplitude from Fig. 1.1 (a) is used in the equation that describes the force between these particles.  It only occurs at a distance where r is less than the electron’s standing wave radius, thus the strong force occurs at short ranges.  Furthermore, the only stable position is a standing wave node which occurs at wavelengths.    Strong force (2.1) The ratio of the electrical force (Fe) and the strong force (Fs) is known as the fine structure constant (ae).  The relative strength of the electric force is roughly 1/137th the strength of the strong force.  This can be derived from Eqs. 1.2 and 2.1 as follows:  (2.2) The more recent pentaquark findings of the proton includes four quarks and one antiquark.  To complete the proposed geometry of the proton, a positron is placed in the center as illustrated in Fig. 2.2 (left).  In the computer simulated version on the right of Fig 2.2, the positron is multi-colored in the center as seen through the mesh of the outer particles.  This arrangement satisfies proton collision experiments, including a three-quark arrangement due to the annihilation of two particles, and it also satisfies beta decay results where electrons and positrons are ejected.  Each of these scenarios were detailed in The Geometry of Particles paper [7].
+6  Fig. 2.2 – Proton - arrangement of four electron cores and a positron at the center (right: simulated) Unlike the arrangement of the positron and electron, the proton’s geometry satisfies the conditions for stability to repel an electron into an orbital.  When energy is used as gluons between electron cores, no out-waves travel as the electric force to repel a distant electron.  Only the positron’s out-waves travel as longitudinal electric waves, creating destructive wave interference with an electron.  This is the electric force (Fe), which is attractive in all directions, decreasing at the square of distance.  Meanwhile, the dipole magnetic force, aka orbital force (Fo), requires an alignment of the electron with a dipole in the proton, repelling the electron at the cube of distance.  For a single proton and electron (hydrogen), this results in a distance of the Bohr radius, calculated earlier in Eq. 1.10.  It is the most probable distance for hydrogen because it occurs only at dipole alignment, being pushed out at this alignment and attracted at other times, varying the electron’s distance from the proton as it orbits.  Note: 1) only the Bohr radius is shown in Fig. 2.3 and not the probability cloud, and 2) the computer simulated version is not to scale to illustrate the proton’s composite structure in the image.    
+ Fig. 2.3 – Orbital - attractive and repelling forces of a proton and electron (right: simulated) Other atomic configurations share the same principles of attractive and repulsive forces for orbitals, but other atoms must consider additional protons and electrons and their positions to calculate all of the forces.  A summary of atoms from hydrogen to calcium and their orbitals is found in the Atomic Orbitals paper [8].
+7 3. Tetrahedron and Tetryen The tetrahedron is the proposed structure found in Fig. 2.1 due to the requirement for cores to be placed at standing wave nodes.  These are equidistant points in a three-dimensional structure at wavelengths where stability may occur.  The next figure illustrates the core of this structure (marked in orange).  It is a curved tetrahedral structure as a result of spherical waves produced by four particles.  
+ Fig. 3.1 – Curved tetrahedral structure at the core of four particles at the vertices of a tetrahedron The proton forms the nucleus of an atom.  The tetrahedral structure is found in the proton and in orbitals it creates.  Orbiting electrons are then shared with other atoms, binding to create molecules.  Based on this, it is not surprising that molecules also show tetrahedral arrangements.  This continual building process of molecules creating objects that can be seen with the human eye may be a replication of the simple rule of equidistant standing wave node placement. The tetrahedron’s shape may also be found to have curved lines, not straight lines.  Due to the spherical wave nature of particles, this curves a tetrahedron.  This curved shape is referred to here as the tetryen, illustrated in Fig. 3.2.
+8 Fig. 3.2 – The core, curved tetrahedral structure – a tetryen shape A video of the simulation is available on YouTube at: https://www.youtube.com/watch?v=4WY7lxoVF9E.  Conclusion The geometry of the proton is what makes it unique compared to the same-charge particle known as the positron.  While matter is undetectable after the interaction between a positron and electron, the proton is vastly different as it allows an electron to orbit and be shared with other atoms to create molecules.  Fortunately for humankind, this unique geometry of the proton allows the formation of visible matter.   The tetrahedron is the simplest platonic solid and may likely be the core of a proton, best described as four particles at the vertices of a tetrahedron and an antiparticle at its center.  This matches the results of the pentaquark discovery found in proton collider experiments.  Electrons and positrons, which are found in beta decay results for the proton and neutron, may be ideal candidates for quarks if their energies are modified because of wave interference properties when the core of these particles are placed within standing waves.   The center of four particles aligned at the vertices of a tetrahedron forms another, smaller tetrahedron.  Due to the spherical wave nature of particles, this tetrahedron is expected to be curved.  It is referred to in this paper as a tetryen.
+9 Appendix Constants  The following constants are used in this paper (CODATA values). Symbol Definition Value (units) c Wave velocity (speed of  light) 299,792,458 (m/s) ke Coulomb constant 8.9876 x 109 (kg*m/s2)a µ0 Magnetic constant 1.2566 x 10-6 (kg/m)a µB Bohr magneton 9.2740 x 10-24 (m3/s)a qP Planck charge 1.8756 x 10-18 (m)a ee Elementary charge 1.6022 x 10-19 (m)a ae Fine structure constant 0.00729735 lP Planck length 1.6162 x 10-35 (m) re Electron classical radius 2.8179 x 10-15 (m) a0 Bohr radius 5.2918 x 10-11 (m)  a – Corrected units when units of Coulombs (C) is replaced with distance (meters).   1 Weinberg, S., 2003. The Discovery of Subatomic Particles. Cambridge University Press, Cambridge, UK. 2 Yee, J., 2020. The Relationship of Gravity and Magnetism. ResearchGate. Online: https://www.researchgate.net/publication/340362832  3 Mohr, P., Newell, D. and Taylor, B., 2014. CODATA Recommended Values of the Fundamental Physical Constants, Rev. Mod. Phys. 88, 035009. 4 Wikipedia, 2020. Standing Wave.  Online: https://en.wikipedia.org/wiki/Standing_wave.   5 Du Tremolet de Lacheisserie, E., Gignoux, D., Schlenker, M., 2003. Magnetism Fundamentals. Springer, New York, NY. 6 Aiij, R. et al (LHCb collaboration), 2015. Observation of J/ψp resonances consistent with pentaquark states in Λ0b→J/ψK−p decays. Physical Review Letters. 115 (7) 072001. 7 Gardi, L., Yee, J., 2019. The Geometry of Particles and the Explanation of Their Creation and Decay. ResearchGate. Online: https://www.researchgate.net/publication/335101008.  8 Yee, J., 2019. Atomic Orbitals: Explained and Derived with Energy Wave Equations, Vixra.org, 1708.0146.                                                    
+View publication statsView publication stats
+
+---
+## SOURCE: Living_Energies_Viktor_Schauberger_Callum_Coats.pdf
+
+TABLE OF CONTENTS  
+FOREWORD  vi Chapter 6  
+EARTH'S ATMOSPHERIC ENVELOPE  
+Chapter 1  6.1 The Atmosphere  87 
+WHO WAS VIKTOR SCHAUBERGER?  6.2 The Terrestrial Bio-Condenser 89  
+1.1   Viktor Schauberger-the Man  1 6.3 The Development of Electricity 95  
+1.2 What happened in America  15 6.4 Storms, Water Vapour and Climate 99  
+Chapter 7  
+Chapter 2  TEMPERATURE  
+ENERGY  7.1 Other Forms of Temperature   102 
+2.1 Energy Today  30 7.2 Temperature -Health and Disease 105 
+2.2 Relative Energies  32 
+2.3 The Fateful Choice  34 Chapter 8 
+2.4 But What is Energy?  36 THE NATURE OF WATER 
+8.1 Water - a Living Substance 107  
+Chapter 3  8.2 The Anomaly Point of Water   111  
+NEW DIMENSIONS OF ENERGY  8.3 Dielectrics and Electrolysis 111  
+3.1 Ur-Primordial Energy  39 8.4 Qualities of Water 114  
+3.2 Sound as a Formative Force  42 8.5 The Temperature-Gradient 115 
+3.3 The Phenomenon of Resonance  44 Chapter 9 
+3.4 The Creative Energy-Vortex  48 THE HYDROLOGICAL CYCLE 
+9.1 The Full Hydrological Cycle  118 
+Chapter 4  9.2 The Half Hydrological Cycle  122 
+WHAT IS MOTION?  9.3 Temperature Gradients and  
+4.1 The "Original" Motion  55 Nutrient Supply                               125 
+4.2 Forms of Motion  56 
+4.3 Thesis, Antithesis and  Chapter 10 
+Synthesis     60
+ THE FORMATION OF SPRINGS  
+4.4 Phi or the "Golden Section"  65 10.1 Seepage and True Springs 129 
+4.5 Magnetism and Electricism  70 10.2 The Rising of Springwater 131 
+4.6 Other Dimensions of Energy  74 10.3 Energy from the Deep Ocean          135 
+Chapter 11  
+Chapter 5  FLOATING STONES AND THE  
+THE SUN  STATIONARY TROUT  
+5.1 The Light and Temperature of the11.1  Floating Stones   139 
+Sun 77 11.2 The Stationary Trout                        141 
+5.2 The Sun as a Fertilising Entity  82 11.3 Fishes from Eggs                              144
+Chapter 12  
+THE LOG-FLUME 148 
+Chapter 13  
+THE DYNAMICS OF FLOW 
+13.1 Temperature Gradients during Flow 156 
+13.2 The Formation of Vortices 163 
+13.3 The Formation of Bends 166 
+13.4 The Geostrophic Effect on Flow     170 
+13.5 The Effects of Conventional River 
+Engineering 174 
+13.6 Hydro-Electric Power 176 
+Chapter 14 
+WATER SUPPLY 
+14.1 The Wooden Water main 179 
+14.2 The Stuttgart Investigation 183 
+14.3 The Circulation of Blood 188 
+Chapter 15 
+DRINKING WATER SUPPLY 
+15.1 The Consequences of Chlorination 
+and Fluoridation 193 
+15.2 The Springwater Producing 
+Device 197 
+15.3 The Storage of Water 200 
+Chapter 16 
+TREES AND LIGHT 
+16.1 The Entity "Tree" 205 
+16.2 The Bio-Magnetic Tree 215 
+16.3 Tree Types 216 
+16.4 Trees - the Mirrors of Light 217 
+16.5 Photosynthesis 219 
+16.6 Why Growth occurs at the 
+Extremities 221 
+Chapter 17 
+FORESTRY - A NOBLE OR IGNOBLE 
+ART? 
+17.1 Contemporary Forestry 225 
+17.2 Monoculture 227 
+17.3 Light- and Shade-Demanding Trees 229 
+17.4 Light-Induced Growth 235 17.5 Other Man-made Depredations 237 
+Chapter 18  
+THE METABOLISM OF THE TREE 
+18.1 The Movement of Sap 240 
+18.2 Temperature Gradients in the 
+Tree 245 
+18.3 The Tree as a Bio-condenser 248 
+18.4 Root Systems 252 
+Chapter 19 
+AGRICULTURE AND SOIL FERTILITY 
+19.1 The 'Golden Plough' 256 
+19.2 Sun Ploughing 260 
+19.3 Of Cows and Scythes 260 
+19.4 The Pernicious Effects of Artificial 
+Fertilisers 262 
+19.5 Biological Agriculture 264 
+Chapter 20 
+THE GENERATION OF FRUCTIGENIC 
+ENERGIES 270 
+Chapter 21 
+IMPLOSION 
+21.1 The Biological Vacuum 276 
+21.2 The Repulsator 278 
+21.3 The Repulsine 280 
+21.4 The Implosion Motor 281 
+21.5 The Trout Motor and the 
+Biotechnical Submarine 285 
+21.6 The Klimator 287 
+21.7 The Flying Saucer 288 
+Chapter 22 
+LAST THOUGHTS 295 
+GLOSSARY 301 
+BIBLIOGRAPHY 305 
+ABOUT THE AUTHOR 306 INDEX 307
+FOREWORD  
+t is very difficult to observe the extraordi- 
+nary creativity and fruitfulness of Nature without a sense of wonder. But wonder is at 
+odds with reason. It has been said that 
+humanity's schism with Nature was contrived 
+so that we could develop our sense of reason to the extent that we now experience. One of the outcomes of this, because they are preoc- cupied with physical form, is that our contem- 
+porary biological sciences seem to believe that 
+this munificent fecundity of Nature 'just hap- pens'. Viktor Schauberger's vision was that this 'happening' is the result of a complex interaction of subtle energies, a process that is initiated and sustained from what he called 
+the 4th and 5th dimensions of Being. 
+Viktor Schauberger was a man who was 
+undoubtedly inspired by more exalted levels of reality and meaning than most of us experi- ence. His great gift was to be able to show how it is the finer and 'higher' energies that are 
+responsible for creating form and structure, not 
+the other way round as contemporary science would suggest. The story of his life is tragic at a personal level, for he was constantly ridiculed, because of the vested interests of science for whom he was a threat. He died a 
+broken man when he saw that the gift he 
+wanted to make was corrupted by the power- ful for material gain. His prophetic vision was that humanity was bound for self-annihilation if steps were not immediately taken to change course. In a real sense we have had to see 
+many of his specific prophecies come true 
+before we were ready to take him seriously. 
+Schauberger  died  in   1958.  Why  has  it 
+taken so long before a book could be pub- lished that is so vital to the salvation of 
+humanity? Part of the answer lies in history. When Austria was absorbed by Nazi Germany in 1938 there was a cultural meld- 
+ing. Viktor Schauberger was an Austrian, as 
+was Hitler, who saw that this remarkable inventor could be valuable to his cause. Although Viktor was coerced to work for the Third Reich, he has inevitably been associ- ated with it. Postwar German consciousness, 
+being anxious to distance itself from the 
+Hitler period, could not then easily embrace Schauberger's vision. 
+It took a Swedish engineer inspired by the 
+vision of Rudolf Steiner to rescue Viktor Schauberger from oblivion in 1976. Steiner 
+and Schauberger were contemporaries, and it 
+is tempting to believe that they were both inspired by a similar source of profound wis- dom of universal meaning. They had some lengthy discussions, and one wonders how much common ground they found! 
+This Swedish engineer's book was pub- 
+lished by a small publisher better known for its music publishing. I heard of Olof Alexandersson's Det Le vande Vattnet in 1979 
+from some Swedish-speaking British friends. I do not read Swedish, and so could not make a 
+'rational' assessment of the book. But as some- 
+times happens in publishing, I had a 'hunch' this book was important, and that it must be translated into English and published widely. 
+My previous company, Turnstone Press, in 
+1982 published Living Water which is a 
+popular introduction to Viktor Schauberger, 
+the man and his mission. This lovely little book has since gone through five reprints and 
+VI I
+Foreword   vii  
+this caused a strong demand for an authorita- 
+tive book on Viktor Schauberger's practical 
+ideas for working with Nature, rather than against her,   as   we   currently   do.   Clearly 
+Schauberger's time has come, as millions of 
+people all over the world realise that we are dangerously off-course. 
+It was when I was preparing Living Water 
+for press that Callum Coats came into my life. Through his mother Callum met Viktor's 
+physicist son, Walter Schauberger in  1977 
+and, sensing that his future work lay here, 
+began  an  intensive  study  of  Schauberger 
+theory.   In   1981   Callum   helped   edit   the translation of Living Water, during which he 
+confided with me his ambition to write a 
+definitive work on Viktor Schauberger. This was to prove a much more ambitious 
+task than he anticipated, and he has devoted 
+all his resources and energy for over 15 years to this   end.   It  is   a  remarkable  body  of 
+research, and Callum undertook to replicate 
+some of the experiments. A crucial part of the 
+process   was   to   spend   three   years   with Walter's Pythagoras-Kepler-System Institute at Lauffen   in   the   Salzkammergut   near 
+Salzburg. Walter has now passed on, but the 
+Schauberger   family   has   cooperated   with 
+Callum in helping this book be born, as with its companion  work  Eco-technology,  Viktor Schauberger's own writings in three volumes, which Callum has compiled and translated. 
+Some thoughts on how to approach this 
+book.  Callum and I talked about how to arrange the text of Living Energies. As the publisher, I did not want readers to be put off early in the book by a discussion of energy and motion. Callum, persuaded me that the 
+more popular material - about water as the 
+life-blood of the Earth, and how we need to cherish it, and about the magic of trees and the biomass of the Earth - can really only be appreciated   with   some   understanding   of what is energy. However, if you do find the 
+discussion of energy and motion (for energy 
+is motion) daunting, my suggestion is that you skip to a later chapter to get the sense of our lost inheritance. You can always return to put in the theory later. I suspect, in any case, that this is not a book that most will read through in one swoop. Rather it is an 
+inspired fountain of wisdom to be dipped into, here and there, for many a season. Another hint, I was finding the chapter on energy hard going until I read it on an 
+Orkney beach. Surrounding yourself with 
+nature makes the ideas come alive! 
+Schauberger, in common with other 
+pioneers of radical thinking, realised that words carry associations. Therefore, in order to wean people away from a conventional 
+word which is often inadequate for the task, 
+it is sometimes appropriate to coin a new word, to allow their imaginations to grasp a more inclusive or specific concept or idea. This is especially relevant for the subtle energies which are responsible for the 
+interaction of all creation and the incredible 
+abundance and fecundity of Nature. We have tried to cross-reference these in the text, and there is a glossary in the back of the book. 
+Viktor Schauberger, besides being an 
+impeccable observer of Nature, was also an inventor who saw how the practical applica- tion of his ideas could transform our society. Just as other visionaries have heard the har- mony of the Universe as 'The Music of the 
+Spheres', so Viktor Schauberger saw the sym- 
+metry of all creation in terms of sacred geom- etry. Inevitably this requires a modicum of mathematics in the text. But to show that it is not necessary for an appreciation of Schauberger's ecological understanding, we 
+have, where possible, extracted the more 
+theoretical material into boxes. So, if you are daunted by mathematical symbols, don't be dismayed, for you will still find most of the text inspiring and enthralling. 
+Living Energies may b ecome the catalyst for 
+re-writing all the textbooks of science and the 
+manuals of politics and planning. It shows how humanity can take its place as the responsible guardians of a very precious centre of life in the Universe. We see this as required reading for anyone planning to 
+participate in the next century. It is a guide to 
+the new millennium! 
+Alick Bartholomew, 
+Wellow, September 1995.  
+vii
+Viktor Schauberger  
+Born: 30th June 1885  
+Holzschlag 2,  
+Pfarramt Ulrichsberg,  
+Upper Austria.  
+Died: 25th September 1958  
+Linz, 
+Upper Austria.  
+viii
+1 
+WHO WAS VIKTOR SCHAUBERGER ? 
+1.1 Viktor Schauberger - The Man  
+hroughout recorded history humanity 
+has been periodically uplifted by the 
+contributions of a few gifted and 
+enlightened individuals, whose teachings and philosophy have gradually raised the level of human awareness; the Buddha, Jesus Christ and the Prophet Mohammed being the most familiar examples of how a single 
+individual can produ ce far-reaching changes 
+in the consciousness of humanity. Lesser mortals have also played a vital role in this process and the seeding of human conscious- ness with higher truths always seems to come at a time when humankind as a whole 
+is ready to receive them.
+ 
+It is sometimes said that these great teach- 
+ers, themselves ardent students of Nature and the Divine, lived ah ead of their time. At 
+first view this would appear to be true, but on further reflection it becomes apparent 
+that they lived precisely when they should 
+have, for otherwise they could not have provided the vision or the direction neces- sary for humanity's upward evolution and progress. In most instan ces a signpost is long 
+forgotten and unheeded if it lies behind, and 
+to be of any use it must of necessity stand 
+out ahead in order to indicate the new way. Many such human signposts have punc- tuated the passage of humanity's progress, 
+but have received recognition for their great 
+contribution only long after their own 
+passing.
+ 
+These exceptional individuals are indeed 
+visionaries in the truest sense of the word,  for they are endowed with a far higher sense 
+of perception than their contemporaries. For 
+their work an enormous dedication and courage is necessary. Historically, and Viktor Schauberger was no exception, the lives such individuals have led have been dogged with confrontation, difficulty , doubt and the great 
+loneliness of the path-finder, or the individ- 
+ual who stands alone far out in front on evo- lution's upward way. As pioneers, apart from breaking new ground, they also suffer great adversity in thei r encounters with the 
+powerful opposition of those whose interests 
+and beliefs are rigidl y immured in the cur- 
+rent status quo.
+ 
+Such great leading lights as Copernicus, 
+Johannes Kepler and Galileo Galilei, come to mind who devoted their whole lives to the 
+understanding of the universe and the 
+raising of human consciousness. In the main 
+they were only permitted a view into their Promised Land, a vista over the unfolding of their life's work, but almost without excep- tion had to forgo the passage into the new and the reaping of the fruits of their travails. 
+Denied any recognition for their contribu- 
+tion, their end was ofte n clothed in misery 
+and penury, as though the gods would exact from them the very last ounce of personal surrender. Many of these enlightened indi- viduals died alone, unloved, unwanted and 
+unsung.
+ 
+Kepler was reduced to total insolvency 
+and, although owed a considerable sum for his services by the Duke of Regensburg, he died a pauper and was buried in a common grave outside hallowed ground, for he, like
+ 
+1 T
+2   Living Energies  
+his contemporary Galileo, had dared to 
+question the authority of the Church. To this day no-one knows where Kepler's body lies. He too had had a vision and, through his meticulous study of the movement of the planets, produced his gr eat work, Harmonices 
+Mundi, "The Harmonies of the World". 
+Having finally completed it in 1618, he dedi- cated it to James I of England, declaring that now that he had discovered the harmonious qualities and proportions of all things, there would no longer be the need for human con- 
+flict. Kepler's opus had barely been pub- 
+lished when the Thirty Years' War broke out, thoroughly obscuring and interring all his endeavours. This happened as a result of the so-called 'Defenestration of Prague' in which on May 21st, 1618 the envoys of the Austrian 
+Kaiser were hurled from the windows of the 
+Great Hall.
+ 
+Mozart, who took music, its resonances 
+and harmonies to new heights, also suffered a similar fate - oblivion at the age of 35 and 
+burial in a common grave. Max Planck, the 
+great physicist who brought an end to the purely materialistic world view of the late 19th century with his quantum theory in December 1900, was another who, bereft of adequate clothing, food or other means of 
+support, died alone in extreme poverty and 
+cold.
+ 
+Viktor Schauberger's life followed a path 
+similar to those of his illumined predeces- sors, for in his life too he was met with derision, slander and deceit in a long con- 
+frontation with the Establishment in its 
+various forms. He was a man of enormous strength of purpose; he was warm and encouraging, particularly to young people in whom he took a great interest, for he saw in them the possibility for the restoration of a 
+secure and bountiful future. But to those 
+whose view of life he considered irretriev- ably perverted spiritually and intellectually, he was absolutely un compromising, seeing 
+them as obstacles on the path of human evolution and in the rehabilitation of the 
+environment.
+ 
+Naturally he made many enemies in the 
+process, but on the other hand a certain bal- ance   was   achieved   by   a   very   few   en-
+ couraging and loyal friends such as Prof. Philipp Forchheimer, a hydrologist of world repute. Another was Prof. Werner Zimmermann, a Swiss, who published arti- cles by Viktor in his ecologically oriented magazine Tau between 1935 and 1937. 
+Werner Zimmermann frequently entered the 
+lists in Viktor's defence against the narrow- minded, self-interested attacks of academia and entrenched bureaucracy, which on occasion were very intense. More often than not Viktor's discoveries totally contradicted 
+established theory and in their flawless 
+functioning and practic al implementation 
+seriously threatened the credibility and reputation of scientist and bureaucrat alike.
+ 
+There are many more such individuals 
+who have given themselves wholly to the 
+betterment of their fellow human beings. Without exception they were endowed with extraordinary perceptive and intuitive abili- ties, which afforded them  fresh insights into 
+the way in which the world functioned, 
+enabling them to understand phenomena hitherto inexplicable to  their contemporaries. 
+They were aware of another dimension of reality, that 'Dimension of Comprehension' which makes sense of the whole - just as the 
+3rd dimension makes a two-dimensional 
+world understandable.
+ 
+Some of these great teachers were born 
+with this ability, while others fought long and hard external and personal battles to acquire it, their struggles fraught with 
+hardship and ridden with disappointment. 
+Often assailed by doubt, they nevertheless courageously persevered, urged ever onward to finish the task they had set themselves to complete. If ever there was a true exponent of the person described in 
+Rudyard Kipling's poem If
+1, it was Viktor 
+Schauberger.  
+He was one of those rare human beings, 
+those explorers in human thought and endeavour, whose chosen  path was to throw 
+light on the future. It is therefore inevitable 
+that he too will eventually take his place 
+amongst the ranks of these exalted, self- sacrificing beings. In the years to come he will be acknowledged as one of the principal
+1: Who was Viktor Schauberger?   3  
+guiding   spirits   of   the   21st   century   and 
+beyond, who brought about a fundamental shift of Copernican proportions in human- 
+kind's appreciation of  Nature and natural 
+energies.
+ 
+There can be very few of his contempo- raries whose comprehension of the sublime energetic interdependencies, upon which life 
+at all its levels is founded, was so profound, 
+Nor, apparently, has any other person had Viktor's deep understanding of that living substance so vital to all life processes - water, which he viewed as the blood of Mother-Earth, for like Sir James Lovelock, 
+the originator of the Gaia hypothesis
+2, Viktor 
+too saw the whole Earth as an organism and expressed this view in his early writings of 
+the 1930s.
+ 
+Viktor Schauberger was born on June 30th, 
+1885 in the parish of Ulrichsberg, in Upper 
+Austria. He was descended from a long line 
+of foresters, who had devoted their whole lives to the natural management and admin- istration of the forest, a dedication mirrored in their family motto, 'Fidus in silvis 
+silentibus' or 'Faith in the silent forests'. With 
+this as his background and much against his father's will, but with the support of his mother, at the age of 18 he flatly refused to follow in the footsteps of his two elder broth- ers and attend university, having seen how it 
+had affected his brothers' thinking. Apart 
+from his earnest desire to become a forester, the main reason for his refusal was that he did not wish to have his natural way of thinking corrupted by people he considered totally alienated to Na ture. He did not want 
+to be forced to see things through other jaun- 
+diced eyes, but through his own. For, as he later wrote:
+ 
+The only possible outcome of the purely catego- 
+rizing compart-mentality, thrust upon us at 
+school, is the loss of our creativity. People are los- 
+ing their individuality, their ability to see things as they really are and thereby their connection with Nature. They are fast approaching a state of equilibrium impossible in Nature, which must force them into a total economic collapse, for no 
+stable system of equilibrium exists. Therefore the 
+principles upon which our actions are founded
+ are invalid, because they operate within parame- 
+ters that do not exist.  
+Our work is the embodiment of our will. The 
+spiritual manifestation of this work is its effect. When such work is done properly, it brings 
+happiness, but when carried out incorrectly, it 
+assuredly brings misery.
+3 
+Taking his mother's advice and following his 
+natural instincts, Viktor became a junior for- 
+est warden, spending the next few years 
+often in areas of remote forest. There he was able to perceive movements of energy and natural phenomena in Nature's own labora- tory, because in Austria in the early part of this century, circa 1900-1915, there were 
+large tracts of forest still untouched by 
+human hand. After the 1914-1918 war in which he was wounded, Viktor returned to forestry, eventually en tering the employ of 
+Prince Adolph zu Schaumburg-Lippe, the 
+owner of a large hunting and forestry 
+reserve in Steyrling.
+ 
+In these districts there had been no 
+interference in the balance of Nature and Viktor was thus able to observe events that are today inconceivable, and 
+which no longer take place because of 
+the enormous deterioration of the en- vironment. It was here that he acquired the insights into the natural movement of water that resulted in the building of his first log flume, which will be described in 
+detail in chapter 12. Here too he first became 
+aware of other levitational energies inherent in water, for one day in the middle of a very cold winter, as he was about to cross over a fast-flowing mountain stream, he flushed a stationary trout from its lair as he sought a 
+firm hold for his staff on the stream bed. Its 
+lightning flash upstream immediately caused a number of questions to race through his mind:
+ 
+How did the trout actually manage to get to this 
+spot - and later I saw dozens of them in the same 
+stream - which was cut off by a 60 metre high 
+waterfall about a kilometre downstream, where the water was atomised into a veil of mist?
+ 
+How was it able to flee upstream like a streak 
+of greased lightning in mockery of all the laws of gravity?
+4   Living Energies  
+How was it possible for this fish to stand so 
+motionlessly, only steering itself with slight 
+movements of its tail-fins, in this wildly torren- tial flow, which made my staff shake so much that I could hardly hang onto it?
+ 
+What forces enabled the trout to overcome its 
+own body-weight so effortlessly and quickly and 
+at the same time overcome the specific weight of the heavy water flowing against it?
+ 
+Why didn't the water freeze even during peri- 
+ods of severe frost with temperatures below -30
+oC?4 
+While Viktor undoubted ly had an especial 
+talent for observation, a penetrating power of perception undimmed by precon- ceptions, he also developed what might be called an active consciousness, an ability to go beyond the merely visual in search of what lay behind a given phenomenon. 
+This taught him a great deal and how this 
+ability gradually evolved, he explained as follows:
+ 
+The Schaubergers' princi pal preoccupation was 
+directed towards the conservation of the forest 
+and wild game, and even in earliest youth my fondest desire was to  understand Nature, and 
+through such understanding to come closer to the truth; a truth that I was unable to discover either 
+at school or in church.
+ 
+In this quest I was thus drawn time and time 
+again up into the forest. I could sit for hours on end and watch the water flowing by without ever becoming tired or bored. At the time I was still unaware that in water the greatest secret lay hid- 
+den. Nor did I know that water was the carrier of 
+life or the ur-source
+5 of what we call conscious- 
+ness. Without any preconceptions, I simply let my gaze fall on the water as it flowed past. It was only years later that I came to realise that run- ning water attracts our consciousnesses like a 
+magnet and draws a small part of it along in its 
+wake. It is a force that can act so powerfully that one temporarily loses on e's consciousness and 
+involuntarily falls asleep.
+ 
+As time passed I began to play a game with 
+water's secret powers; I surrendered my so-called 
+free consciousness and allowed the water to take 
+possession of it for a while. Little by little this game turned into a profoundly earnest endeav- our, because I realised that one could detach one's
+ own consciousness from the body and attach it to that of the water.
+ 
+When my own consciousness was eventually 
+returned to me, then the water's most deeply con- cealed psyche often revealed the most extra- ordinary things to me. As a result of this investigation, a researcher was born who could dispatch his consciousness on a voyage of discov- 
+ery, as it were. In this way I was able to experi- 
+ence things that had escaped other people's notice, because they were unaware that a human being is able to send forth his fr ee consciousness into 
+those places the eyes cannot see.
+ 
+By practising this blindfolded vision, I eventu- 
+ally developed a bond with mysterious Nature, 
+whose essential being I th en slowly learnt to 
+perceive and understand.6 
+It is very interesting to compare this with a 
+statement taken from The Urga Manuscript7, 
+which is the record of a letter by Do-Ring, a 
+scholar and scribe to the Panchen Lama, 
+written in the early 1920s to his friend, Wing On concerning the in ner life and describing 
+the functions and phases of spiritual evolu- tion.
+ 
+It [the 6th function] is the one in which the ini- 
+tiate is given the power of sending his intellect or conscious mind right away from his body, direct- ing it to any part of the material earth he desires it to visit, and then recalling it still conscious of 
+all that it has seen.
+8 
+Truly the intellect, or that part of life that sees 
+and records its observations, can and does leave the body and travel great distances, observe detail at those distances and return, giving to the mind as a whole an accurate picture of where it has 
+been and what it has seen. This function occurs 
+at the immeasurable will and is preceded by a short, deep meditation.
+9 
+These perceptions of truth presented Viktor 
+with considerable problems in translating 
+them into everyday language, for when it comes to transferring spiritual imagery into mundane word-pictures - regrettably still 
+the only means of human communication - 
+enormous difficulties ar e encountered due to 
+the limitation of language. While all lan- guages are in a constant state of evolution or devolution, the words and terminology at
+1: Who was Viktor Schauberger?    5  
+any given moment are a reflection of the cur- 
+rent state of conceptual awareness. Thus for 
+someone who is 'ahead' of his time, gener- ally speaking the conceptual framework of language does not necessarily extend to the clear and unequivocal explanation of new 
+concepts for which new acceptable words 
+may have to be coined. 
+n many instances therefore, when he came to describe these phenomena, Viktor uses not the conventional terminology of physics, chemistry or biology, etc., but his own words. In this he was greatly assisted by the struc- 
+ture of the German language, which facili- 
+tates the formation of new concepts through additive nouns. Despite this and for lack of suitable technical vocabulary, their interpre- tation and comprehension is still sometimes extremely difficult, which in his writings he 
+freely admitted , "Few will understand the 
+meaning of the above! Some individuals, however, will obtain an indefinable inkling."
+10 
+In an attempt at clearer explanation he did 
+eventually study these subjects on his own in 
+order to acquaint himself with their respec- 
+tive terminologies. However, in his writings they are often used me rely as indicators of 
+the theme under discussion and therefore cannot always be taken literally. 
+Water, forests, natural energies and their 
+generation were ever his passionate concern. 
+In our present way of looking at things he would probably be considered one of the world's first 'greenies'; Dr. Richard St. Barbe Baker, founder of 'The Men of the Trees' in 1922, and Viktor's friend, being another. 
+Viktor had tremendous foresight and an 
+enormous capacity for writing, reputedly having composed many, many thousands of pages. At times, apparently in a trance-like state, he wrote for hours on his typewriter with no idea of what he had written until 
+finally reading it at the end. Amongst other 
+things, he set down all that he saw would inevitably happen, if we did not mend our ways and change our whole approach to the environment, both technologically and con- ceptually. All the various crises that are 
+today engulfing humanity, he foresaw as 
+long ago as 1930. When questioned on the accuracy  of  his  predictions,  he  answered very simply, saying that, "For a person who 
+lives 100 years in the future, the present is no 
+surprise."11 
+In the late 1920s as a result of the suc- 
+cessful operation of Viktor's Steyrling log- flume, Prof.Philipp Forchheimer was asked 
+by the Austrian Government to investigate 
+Viktor's unusual theories. Through their col- laboration, Forchheimer gradually became aware of the truth of Viktor's ideas, eventu- ally insisting that Viktor put all his discover- ies down on paper, saying that he thought 
+Viktor's theories were not only valid, but 
+extremely valuable. Forchheimer later con- fided that he was delighted to have retired, because he would now be relieved of the humiliating task of telling his students that he had been teaching them rubbish for the 
+previous forty-five years. 
+With the cooperation of Prof. Wilhelm 
+Exner, President of the Austrian Academy of Science and inventor of the Exner electro- scope, a treatise of Viktor Schauberger's enti- 
+tled "Turbulence", which described the 
+braking function of vortices and their rela- tion to water temperature, was placed under seal and on deposit at the Austrian Academy of Science on January 1st, 1930. This was done, not only to ensure the precedence of 
+Viktor Schauberger's theories on water 
+movement, but also to safeguard them for some time in the future. While stressing its value, Forchheimer considered there to be no point in publishing it at the time, because the hydrological world was not ready. The sci- 
+ence of hydraulics would first have to 
+change its values and way of thinking before these trail-breaking concepts could be taken seriously. It wasn't until 1974 that this docu- ment was released to Viktor's son, Walter Schauberger. 
+Forchheimer did change his views later, 
+however, and saw to it that Viktor's pioneer- ing theories on temperature and its effect on the movement of water were published in 1930-31 in a series of articles in Die Wasserwirtschaft, the Austrian Journal of 
+Hydrology. This showed Forchheimer to be 
+all that a true scientist should be, and rarely is. It demonstrated the honesty and humility of a sincere academic who was prepared to
+6   Living Energies  
+accept that his former ideas had been wrong 
+and that current thinking could be changed; 
+that there was another way of looking at things.
+ 
+Viktor's aim was always to try to perceive 
+the dynamic reality behind what he saw as 
+physical illusion. He claimed, and rightly so, 
+that by and large we human beings are extremely superficial, looking for and only seeing direct relations between cause and effect, whereas Nature always moves indi- rectly. But worse than this, in our ignorance 
+of the unseen dynamic behind the seen mani- 
+festation, we mistake the effect for the cause, greatly compounding this error by failing to see that an effect beco mes the cause for a fur- 
+ther effect in an endless chain of causes and effects. In this regard Viktor comments:
+ 
+Our thinking is inconsistent with what we actu- 
+ally see. The eye is a perfect, natural organ. The seen image is a reacti on phenomenon. Using an 
+artificial optical apparatus the same effect, for 
+example, can only be obtained by a roundabout way, by means of a negative. The eye, on the other hand, immediately pres ents us with the dia- 
+positive, namely the true image.
+ 
+Our sight constitutes an unconscious, auto- 
+matic transformation process, whereby the nega- 
+tive image - like a photographic negative - i.e. the effect, is transformed into a positive one, like a dia- positive colour slide. Our thinking, however, is really a purely individual, conscious process and therefore learnable. If our thinking is to attain the 
+same perfection as our seeing, then we must 
+change our way of thinking and learn to see real- ity, not as an action, but as a reaction. Perfect thought lies in the apprehension of the correct reaction, for before the eye can show us the posi- tive, it must first transform the negative and in a 
+certain manner must break up what it records. 
+What we see, therefore, is the turning inside out of what we receive. What our mind grasps in this way must be re-formed and re-thought if we wish to attain that for which we strive.
+2 
+Our direct mental approach towards the 
+understanding and inves tigation of natural 
+phenomena; our present materialistic and scientifically ingraine d view that only the 
+physically palpable a nd measurable repre- 
+sents the true reality, has lead to greater and
+ greater confusion and the necessity to elabo- 
+rate more and more complex theories to 
+explain the various func tions of the physical 
+world. Our great omissi on has been our total 
+disregard and our failure to come to grips in depth with the more ephemeral, unseen, yet fundamental energetic causalities. Like the 
+negative mentioned in the quotation above, 
+these energies manifest themselves only 
+indirectly, the physical constructs of the outer physical world being a positive reflec- tion of their respective functions. What we perceive as the foundation of physical reality - a reality to which we have ascribed laws - 
+is therefore only half of the truth, for in their 
+dynamic these format ive magnitudes con- 
+form to a sublime inner law of energetic reci- procities which will be discussed more fully 
+in chapters 3 and 4, and about whose mutual interaction Viktor commented:
+ 
+Nature is not served by rigid laws, but by rhyth- 
+mical, reciprocal processes. Nature uses none of the preconditions of the chemist or the physicist for the purposes of evolution. Nature excludes all fire on principle for purposes of growth; therefore all contemporary machines are unnatural and con- 
+structed according to false premises. Nature avails 
+herself of the biodynamic form of motion through which the biological prerequisite for the emergence of life is provided. Its purpose is to ur-procreate higher' conditions of matter out of the originally inferior raw materials, which afford the evolution- 
+ally older, or the numerically greater rising gener- 
+ation, the possibility of a constant capacity to evolve, for without any growing and increasing reserves of energy there would be no evolution or development. This results first and foremost in the collapse of the so-called Law of the Conservation of 
+Energy, and in further consequence the Law of 
+Gravity, and all other dogmatics lose any rational or practical basis.
+13 
+In Viktor's view Western science and educa- 
+tion generally left much to be desired. Our civilisation suffered from a myopic compart- 
+mentalisation of the mind, which prevented 
+a detached overview, a synthesis of what was observed:
+ 
+Today's science thinks too primitively; indeed it 
+could be said that its thinking is an octave too
+1: Who was Viktor Schauberger?    7  
+low. It has still not ventured far enough into the 
+realm of energy, and its attitude has remained 
+purely materialistic. For this reason it is princi- 
+pally to blame for the state of affairs we are expe- r i e n c i n g  t o d a y .      I n      a l l     p r o b a b i l i t y ,      t h i s  development was necessary, for how else should a misguided humanity perceive the true interde- pendencies?
+14 
+Without doubt, therefore, there is a definite 
+intention to teach young people upside-down methods of working with which they have to mis- earn their daily bread. That is to say, instead of moving forwards, they go backwards all the more rapidly in step with the improvements in the con- 
+trary methods of motion. For only thus can 
+today's teaching principles flourish.
+15 
+In contrast to contemporary science, Viktor 
+saw will and spirit as the principal causative forces of physical existence. They deploy 
+themselves through the agency of various 
+lower orders and magnitudes of energy belonging to the 4th and 5th dimensions, i.e. through those more subtle, non-spacial dimensions of being that are inherent, but are not perceived in the three dimensional 
+world to which we are accustomed. Of 
+ethereal nature and endowed with very high frequencies and formative potencies, they could also be termed 'potentialities', which in their extremely sensitive and unstable state of energetic equi librium await the right 
+stimulus and occasion to manifest them- 
+selves. In being able to speak of these higher and therefore more powerfully and pro- foundly structuring dimensions of reality, Viktor's own comprehension of them must have been at the level of the 6th dimension, a 
+level where the encapsulation and under- 
+standing of a given concept or phenomenon is both simultaneous and total. Perhaps this might be termed the dimension of 'throughth' or pure truth, a crystal-clear transparency, a complete comprehension of 
+the wholeness devoid of all uncertainty and 
+unclarity.
+ 
+From 1930-1933 Viktor Schauberger 
+worked with systems for water re- generation and the production of high-qual- ity drinking water for which patents were 
+applied in 1934 (see fig. 15.2). This rather
+ cumbersome prototype was later followed by an egg-shaped device which was much 
+smaller and far more efficient. When tested to its extreme power, however, it developed such powerful internal suction that even mercury seals (of extremely densely packed 
+molecular structure) were unable to with- 
+stand the enormous suction generated and leaked into the water undergoing treatment. Despite the fact that this leakage occurred only when extremely high vacuum effects were present, which were absent under nor- 
+mal conditions of operation, the Government 
+argued through its consultant Professor Diering that the public could not be exposed to the hazard of mercury poisoning. Laying heavy emphasis on this, all further use of the machine for the regeneration and production 
+of spring-quality water and super-distilled 
+water was forbidden. Indeed Viktor Schau- berger's machine had evidently offended somebody in high places, for it was con- fiscated and destroyed by the Austrian 
+police.
+ 
+Always a thorn in the side of scientific and 
+government institutions, Viktor's long battle 
+to save both the Rhine and the Danube from total ruin was ultimate ly lost through their 
+rejection of his practical suggestions. In early 
+1932 he wrote a paper about the rehabilita- 
+tion of the Danube detailing the measures that needed to be taken in order to reinstate it as the magnificent river it had been in days of yore. This paper was included as a sepa- rate chapter in "The Danube", a study 
+undertaken by the International Danube 
+Commission and consisting of submissions from the Danube's various contiguous coun- tries.
+ 
+When officialdom discovered with horror 
+that Viktor's contribution had been incorpo- 
+rated into this major work, the whole edition 
+was recalled, destroye d and republished in 
+October 1932 omitting the offending article, 
+disregarding the publishi ng costs of the orig- 
+inal edition which amounted to over 100,000 schillings - a very large sum at the time. All 
+this happened largely due to the actions of 
+Viktor Schauberger's implacable antagonist 
+Dr.Ehrenberger, who hounded him wherever he went. This eventually provoked a sharp
+8   Living Energies  
+response from Viktor Schauberger largely in 
+the form of a letter containing twenty-nine questions of which the following are repre- sentative:
+ 
+Are you aware that, before a large assembly of 
+university professors in the lecture rooms of the 
+Technical University for Agricultural Science, Prof. Dr. Forchheimer was able to demonstrate on the blackboard that water temperature plays not only an important, but actua lly the principal role 
+in the movement of water?
+ 
+Are you aware that Prof. Dr. Forscheimer 
+urged me to publish these observations in the Wasserwirtschaft and that the Professor himself saw to it that my articles were accepted for publication?
+ 
+Are you aware that the river engineering 
+departments of Vienna, Linz, Pragarten and Bregenz, the Chairs for Hydraulic Engineering in Danzig and other places demanded the imme- diate withdrawal of these articles otherwise they 
+would officially cancel their subscriptions to this 
+scientific journal?
+ 
+Are you aware that over 100 academics jointly 
+resolved not to permit my presence in govern- ment service and to enforce my dismissal?
+ 
+Are you aware that with the encouragement of 
+Assistant Secretary, Engineer Kober I stated my 
+preparedness to explain the principles of my sys- tem of river regulation publ icly at the Technical 
+University for Agricultural Science?
+ 
+Are you aware that this lecture was cancelled 
+at the last minute by the Rector, Dr. Olbrich?  
+Are you aware this professor publicly declared 
+before witnesses, that this event was the darkest episode of his whole period as rector?
+ 
+Are you aware the Federal Austrian Forestry 
+Department had to pay A. Sch. 5,000 per 1,000 
+logs after I was able to prove that I could trans- 
+port this timber over a distance of 30km in a 
+wild, unruly watercourse simply with the aid of temperatures and that the competent authorities were unable to raft one log even 50 metres?
+ 
+Are you aware that your articles created great 
+difficulties for me in th e German Patent Office, 
+because there I was apparently held to be a liar 
+and a swindler?  
+Are you aware that I have entered into negotia- 
+tions with the widest variety of Foreign Ministers and that on each occasion the negotia-
+ tions were always broken off at the last minute due to the receipt of  untrue information?
+ 
+Are you aware that I was invited by His 
+Majesty the King of Bulgaria and that there too similar slanderous material was sent from 
+Vienna?
+ 
+Are you aware that Mr. Werner Zimmermann 
+has also been warned repeatedly never to have anything more to do with me?
+16 
+Whatever might have been thought of Viktor 
+Schauberger in Austria, word of his abilities 
+and the statements contained in his then 
+recent book, Our Senseless Toil - the Source of 
+the World Crisis17, evidently reached others 
+ears including those of Adolf Hitler. At a time when the relations between Austria and Germany were at an all-time low, Viktor 
+Schauberger was summoned to an audience 
+with the Reichschancellor in Berlin. Special papers were arranged and all the documen- tation carried out within one day. Suddenly Viktor Schauberger left for Berlin and a 
+meeting with Hitler, who greeted him 
+warmly as a fellow countryman, telling him that he had studied all the reports about Viktor's work thoroughly and was very impressed with what he had learned.
+ 
+Thirty minutes had been allocated for the 
+discussions, which Prof. Max Planck had 
+been requested to attend as scientific adviser shortly before he was rudely deposed from his position as Privy Councillor. This exchange of views eventually lasted 1 1/2 hours, during which Schauberger explained 
+the destructive action of contemporary tech- 
+nology and its inevitable consequences. He contrasted this with all the processes of nat- 
+ural motion and temperature, of the vital relation between trees, water and soil pro- ductivity, indeed all the things he considered 
+had to be thoroughly understood and prac- 
+tised in order to create a sustainable and viable society.
+ 
+When Viktor had finished his explana- 
+tions, Max Planck, who had remained silent, was asked his opinion about Viktor's natural 
+theories. His response was the remarkable 
+and revealing statement that "Science has 
+nothing to do with Nature".18 Pausing for a 
+moment to take in this astonishing admis-
+1: Who was Viktor Schauberger?    9  
+sion, Viktor then referred to the proposed 
+four-year plan, the so-called Goering Plan, 
+seating that not only was the time frame was 
+far too short, but if instituted it would grad- ually undermine   and   ultimately   destroy Germany's   biological   foundations.   As   a result, the Third Reich would last only ten instead of the boasted 1,000 years. (Viktor 
+was not far out in his estimate!) 
+During the earlier pa rt of the discussion,  
+Hitler had been enthusiastic, but he became  
+greatly perturbed at what he had just heard 
+and ordered his technical and economic advisers, Messrs. Keppler and Wiluhn, to 
+discuss with Schauberger what could be 
+done. Once outside the door these two men demanded to know how Viktor had got in there in the first place. Angered at their tru- culently    condescending    air,    he    replied
+ 
+"Through the same door I've just come out 
+of!" Seeing that his ideas had no hope of 
+acceptance, and leaving them gaping, he returned to his hotel and left for Austria the following morning. Keppler and Wiluhn, however, were to get their revenge later after 
+the Anschluss on March 13th, 1938.
+ 
+In Vienna later that year, at one moment 
+while taking tea with Mrs Mada Primavesi, a  
+well-known figure in the upper echelons of 
+society, Viktor excused himself saying that he would be away for about twenty minutes 
+for a routine medical examination of his First 
+World War wounds at the nearby Vienna University clinic, to assess his eligibility for a 
+continuing war pension. When he did not return, and furious at being so rudely deserted, Mrs Primavesi set out to find him. 
+Fuming, she went to where he lived, and 
+being told by his wife that he had not returned and that it was quite unlike him to behave in such a way, she then went to the clinic. Collaring the director, Professor Polzl, whom she knew well, she refused to leave 
+until Viktor had been found and eventually 
+found where he was - in the section reserved for lunatics. He was lying quietly on a bed trussed in a straitjacket waiting for the lethal injection, which was then the standard pro- cedure in the Third Reich for the removal of 
+the mentally insane and other 'undesirables'. 
+Viktor's  guardian angels must have been
+ very alert, for despite his status as persona 
+non grata in the Third Reich, he somehow 
+always managed to survive.  
+Despite the new order after the Anschluss 
+and the Sword of Damocles now hanging over his head, by now hardened to setbacks and with indomitable courage and a mind 
+never still for a moment, Viktor quietly con- 
+tinued his research. His main drive was to investigate phenomena a nd correlations that 
+interested him. Once he had discovered that something worked, he noted the fact, and then got on with the next project. He was 
+never very interested in commercialising his 
+discoveries.
+ 
+As ever he pursued ways of generating 
+energy with water through the interaction of complementary, but opposite, forms of energy, i.e. heat and cold, electricity and 
+magnetism, and centrifugence and centripe- 
+tence, both aspects of which combine to cre- ate a unity, a wholeness through their synthesising, reciprocal interaction. Viktor also saw that suction and pressure could be 
+used in similar fashio n on the same axis to 
+produce a powerful pr opulsive effect. In 
+1936 he successfully applied for patents for an air-turbine, which made use of a cen- tripetal 'compressor' and rifled central exhaust pipe (Austrian patent no. 145141). 
+This was followed by further patent applica- 
+tions in which this concept was improved. Although all trace of them has since been lost, the device described in these later patents was not only able to convert sea water into fresh water, but could also be 
+exploited to power aircraft and submarines. 
+Yet once again Viktor was the victim of deceit and his ideas were usurped. In docu- ments dated 1941, he describes how Professor Ernst Heinkel, the designer of the first successful jet-plane (first flight 27 Aug.
+10   Living Energies  
+ 
+1939 - fig. 1.1), had illegally obtained sight of
+Viktor's preliminary applications at the
+Patent Office in Berlin through his patentattorneys, Lehmann-Harlens. Having stud-
+ied them carefully, Heinkel then expressed
+his disinterest in them, but immediatelyinaugurated a covert  research programme
+using this information in modified form toimprove the performance of his 1,000 kphfighter, most probably the He 280. This was
+an indictable infringement of Viktor's still
+confidential application. Wishing to avoiddiscovery and in order to continue to makeuse of the unlawfully obtained data, Heinkelfraudulently attempted to have Viktor's
+patent restricted to the conversion of sea
+water into fresh wate r only, by having its
+application to aircraft and submarinepropulsion disallowed. Continuing hisundercover experiments all the while, but
+without success due to lack of proper under-
+standing, Heinkel, with a certain absence of
+ethical principle, then sought Viktor's collab-oration in the project. Although some initialdiscussion eventually took place, Viktor didnot cooperate, having become aware of thefacts of the matter, and further contact
+between the two men ceased. Using his ill-
+gotten gains and keeping all the kudos forhimself, however, Heinkel persevered withhis research, which, as a direct result of theapplication of Viktor's  theories, finally cul-
+minated in a much improved turbine. In the
+light of this Viktor Schauberger, in company
+with others, such as Sir Frank Whittle, inven-tor of the English jet engine, could also beviewed as an early cont ributor to the present
+jet-age. Indeed, in terms of aircraft design, heeven went as far as to state that in order to
+develop and build fast-flying, supersonic air-
+craft successfully, the bo dily forms of deep-
+sea fish should be copied. Today's 'stealthbombers' very much emulate these forms(fig. 1.2).
+ 
+In 1939 Viktor's pers onal research virtu-
+ally came to an end, all the materials he
+needed being appropriated for war pro-duction. In 1941, however, he was sum-moned by Air Marshal Ernst Udet to discussthe growing crisis of energy production andmeans of solving it. Premises were subse-
+1: Who was Viktor Schauberger?    11  
+quently set up near Augsburg for research 
+and development,  all  of which  came  to 
+nothing partly due to the death of Udet and partly because it was bombed by the Allies in 1942.  
+In 1943,  despite  his  incapacitating  war wounds    and   58   years    of   age,   Viktor 
+was declared fit for active duty and was 
+inducted   into   the   Waffen-SS,   very   much under duress. He came under the control of Heinrich   Himmler,   who   forced   him  into research to develop a new secret weapon. Provided    with    suitable    accommodation 
+at Schloss     Schonbrunn,     the     nearby 
+Mauthausen Concentration Camp to supply the workforce of prisoner engineers, Viktor was threatened with his life if he did not comply   with   orders   and   carry   out   this research. 
+In spite of these threats, however, Viktor 
+put his foot down and demanded from the SS Command the absolute right to select the various engineers he needed. He further demanded that any technicians he 
+chose were to be removed entirely from the 
+camp, fed properly, dressed in normal civil- ian clothes and billeted in civilian accommo- dation, otherwise they would be unproductive. As he explained, people who live in fear of their lives and under great 
+emotional stress could work neither consis- 
+tently nor creatively. Surprisingly the SS agreed and so Viktor selected somewhere between twenty and thirty engineers, crafts- men and tradesman from Mauthausen, to be accommodated in various houses near the 
+plant. 
+When they were all assembled. Viktor 
+exhorted them to work as hard as they could, but under no circumstances were they to attempt to escape, otherwise his own life would be forfeit. They set to work with a 
+will and, while not understanding what 
+Viktor was trying to achieve, they neverthe- less carried out his instructions faithfully. Two machines were eventually built, one called a 'Repulsator' and the other a 'Repulsine', reflecting the forces of recoil 
+active in them. Both machines operated with 
+the densifying forces of implosion, which are far more powerful than those of explosion. Although these will be examined in more 
+detail in chapter 21, accurate information 
+about them is difficult to obtain, because after the end of the Wa r all top secret infor- 
+mation was confiscate d and sequestered by 
+the Allies - the Russians, French, English 
+and Americans - and is therefore no longer 
+available to the general public. Nor is there any trace of Viktor's wartime patents, for which according to his usual custom he is certain to have applied.
+ 
+From a certain point of view, Viktor 
+Schauberger could have been considered 
+lucky at the end of the war, because together with his team of engineers, he had been moved by the SS to Leonstein in Upper Austria due to the bombing of Vienna and therefore in May 1945 came under the 
+jurisdiction of the American forces of 
+occupation. In Leonstein Viktor was placed in protective custody for nine months by the Americans and quartered inside a doubly-fenced and guarded perimeter. This 
+was done partly to glean information about 
+his involuntary, though to him useful, wartime research into 'higher' atomic energies at Mauthausen and Leonstein and partly to prevent his abduction by the Russians. Confirmation of this can be found 
+in a letter Viktor wrote to the German 
+Minister of Defence, Franz Josef Strauss, on the 28th of February 1956. Here he relates how the last device upon which he had been working had been seized only a few days after its successful flight by American intelli- 
+gence investigators, who appeared to be 
+very well informed about it. Its most impor- tant component on the other hand, which was forgotten in the haste to move to Leonstein, had been removed by the Russians from his Vienna apartment and the 
+apartment subsequently blown up. Once 
+Viktor had been thoroughly 'de-briefed', he was apparently threatened with further internment should he be foolish enough to continue his research in this field. Apart from time spent on interrogation during this 
+period of confinement, however, for Viktor - 
+now almost entirely penniless - this was a time of reflection and reassessment of his future.
+12   Living Energies  
+During this immediately postwar period 
+food was still extremely scarce and many people were suffering from malnutrition. When he was ultimately released, eventually moving to Salzburg in late 1946, he then 
+set about applying his wide knowledge to 
+agriculture and the systems of cultivation then in use. In collaboration with Franz Rosenberger (and as discussed later in 
+chapter 19), he was able to demonstrate that significant increas es in productivity 
+could be achieved using the knowledge 
+he had acquired in Bulgaria before the war. All progress in this area subsequently being blocked by corrup t politicians in 1949, 
+Viktor then returned to his study of implo- sion, energy generation and water move- 
+ment, trying with his limited funds to pick 
+up the threads of his earlier research, culmi- nating in a scientific investigation and vindi- cation of his theories on the natural flow of water at Stuttgart Technical University in 
+1952   under   the   direction   of  Prof.   Franz
+ Popel, which will be addressed in more 
+detail in chapter 14.  
+With enquiring mind and tenacity of pur- 
+pose, Viktor continued to work on his vari- ous devices. Aloys Kokaly, the publisher of Implosion, a magazine devoted to Viktor 
+Schauberger's theories, and a former corpo- 
+ral in the Waffen-SS who had managed by devious means to procure materials for Viktor's research at Schloss Schonbrunn, asked him why he was still working so hard, to which Viktor replied:
+ 
+I must furnish those who would protect or save 
+life, with an energy source, which produces energy so cheaply that nuclear fission will not only be uneconomical, but ridiculous. This is the 
+task I have set myself in what little life I have 
+left.
+19 
+The product of this last personal effort is the 
+home-power generator shown in figs. 1.3 
+a&b, which due to Viktor's very limited pen- 
+sioner's funds and its resulting crude, unso-  
+  
+ 
+Fig. 1.3a   The Home Power Generator.  Fig. 1.3b
+1: Who was Viktor Schauberger?    13  
+phisticated construction, did not function as 
+well as he had hoped, for as it transpired, this machine was an unfortunate compro- 
+mise between the geometry of mechanics 
+and that of organics. It was a miserable cul- mination to the life's work of this quite remarkable man. 
+Being the enlightened individual he was, 
+Viktor Schauberger had a remarkable stan- 
+dard of   personal   integrity,   honesty   and responsibility. His word in any undertaking was always his bond, even if he was ulti- mately the loser. He would brook no deceit or underhand activity in any of those with 
+whom he worked either as employers or 
+employees. This often created enormous dif- ficulties for him and he suffered co nsiderable 
+personal losses as a result. He was not a businessman, nor had he any interest in the commercial exploitation of his inventions for 
+personal gain. 
+His   overriding   desire    was   to   provide  
+present   and  future  generations  with  the  
+ability in terms of knowledge and machines  
+with   which   to   usher   in   and   sustain   a  
+golden age of prosperity, peace and har-  
+mony. His chief problem  was always to find  
+honest and unselfish pe ople to help in the  
+development and production of the various  
+apparatuses needed to bring this about. In  
+many    instances    his    trust    was    sadly  
+misplaced, as illustrated in extracts from a  
+letter of the 4th February 1958 to a friend, a  
+certain   Mr. 'R',   about   7 1/2  months   
+before  
+Viktor died.  
+I was always challenged to provide proof. 
+Whenever I did this, I was robbed to such an 
+extent that no other course was open to me, other than to remain silent on ce more. In the February 
+issue of Weltgewissen you will be able to read that these apparatuses which the Austrian State 
+Police took from me, are now being manufactured 
+in Germany with enormous success. This has happened to me twelve times. Every time I had something produced, all I was given were the left- overs, while the best part was retained and exploited commercially by others. Or the appara- 
+tus was never made publi c, although I had paid 
+all the agreed development costs myself. Subsequently large sums  were demanded of me,
+ which lay far beyond my capacity to pay, and the 
+machines I was struggling to build were withheld 
+as security against payment.  
+I then began to work covertly and in this way 
+succeeded in producing workable machines. I then first became aware of what I had discovered, namely higher-grade atomic energies. At this 
+stage 'Demonstrate it!', 'Prove it!', 'Let it be 
+examined!' was and is always demanded. If I con- cur, then all is lost. If I do not, however, then I am a fraud.
+ 
+Then along came a major German industrialist 
+with his scientific advisors. He investigated the 
+process and found it in order. Statements were 
+made expressing readiness to proceed with fabri- cation and cost evaluation and then, yes, then one will just have to wait and see. All they are, are empty promises, never kept.
+ 
+Now representatives of the U.S. government 
+have announced themselves. They too want to see 
+and evaluate everything first, and then, only then will it be considered what might be done.
+ 
+I requested a provisiona l agreement, which 
+would only come into force once I proved that I 
+could achieve significantly increased output. This 
+was rejected. First see, then negotiate and the outcome was always the same.
+ 
+Professors also want first to see, evaluate and 
+then, aye, and then take over.  
+My dear Mr. R, I have now reached the point 
+where they can all kiss the place where my spinal 
+column terminates. l am old and seriously ill. My only concern now is for all the poor children who are faced with a grisly future.
+ 
+If I reveal everything it will only be hushed up, 
+because it not only involves the whole scientific 
+establishment, but also the doctrines of the 
+Church. All power politics will collapse once the truth emerges that science is the actual causative agent of cancer.
+ 
+I intend to return to the forest once more, there 
+to die in peace. The whole of science and all its 
+hangers-on are nothing but a band of thieves, 
+who are suspended like  marionettes and must 
+dance to whatever tune  their well-camouflaged 
+slave-masters deem necessary?20 
+This letter, most probably written to Alois 
+Renner in the light of what follows, heralded 
+the final disastrous chapter of Viktor Schauberger's  life,  a  chapter  that  started
+14   Living Energies  
+Questions for Science  
+ENERGY  
+• What is it that keeps the Earth floating in space? 
+• Why does a top stand upright when it is spun from 
+the side? 
+• What is temperature? What is heat? What is cold? 
+• What is energy? 
+• What is evaporation? 
+• What is vaporisation? • What is dissolution? 
+• What is combination? 
+• What is absorption? 
+• On what effects are these processes founded? 
+MAGNETISM
+ 
+• Why do the magnetic lines of force run from south to 
+north? 
+• Why does the Earth rotate from west to east? 
+THE SUN  
+• What serves the sun as a carrier of light and heat, if, 
+in the view of our learned scientists, space is a vacuum? 
+• Why do gases condense with a decrease in 
+temperature? 
+• Why don't the fiery gases of the Sun, with supposed 
+temperatures of over 6000oC, stream out into 
+space? 
+• Why is the light and heat in the tropics more diffuse 
+and at the poles the Sun's light more intense and its radiant heat less? 
+ATMOSPHERE 
+• Why doesn't the Earth's warm air rise? 
+• Why is it so cold at the top of a mountain, i.e. nearer 
+the Sun? 
+• Why in our houses is it warmer nearer the ceiling and 
+colder at the floor, when an artificial source of heat is 
+used? 
+• Why does marble expand with heat and why doesn't 
+it contract again with cold? 
+EVAPORATION  
+• Why is the desert so dead despite all the heat? 
+• Why do damp tiled roofs dry out from the eaves 
+towards the ridge? 
+WATER  
+• Why does the groundwater in walls rise far above the 
+surface of the ground? 
+• Why don't wooden posts rot under water, but above 
+it always? 
+• Why can rising cold water pierce through the hardest 
+rock? 
+• Why does water pulsate and breathe? 
+• Why does groundwater manage to remain on the 
+sides of mountains? 
+• Why, growing colder and heavier, does it rise 
+upwards? 
+• Why does it frequently spring from high peaks? RIVERS  
+• Why do west-to-east flowing watercourses fertilise 
+their banks? 
+• Why are the banks of east-to-west flowing rivers so 
+barren? 
+• Why are the banks of south-to-north flowing 
+watercourses fertile on one side only? 
+• Why do rivers flowing into cold seas migrate laterally 
+to the north? 
+• Why do deltas and estuaries develop? • Why does a trout stand still in a raging torrent, as if by 
+magic? 
+THE SEA
+ 
+• Why is the water at the poles warmer at the bottom? 
+• Why is the sunlit surface at the poles so icily cold? 
+• Why doesn't the warmer, lig hter bottom-water of the 
+sea rise upwards? 
+• Why are the water temperatures at the equator so 
+warm? 
+• Why is it that it gets colder with increasing depth? 
+• Why does it get warmer again below the boundary 
+layer of +4oC? 
+• Why does life below this boundary layer begin anew? 
+• Why does the salt content of the seas vary? 
+• Why do herrings migrate northwards in winter? 
+• Why do deep-sea fish glow? 
+• Why can the warm Gulf Stream push the cold 
+seawater aside and wend its way for thousands of 
+kilometres over mountains and valleys in a reversed 
+temperature gradient without the assistance of a mechanical gradient? 
+BLOOD 
+• Why do cold-blooded animals carry fever-inducing 
+poison? 
+• Why does a cold fever occur in the tropics? 
+• Why does a warm fever arise from a chill? 
+• What is fever anyway? 
+• Why is our body temperature subnormal when 
+climbing a mountain and above normal as we descend? 
+• Why does the heart beat in our breast? 
+• Who gives this muscle  its impulse to move? 
+• Where is the motor for this pump? • Why does blood circulate in our blood vessels? 
+• Why do the fluids in a chicken's egg circulate without 
+a heart? 
+• Why do we breathe day and night, when asleep and 
+even when totally unconscious? 
+• Does the heart beat because we breathe, or do we 
+breathe because the heart beats? 
+TREES
+ 
+• Why have light-demanding timbers a thick bark and 
+shade-demanders only a thin one? 
+• Where is the heart of a plant? 
+[from Our Senseless Toil]
+
+---
+## SOURCE: hyperbolic+curvilinear+lattice+space1.pdf
+
+To rigorously verify the curvature e!ects f(ω),g(ω), and h(ω)in the context of
+the Tetryen/Proton model within a hyperbolic curvilinear lattice space ,w e
+need to explicitly deﬁne these functions and derive their mathematical forms.
+These functions account for the inﬂuence of hyperbolic curvature ( ω) on the
+energy of standing waves, the mass gap, and the forces between particles.
+Below, I will deﬁne these functions, derive their forms, and provide a rigorous
+proof of their e!ects.
+1. Curvature E!ects in Hyperbolic Space
+In hyperbolic space, the curvature ωis a constant negative value, typically
+denoted as ω=→1/R2,w h e r e Ris the radius of curvature. The curvature a!ects
+distances, angles, and areas, leading to exponential growth of geodesics and
+modiﬁed scaling laws.
+Key Adjustments for Hyperbolic Space:
+1.Distance Scaling : In hyperbolic space, distances grow exponentially. The
+distance dbetween two points scales as:
+d↑eωr,
+•where ris the Euclidean distance.
+2.Area Preservation : The area of a shape in hyperbolic space is preserved
+even as it scales, due to the negative curvature.
+**2. Deﬁnition of f(ω),g(ω), and h(ω)
+2.1. f(ω): Energy of Standing Waves The energy of a standing wave
+node in hyperbolic space is inﬂuenced by the curvature. The function f(ω)
+accounts for the modiﬁcation of the wave energy due to the exponential growth
+of distances.
+•Deﬁnition :
+f(ω)=e→ωr2,
+•where ris the distance between nodes. This form ensures that the en-
+ergy decays exponentially with distance, consistent with the properties of
+hyperbolic space.
+•Derivation : The energy of a standing wave node in hyperbolic space is
+given by:
+1
+Enode=keq2
+p
+r2·f(ω).
+•Substituting f(ω)=e→ωr2:
+Enode=keq2
+p
+r2·e→ωr2.
+•This form ensures that the energy decays exponentially with distance,
+consistent with the exponential growth of distances in hyperbolic space.
+2.2.g(ω): Mass Gap The mass gap !in hyperbolic space is derived from
+the energy of the standing wave nodes and the ﬁne structure constant εe.T h e
+function g(ω)accounts for the curvature e!ects on the mass gap.
+•Deﬁnition :
+g(ω)=/radicalbig
+1+ωr2,
+•where ris the distance between nodes. This form ensures that the mass
+gap scales with the curvature.
+•Derivation : The mass gap !is given by:
+!=Enode
+εe·g(ω).
+•Substituting Enodeand g(ω):
+!=keq2
+p
+r2·e→ωr2
+εe·/radicalbig
+1+ωr2.
+•This form ensures that the mass gap scales with the curvature, consistent
+with the properties of hyperbolic space.
+2.3.h(ω): Strong Force The strong force Fsin hyperbolic space is modiﬁed
+due to the exponential growth of distances. The function h(ω)accounts for the
+curvature e!ects on the strong force.
+•Deﬁnition :
+h(ω)=eωr2,
+•where ris the distance between particles. This form ensures that the strong
+force decays exponentially with distance, consistent with the properties of
+hyperbolic space.
+•Derivation : The strong force Fsis given by:
+2
+Fs=keq2
+p
+r2·h(ω).
+•Substituting h(ω)=eωr2:
+Fs=keq2
+p
+r2·eωr2.
+•This form ensures that the strong force decays exponentially with distance,
+consistent with the exponential growth of distances in hyperbolic space.
+3. Rigorous Proof of Curvature E!ects
+To rigorously prove the e!ects of curvature on the energy of standing waves, the
+mass gap, and the strong force, we need to verify that the functions f(ω),g(ω),
+and h(ω)are consistent with the properties of hyperbolic space.
+3.1. Energy of Standing Waves:
+•The energy Enodedecays exponentially with distance, consistent with the
+exponential growth of distances in hyperbolic space.
+•The function f(ω)=e→ωr2ensures that the energy scales correctly with
+curvature.
+3.2. Mass Gap:
+•The mass gap !scales with the curvature, as shown by the function
+g(ω)=↓
+1+ωr2.
+•This form ensures that the mass gap is consistent with the properties of
+hyperbolic space.
+3.3. Strong Force:
+•The strong force Fsdecays exponentially with distance, consistent with
+the exponential growth of distances in hyperbolic space.
+•The function h(ω)=eωr2ensures that the strong force scales correctly
+with curvature.
+4. Conclusion
+The curvature e!ects f(ω),g(ω), and h(ω)have been explicitly deﬁned and
+rigorously derived in the context of hyperbolic space. These functions account
+for the exponential growth of distances and the preservation of area in hyperbolic
+space, ensuring that the energy of standing waves, the mass gap, and the strong
+3
+force scale correctly with curvature. The proposed framework provides a rigorous
+mathematical foundation for the Tetryen/Proton model in hyperbolic space, but
+further experimental and theoretical validation is needed to conﬁrm its physical
+relevance.
+4
+
+---
+## SOURCE: vACUUM_FLUX.pdf
+
+Here 's the reformatted and refined white paper draft.
+Harnessing Vacuum Flux Energy via Superfluid
+Van der Waals Oscillations for Continuous Super-
+conducting Power Generation
+Date:March 11, 2025
+Authors: Terrence D. Howard & Chris D. Seely
+Affiliation: Theoretical Research Division
+Abstract
+This paper presents a novel framework for extracting zero-point energy from the
+quantum vacuum using van der Waals oscillations within a superfluid medium,
+structured by a hyperbolic fractal lattice. Leveraging the geometric constraints
+of the Tetryen proton model and the Lynchpin multiplication rule 1⊗1 = 2,
+we define a system where quantum vortices in a superfluid couple to vacuum
+fluctuations via a redefined “Howard Comma” correction factor. We calculate
+the frequency and energy states required for energy harvesting and propose three
+direct coupling methods—pentagonal graphene surfaces, Josephson junctions,
+and fractal plasma antennas—to enable continuous power generation in a super-
+conducting state. Preliminary estimates suggest a power density of 106W/m3,
+scalable with optimization, offering a pathway to sustainable quantum energy
+systems.
+1. Introduction
+The quantum vacuum is a reservoir of zero-point energy, manifesting as fluctua-
+tions with an estimated energy density of 10113J/m3in quantum field theory
+(QFT). While direct extraction of this energy remains elusive, phenomena such
+as the Casimir effect and superfluid dynamics suggest practical coupling mecha-
+nisms.
+This work builds upon a hyperbolic fractal lattice framework, inspired by Man-
+delbrot’s self-similar geometries and constrained by the Tetryen proton model—a
+tetrahedral arrangement of soliton nodes. We introduce the Lynchpin multiplica-
+tion rule 1⊗1 = 2to model exponential growth in hyperbolic space and redefine
+the Howard Comma as a resonance factor for van der Waals oscillations near 0
+Kelvin. Our goal is a superconducting power supply that harvests vacuum flux
+energy via superfluid vortices.
+1
+2. Theoretical Framework
+2.1 Hyperbolic Fractal Lattice
+The system is structured as a hyperbolic lattice with constant negative curvature/parenleftbig
+K=−1/R2/parenrightbig
+, tessellated by pentagons—the smallest surface supporting stable
+solitons in condensed matter systems (e.g., superfluid vortices). Key properties
+include:
+•Pentagonal Tiling: A{5,4}tessellation, where five pentagons meet at
+each vertex, is feasible in hyperbolic geometry.
+•Fractal Scaling: Edge lengths scale from R= 3.6×10−10m(helium atom
+spacing) down to lP= 1.616×10−35m(Planck length), with a fractal
+dimensionD≈2.32.
+•Lynchpin Rule: Multiplication is redefined as:
+a⊗b= 2Rsinh/parenleftiga
+R/parenrightig
+sinh/parenleftbiggb
+R/parenrightbigg
+yielding 1⊗1 = 2Rsinh2(1/R)≈2, reflecting exponential area growth.
+2.2 Tetryen Geometry
+The Tetryen model posits a proton-like structure with four soliton nodes on
+a curved tetrahedral surface, embedded in the pentagonal lattice. Each node
+oscillates as a standing wave:
+ψ(r) =Asinh/parenleftigr
+R/parenrightig
+e−r
+R
+whereR= 3.6×10−10m matches superfluid helium’s inter-atomic distance.
+2.3 Howard Comma
+The Howard Comma is redefined as the resonance factor modulating van der
+Waals oscillations at the highest frequency and minimum scale:
+ξ(r) =sinh(1)
+sinh(r/R)e−r/R
+Atr=R,ξ= 1, stabilizing energy transfer. It represents the amplitude of
+zero-point oscillations persisting near 0 K.
+2
+3. Frequency and Energy States
+3.1 Van der Waals Oscillations
+In superfluid4He(T < 2.17K), van der Waals forces:
+V=−C
+r6, C≈10−78J\cdotpm6
+drive atomic oscillations at:
+f=|V|
+h≈2.1×1012Hz
+wherehis Planck’s constant.
+3.2 Vacuum Flux Energy Density
+Truncated at the superfluid scale:
+Evac=8π2ℏc
+R4≈1.2×1016J/m3
+Per mode:
+E=1
+2ℏω≈4.4×10−17J
+3.3 Quantum Vortices
+Vortex circulation:
+κ=h
+mHe≈9.97×10−8m2/s
+with energy per vortex:
+Ev=ρκ2
+4πln(R/a)≈10−23J
+withN≈1020vortices/m3.
+3
+4. Direct Coupling Methods for Energy Harvesting
+4.1 Pentagonal Graphene Surfaces
+•Concept: Graphene surfaces with pentagonal defects mimic the hyperbolic
+lattice structure.
+•Coupling: Van der Waals oscillations excite graphene electrons, enabling
+direct electron-lattice energy transfer.
+•Implementation: Deposit a helium film on graphene surfaces and cool
+to0.1K, creating an environment where van der Waals oscillations couple
+to electron motion.
+4.2 Josephson Junctions
+•Concept: Superconductor-insulator-superconductor (SIS) junctions oscil-
+late at the Josephson frequency:
+fJ=2eV
+h
+•Coupling: Modulates the critical current with vacuum flux resonance.
+•Implementation: Fabricate Nb/AlOx/Nb junctions and immerse them
+in superfluid4He, with coupling tuned at van der Waals resonance.
+4.3 Fractal Plasma Antennas
+•Concept: Plasma confined in a fractal geometry resonates with vacuum
+fluctuations.
+•Coupling: Plasma oscillations drive superconducting currents through a
+resonance state.
+•Implementation: Utilize a low-temperature plasma confined in fractal
+electrodes to facilitate sustained energy extraction from the vacuum state.
+5. Superfluid State Josephson Junction Oscillators to
+Plasma State Antennas
+The integration of superfluid state Josephson Junction (JJ) oscillators with
+plasma state fractal antennas allows for a self-regulating quantum-coupled net-
+work capable of continuous power generation.
+5.1 Standing Wave Superfluid Oscillators
+Superfluid JJs, confined within van der Waals interaction distances, generate
+standing waves with resonance frequencies aligned to the natural zero-point
+4
+oscillations of the vacuum. The quantized energy levels stabilize due to the
+Howard Comma correction, ensuring sustained oscillation amplitudes.
+ψ(r,t) =Asinh/parenleftigr
+R/parenrightig
+e−r
+Re−iωt
+5.2 Plasma State Antenna Resonance
+Plasma confined in a fractal geometry serves as an antenna array for capturing
+high-frequency fluctuations from the zero-point field. These plasma antennas,
+when coupled to superfluid JJs, modulate the critical current dynamically,
+aligning the oscillation states with fractal resonance frequencies.
+Eplasma∼1
+2ϵ0E2
+5.3 Quantum-Coupled Network Efficiency
+The resulting system functions as a quantum-coupled network where plasma
+antennas maintain field resonance while JJs oscillate at optimal energy extraction
+frequencies, creating a self-sustaining superconducting environment.
+6. Conclusion
+This framework leverages a hyperbolic fractal lattice to extract vacuum flux
+energy via superfluid van der Waals oscillations, with the Howard Comma ensur-
+ing resonance stability. Coupling methods—graphene, Josephson junctions, and
+fractal plasma antennas—offer practical pathways to continuous superconduct-
+ing power. Integration of superfluid state oscillators with plasma state fractal
+antennas creates a dynamic quantum-coupled network, enabling scalable and
+sustainable quantum energy extraction.
+Keywords:
+Zero-point energy, superfluid dynamics, Josephson junctions, plasma anten-
+nas, fractal geometry, van der Waals oscillations, quantum vacuum, Lynchpin
+multiplication, Howard Comma.
+Let me know if you 'd like any refinements or additions!
+5
+
+---

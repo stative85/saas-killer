@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SAAS KILLER - Turn Backlogs into Winners</title>
+    <style>
+        :root { --bg: #0d0e12; --fg: #e0e0e0; --accent: #3a86ff; --danger: #ff4757; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--fg); line-height: 1.6; margin: 0; padding: 40px; }
+        .container { max-width: 1000px; margin: auto; }
+        header { text-align: center; margin-bottom: 60px; }
+        h1 { font-size: 3rem; letter-spacing: -1px; margin-bottom: 10px; }
+        .hero-sub { font-size: 1.2rem; color: #888; }
+        .demo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 40px; }
+        .demo-box { background: #1a1b23; border: 1px solid #2a2b35; padding: 20px; border-radius: 12px; }
+        .demo-label { font-weight: bold; text-transform: uppercase; font-size: 0.8rem; color: var(--accent); margin-bottom: 15px; display: block; }
+        pre { background: #000; padding: 15px; border-radius: 6px; overflow-x: auto; font-size: 0.9rem; color: #aaa; white-space: pre-wrap; height: 300px; }
+        .btn { display: inline-block; background: var(--accent); color: white; padding: 15px 30px; border-radius: 8px; text-decoration: none; font-weight: bold; margin-top: 20px; }
+        .btn:hover { background: #2a75e6; }
+        .metrics { margin-top: 20px; display: flex; gap: 20px; font-size: 0.9rem; }
+        .metric-pill { background: #333; padding: 4px 12px; border-radius: 20px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>SAAS KILLER</h1>
+            <p class="hero-sub">Refine your transcript archives into high-retention content packs.</p>
+            <a href="upload.html" class="btn">Start Your First Refinery Run</a>
+        </header>
+
+        <section id="proof-demo">
+            <h2>THE REFINERY DEMO</h2>
+            <div class="demo-grid">
+                <div class="demo-box">
+                    <span class="demo-label">Raw Archive Sludge</span>
+                    <pre id="before-text">Loading ugly transcript...</pre>
+                </div>
+                <div class="demo-box">
+                    <span class="demo-label">Refined Apex Script</span>
+                    <pre id="after-text">Loading winning signal...</pre>
+                </div>
+            </div>
+            <div class="metrics">
+                <div class="metric-pill">Forensic Score: <span id="demo-score">0.00</span></div>
+                <div class="metric-pill">Status: VALIDATED</div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        async function loadDemo() {
+            const res = await fetch('/api/demo');
+            const data = await res.json();
+            if (data.status !== 'no_demo_found') {
+                document.getElementById('before-text').textContent = data.before;
+                document.getElementById('after-text').textContent = data.after;
+                document.getElementById('demo-score').textContent = data.score;
+            }
+        }
+        loadDemo();
+    </script>
+</body>
+</html>

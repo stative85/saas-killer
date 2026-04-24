@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SAAS KILLER - Start Refinery Run</title>
+    <style>
+        :root { --bg: #0d0e12; --fg: #e0e0e0; --accent: #3a86ff; }
+        body { font-family: sans-serif; background: var(--bg); color: var(--fg); padding: 40px; }
+        .card { background: #1a1b23; padding: 30px; border-radius: 12px; max-width: 600px; margin: auto; }
+        label { display: block; margin-bottom: 10px; font-weight: bold; }
+        select, input { width: 100%; padding: 12px; margin-bottom: 20px; background: #000; border: 1px solid #333; color: white; border-radius: 6px; }
+        .btn { display: block; width: 100%; background: var(--accent); color: white; padding: 15px; border: none; border-radius: 8px; font-weight: bold; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h2>🚀 INITIATE REFINERY RUN</h2>
+        <form id="run-form">
+            <label>Operational Mode</label>
+            <select id="mode">
+                <option value="retention_aggressive">Retention Aggressive</option>
+                <option value="fracture_aggressive">Fracture Aggressive</option>
+            </select>
+            
+            <label>Upload Archive (.zip or folder path)</label>
+            <input type="text" placeholder="C:\Path\To\Archive" id="path">
+            
+            <button type="submit" class="btn">Engage Refinery</button>
+        </form>
+        <p id="status-msg" style="margin-top: 20px; color: #888;"></p>
+    </div>
+
+    <script>
+        document.getElementById('run-form').onsubmit = async (e) => {
+            e.preventDefault();
+            const msg = document.getElementById('status-msg');
+            msg.textContent = "Hammering down... (this takes ~10-20 seconds)";
+            
+            const formData = new FormData();
+            formData.append('mode', document.getElementById('mode').value);
+            
+            const res = await fetch('/api/run', { method: 'POST', body: formData });
+            const data = await res.json();
+            
+            if (data.run_id) {
+                msg.textContent = `Success! Run ${data.run_id} complete.`;
+                window.location.href = `results.html?run_id=${data.run_id}`;
+            } else {
+                msg.textContent = "Error: " + (data.message || "Unknown failure.");
+            }
+        };
+    </script>
+</body>
+</html>
