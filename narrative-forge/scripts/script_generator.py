@@ -1,13 +1,10 @@
-# script_generator.py
 import json
 import argparse
 import random
-import re
+import os
 from pathlib import Path
-from dataclasses import dataclass, asdict
+from dataclasses import dataclass
 from typing import List, Dict, Any, Tuple
-from collections import Counter
-from datetime import datetime
 
 @dataclass
 class ScriptPhase:
@@ -16,145 +13,107 @@ class ScriptPhase:
     source_title: str
     arcs: List[str]
 
-class NarrativeCompiler:
+class ScriptCompiler:
     def __init__(self, chunks_path: Path):
-        self.chunks = self._load_jsonl(chunks_path)
-        self.pos_bias, self.neg_bias = self._load_feedback_bias()
-        self.intersections = self._load_intersections()
-
-    def _load_feedback_bias(self):
-        best_dir = Path(__file__).parent.parent / "outputs" / "best"
-        pos, neg = Counter(), Counter()
-        if best_dir.exists():
-            for f in best_dir.glob("*.txt"):
-                pos.update(re.findall(r"\b\w{5,}\b", f.read_text(encoding="utf-8").lower()))
-        neg.update(['subscribe', 'review', 'sponsor', 'comment', 'below', 'click'])
-        return pos, neg
-
-    def _get_resonance_score(self, chunk):
-        base_score = chunk.get('quality_score', 0.5)
-        text = chunk['text'].lower()
-        pos_bonus = sum(0.01 for term in self.pos_bias if term in text)
-        neg_penalty = sum(0.05 for term in self.neg_bias if term in text)
-        return max(0.001, base_score + min(0.20, pos_bonus) - neg_penalty)
+        self.chunks = []
+        # THE AD-BREAKER BLACKLIST
+        self.blacklist = {
+            'infowarstore', 'store.com', 'dvd', 't-shirt', 'limited edition', 'fundraiser',
+            'checkout', 'shipping', 'discount', 'price', 'product', 'buy', 'purchase',
+            'class', 'next week', 'lecture', 'exam', 'student', 'semester', 'course',
+            'thank you', 'watching', 'listening', 'subscribe', 'follow', 'visit'
+        }
         
-    def _load_jsonl(self, path: Path):
-        data = []
-        noise = {'subscribe', 'review', 'sponsor', 'brex', 'listening', 'watching', 'support', 'tremendous'}
-        with open(path, 'r', encoding='utf-8') as f:
+        with open(chunks_path, 'r', encoding='utf-8') as f:
             for line in f:
                 j = json.loads(line)
-                if not any(w in j['text'].lower() for w in noise):
-                    data.append(j)
-        return data
+                # DYNAMIC AD-BREAKER
+                text_low = j['text'].lower()
+                if not any(w in text_low for w in self.blacklist):
+                    self.chunks.append(j)
 
-    def _load_intersections(self):
-        inter = [c for c in self.chunks if len(c.get('arcs', [])) >= 3]
-        return sorted(inter, key=lambda x: self._get_resonance_score(x) * len(x['arcs']), reverse=True)
-
-    def select_hook(self, mode="fracture") -> ScriptPhase:
-        if mode == "retention_aggressive":
-            candidates = [c for c in self.intersections if 50 < len(c['text']) < 180]
-        else:
-            candidates = [c for c in self.intersections if 100 < len(c['text']) < 400]
-        if not candidates: candidates = self.intersections
+    def select_hook(self, mode: str = "retention") -> Dict:
+        """Selects a high-impact opening."""
+        # Modes: retention (short, punchy), fracture (conflict-heavy)
+        target_arcs = ['threat', 'truth'] if mode == "fracture" else ['human', 'future']
+        candidates = [c for c in self.chunks if any(a in c.get('arcs', []) for a in target_arcs)]
+        candidates = [c for c in candidates if 100 < len(c['text']) < 400]
+        
         if not candidates: candidates = self.chunks[:10]
-        candidates.sort(key=lambda x: self._get_resonance_score(x), reverse=True)
+        
+        # Sort by quality score * arc density
+        candidates.sort(key=lambda x: x.get('quality_score', 0.5) * len(x.get('arcs', [])), reverse=True)
+        
+        # Pick from top 3
         target = random.choice(candidates[:min(3, len(candidates))])
-        return ScriptPhase("HOOK", target['text'], target['title'], target['arcs'])
+        return target
 
-    def build_narrative(self, count=2, mode="fracture") -> List[ScriptPhase]:
+    def select_build(self, arc: str, max_len: int = 800) -> Dict:
+        """Selects supporting evidence for a specific arc."""
+        candidates = [c for c in self.chunks if arc in c.get('arcs', [])]
+        candidates = [c for c in candidates if 300 < len(c['text']) < max_len]
+        
+        if not candidates: candidates = self.chunks[:10]
+        candidates.sort(key=lambda x: x.get('quality_score', 0.5), reverse=True)
+        return random.choice(candidates[:min(5, len(candidates))])
+
+    def compile(self, mode: str = "retention", style: str = "aggressive") -> Tuple[str, Dict]:
         phases = []
-        selected_arcs = ["science", "future", "control", "truth", "human", "threat"]
-        random.shuffle(selected_arcs)
-        for i in range(min(count, len(selected_arcs))):
-            arc = selected_arcs[i]
-            candidates = [c for c in self.chunks if arc in c.get('arcs', []) and len(c.get('arcs', [])) <= 2]
-            if mode == "retention_aggressive":
-                candidates = [c for c in candidates if len(c['text']) < 500]
-            candidates.sort(key=lambda x: self._get_resonance_score(x), reverse=True)
-            if candidates:
-                target = random.choice(candidates[:min(5, len(candidates))])
-                phases.append(ScriptPhase(f"BUILD_{arc.upper()}", target['text'], target['title'], target['arcs']))
-        return phases
-
-    def build_collision(self) -> ScriptPhase:
-        candidates = [c for c in self.intersections if len(c['arcs']) >= 4]
-        if not candidates: candidates = self.intersections[:5]
-        target = random.choice(candidates[:min(3, len(candidates))])
-        return ScriptPhase("COLLISION", target['text'], target['title'], target['arcs'])
-
-    def select_resolution(self, mode="fracture") -> ScriptPhase:
-        arc_targets = ['threat', 'truth'] if mode in ["fracture", "retention_aggressive"] else ['future', 'human']
-        candidates = [c for c in self.chunks if any(a in c.get('arcs', []) for a in arc_targets) and len(c['text']) < 300]
-        if not candidates: candidates = self.chunks[-20:]
-        target = random.choice(candidates[:min(10, len(candidates))])
-        return ScriptPhase("RESOLUTION", target['text'], target['title'], target['arcs'])
-
-    def compile(self, mode="fracture", style="aggressive") -> Tuple[str, Dict[str, Any]]:
+        
+        # 1. HOOK
         hook = self.select_hook(mode=mode)
-        builds = self.build_narrative(count=2, mode=mode)
-        collision = self.build_collision()
-        res = self.select_resolution(mode=mode)
+        phases.append(ScriptPhase("HOOK", hook['text'], hook['title'], hook.get('arcs', [])))
+
+        # 2. BUILD 1 (Truth or Control)
+        b1 = self.select_build('truth' if style == "aggressive" else "human")
+        phases.append(ScriptPhase("BUILD_TRUTH", b1['text'], b1['title'], b1.get('arcs', [])))
+
+        # 3. BUILD 2 (Science or Future)
+        b2 = self.select_build('future' if mode == "retention" else "science")
+        phases.append(ScriptPhase("BUILD_FUTURE", b2['text'], b2['title'], b2.get('arcs', [])))
+
+        # 4. COLLISION (The Peak)
+        col = self.select_build('threat' if style == "aggressive" else "human", max_len=1000)
+        phases.append(ScriptPhase("COLLISION", col['text'], col['title'], col.get('arcs', [])))
+
+        # 5. RESOLUTION
+        res = self.select_build('future', max_len=400)
+        phases.append(ScriptPhase("RESOLUTION", res['text'], res['title'], res.get('arcs', [])))
+
+        # Format output
         script = f"--- WENDIGO NARRATIVE COMPILATION [Mode: {mode.upper()} | Style: {style.upper()}] ---\n\n"
-        phases = [hook] + builds + [collision] + [res]
-        total_len = 0
         for p in phases:
-            content = p.content
-            if mode == "retention_aggressive":
-                content = content.replace("...", ",").replace("  ", " ")
-            if style == "aggressive":
-                content = content.upper() if len(content) < 150 else content
-            elif style == "philosophical":
-                content = "... " + content.replace(".", " ...")
-            script += f"[{p.name}] (Source: {p.source_title})\nArcs: {', '.join(p.arcs)}\n> {content}\n\n"
-            total_len += len(content)
+            script += f"[{p.name}] (Source: {p.source_title})\n"
+            script += f"Arcs: {', '.join(p.arcs)}\n"
+            script += f"> {p.content.strip()}\n\n"
+
         diags = {
             "mode": mode,
-            "hook_length_chars": len(hook.content),
-            "total_script_chars": total_len,
-            "clarity_score": 0.85 if mode == "retention_aggressive" else 0.70,
-            "early_conflict_score": 0.90 if mode == "retention_aggressive" else 0.60
+            "hook_length_chars": len(hook['text']),
+            "total_script_chars": len(script),
+            "clarity_score": 0.7, # Mock
+            "early_conflict_score": 0.6 # Mock
         }
-        script += f"\n[DIAGNOSTICS]\n{json.dumps(diags, indent=2)}\n"
+
         return script, diags
 
 def main():
-    ap = argparse.ArgumentParser()
-    ap.add_argument("--chunks", required=True, type=Path)
-    ap.add_argument("--mode", default="fracture_aggressive")
-    ap.add_argument("--style", default="aggressive")
-    ap.add_argument("--out", type=Path)
-    args = ap.parse_args()
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--chunks", type=Path, required=True)
+    parser.add_argument("--mode", choices=["retention", "fracture"], default="retention")
+    parser.add_argument("--style", choices=["aggressive", "humanist"], default="aggressive")
+    parser.add_argument("--out", type=Path, required=True)
+    args = parser.parse_args()
 
-    # ROBUST MODE/STYLE HANDLING
-    mode = args.mode
-    style = args.style
-    
-    # Handle combined mode/style strings from orchestrator
-    if "_" in mode:
-        parts = mode.split('_')
-        mode = parts[0]
-        style = parts[1] if len(parts) > 1 else style
-    
-    # Validation against supported sets
-    valid_modes = ["fracture", "closed", "retention"]
-    valid_styles = ["documentary", "aggressive", "philosophical", "lyrical"]
-    
-    if mode not in valid_modes:
-        print(f"[WARNING] Invalid mode '{mode}', defaulting to 'fracture'")
-        mode = "fracture"
-    if style not in valid_styles:
-        print(f"[WARNING] Invalid style '{style}', defaulting to 'aggressive'")
-        style = "aggressive"
+    compiler = ScriptCompiler(args.chunks)
+    script, diags = compiler.compile(mode=args.mode, style=args.style)
 
-    compiler = NarrativeCompiler(Path(args.chunks))
-    script, diags = compiler.compile(mode=mode, style=style)
-    if args.out:
-        args.out.parent.mkdir(parents=True, exist_ok=True)
-        with open(args.out, "w", encoding="utf-8") as f:
-            f.write(script)
-        print(f"[OK] Script saved to: {args.out}")
+    script += "\n\n[DIAGNOSTICS]\n"
+    script += json.dumps(diags, indent=2)
+
+    args.out.parent.mkdir(parents=True, exist_ok=True)
+    args.out.write_text(script, encoding="utf-8")
+    print(f"[OK] Script saved to: {args.out}")
 
 if __name__ == "__main__":
     main()
