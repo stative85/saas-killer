@@ -97,14 +97,20 @@ if __name__ == "__main__":
     parser.add_argument("--csv", type=Path, default=Path("narrative-forge/distribution/distributors_email.csv"))
     args = parser.parse_args()
 
-    sender = os.environ.get("SENDER_EMAIL")
-    password = os.environ.get("SENDER_APP_PASSWORD")
+    keys_file = Path("GIVE_ME_THE_KEYS.txt")
+    if not keys_file.exists():
+        print("[🛑] ERROR: GIVE_ME_THE_KEYS.txt not found.")
+        exit(1)
+        
+    content = keys_file.read_text().splitlines()
+    sender = ""
+    password = ""
+    for line in content:
+        if line.startswith("EMAIL="): sender = line.replace("EMAIL=", "").strip()
+        if line.startswith("APP_PASSWORD="): password = line.replace("APP_PASSWORD=", "").strip()
 
     if not sender or not password:
-        print("[🛑] ERROR: SENDER_EMAIL and SENDER_APP_PASSWORD environment variables must be set.")
-        print("Example (Windows):")
-        print("  $env:SENDER_EMAIL='your@gmail.com'")
-        print("  $env:SENDER_APP_PASSWORD='abcd efgh ijkl mnop'")
+        print("[🛑] ERROR: The keys are empty. Fill out GIVE_ME_THE_KEYS.txt with your email and App Password.")
         exit(1)
 
     fire_outreach(args.csv, sender, password)
