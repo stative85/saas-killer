@@ -100,7 +100,12 @@ def main():
             SCRIPTS_DIR / "metadata_builder.py", "--script", str(latest_best), "--obsessions", r"C:\Users\cleve\OneDrive\Pictures\corpus_run\exports\obsession_terms.txt", "--hooks", "none", "--out", str(meta_json)
         ], manifest["stages"])
 
-        # 5. SEAL PACK
+        # 5. REVENUE INJECTION
+        run_step("REVENUE", [
+            SCRIPTS_DIR / "affiliate_mapper.py", "--run-id", run_id
+        ], manifest["stages"])
+
+        # 6. SEAL PACK
         if meta_json.exists():
             meta = json.loads(meta_json.read_text())
             deploy_pack = {
