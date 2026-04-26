@@ -94,7 +94,7 @@ def fire_outreach(csv_path: Path, sender_email: str, sender_pass: str):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--csv", type=Path, default=Path("narrative-forge/outputs/distribution/distributors_email.csv"))
+    parser.add_argument("--csv", type=Path, default=Path("narrative-forge/distribution/distributors_email.csv"))
     args = parser.parse_args()
 
     sender = os.environ.get("SENDER_EMAIL")
