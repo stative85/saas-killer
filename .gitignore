@@ -23,3 +23,17 @@ battle_logs/
 !narrative-forge/docs/FORENSIC_STANDARD.md
 !README.md
 !requirements.txt
+
+# Security hygiene (do not track local credential material)
+*.pickle
+*.pem
+*.key
+*.env
+client_secrets.json
+youtube_token.pickle
+GIVE_ME_THE_KEYS.txt
+
+# Local runtime databases and logs
+*.db
+*.sqlite
+*_log.txt
