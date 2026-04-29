@@ -48,13 +48,32 @@
     </div>
 
     <script>
+        // Inline fallback so this page works even when the API isn't running.
+        // Pulled from narrative-forge/benchmarks/v0_baseline (run_2026-04-22_190642).
+        const FALLBACK = {
+            before: "[Raw transcript, 5 sources, ~12k chars]\n\n> \"...I've done a lot of work trying to and I I never give it any classified data, never sensitive data. These are using hypothetical construct products that I use just to evaluate these AI systems...\"\n\n> \"Axon. Thank you for joining us. >> Thanks for having me here. >> Appreciate having you here. Um, obviously we're going to get into your life and all that Axon does...\"\n\n> \"movies are to blame for this in a huge way because I think they give people a very wrong impression of what military technology actually looks like. But every time I see a military system, I mean, they're sometimes literally running on like Windows 95...\"\n\n[+ 2 more low-density sources]",
+            after: "--- WENDIGO NARRATIVE COMPILATION [Mode: FRACTURE | AGGRESSIVE] ---\n\n[HOOK] Palmer Luckey — Military of the Future\n> Their gift to humanity will end up being open source models used in ways they could never endorse — but will nonetheless exist, uncontrolled.\n\n[BUILD_THREAT] Rick Smith / Axon ($55B Taser empire)\n> A journalist with good instincts. A CEO who built an empire on the gap between what the public fears and what police actually carry.\n\n[BUILD_CONTROL] Josh Steinman / Cyber Czar\n> Some of our best military platforms run on Windows 95. Consumer tech is 25 years ahead of the gear we send into combat.\n\n[COLLISION] Nabiha Saklayen / Factory of Youth\n> We don't have equations for the body. The optimist says: next century, big moves.\n\n[RESOLUTION] Elliot Seguin / Test Pilots vs. Drones\n> The pilot's license is a cheat code. The drone is a different cheat code.\n\n[PROVENANCE] mode=fracture_aggressive · score=0.70",
+            score: "0.70"
+        };
+
+        function renderDemo(data) {
+            document.getElementById('before-text').textContent = data.before;
+            document.getElementById('after-text').textContent = data.after;
+            document.getElementById('demo-score').textContent = data.score;
+        }
+
         async function loadDemo() {
-            const res = await fetch('/api/demo');
-            const data = await res.json();
-            if (data.status !== 'no_demo_found') {
-                document.getElementById('before-text').textContent = data.before;
-                document.getElementById('after-text').textContent = data.after;
-                document.getElementById('demo-score').textContent = data.score;
+            try {
+                const res = await fetch('/api/demo');
+                if (!res.ok) throw new Error('api unavailable');
+                const data = await res.json();
+                if (data.status === 'no_demo_found') {
+                    renderDemo(FALLBACK);
+                } else {
+                    renderDemo(data);
+                }
+            } catch (e) {
+                renderDemo(FALLBACK);
             }
         }
         loadDemo();

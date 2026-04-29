@@ -2,6 +2,8 @@
 
 A closed-loop narrative engine that ingests raw speech, repairs it, extracts signal, compiles high-resonance scripts, renders media, and deploys to YouTube with feedback-driven evolution.
 
+> **New here?** Start with [`landing.html`](./landing.html) (the public-facing value surface — open in a browser, no backend needed) and [`SELL.md`](./SELL.md) (the 5-step checklist to convert the engine into payment links). [`OFFER.md`](./OFFER.md) is the marketing copy; [`MONETIZE.md`](./MONETIZE.md) is the three-path revenue playbook.
+
 ## ⚠️ Operational Status (Read First)
 
 - This repository is a Windows-first local project and currently mixes source code with generated artifacts.
