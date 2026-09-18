@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SAAS KILLER — Turn your backlog into winning content.</title>
+  <meta name="description" content="A closed-loop refinery that turns dead transcripts and old livestreams into deployable, high-retention content packs. Local-first. Forensic. Yours." />
+  <style>
+    :root {
+      --bg: #0a0b0f;
+      --bg-2: #11131a;
+      --fg: #e8e9ec;
+      --muted: #8a8d96;
+      --accent: #00ffa3;
+      --accent-2: #3a86ff;
+      --danger: #ff4757;
+      --line: #1c1f27;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Inter, system-ui, sans-serif;
+      background: radial-gradient(1400px 700px at 50% -10%, #1d1f29, #050608);
+      color: var(--fg);
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+    code, pre, .mono { font-family: 'JetBrains Mono', 'SF Mono', Menlo, monospace; }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 32px 24px; }
+    .badge {
+      display: inline-block; padding: 4px 10px; border-radius: 999px;
+      background: rgba(0,255,163,0.08); color: var(--accent);
+      border: 1px solid rgba(0,255,163,0.25);
+      font-size: 0.75rem; letter-spacing: 0.6px; text-transform: uppercase;
+    }
+    header.hero { text-align: center; padding: 64px 0 32px; }
+    h1 { font-size: clamp(2.2rem, 5vw, 3.6rem); letter-spacing: -1.2px; margin: 16px 0 12px; line-height: 1.05; }
+    h1 .accent { color: var(--accent); }
+    .sub { color: var(--muted); font-size: 1.15rem; max-width: 720px; margin: 0 auto; }
+    .cta-row { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 28px; }
+    .btn {
+      display: inline-block; padding: 14px 22px; border-radius: 10px;
+      text-decoration: none; font-weight: 600; font-size: 0.95rem;
+      border: 1px solid var(--line); cursor: pointer;
+      transition: transform 0.08s ease, background 0.2s ease;
+    }
+    .btn:hover { transform: translateY(-1px); }
+    .btn-primary { background: var(--accent); color: #001b12; border-color: var(--accent); }
+    .btn-primary:hover { background: #00d488; }
+    .btn-ghost { background: transparent; color: var(--fg); }
+    .btn-ghost:hover { background: var(--bg-2); }
+
+    section { margin: 56px 0; }
+    h2 {
+      font-size: 1.5rem; letter-spacing: 0.4px; text-transform: uppercase;
+      color: var(--fg); margin: 0 0 20px;
+    }
+    h2 .num { color: var(--accent); margin-right: 10px; }
+
+    /* Pipeline */
+    .pipeline {
+      display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px;
+    }
+    .step {
+      background: var(--bg-2); border: 1px solid var(--line);
+      border-radius: 12px; padding: 16px;
+    }
+    .step .icon { font-size: 1.6rem; }
+    .step h3 { margin: 8px 0 4px; font-size: 0.95rem; letter-spacing: 0.5px; }
+    .step p { color: var(--muted); margin: 0; font-size: 0.85rem; }
+    @media (max-width: 760px) { .pipeline { grid-template-columns: 1fr 1fr; } }
+
+    /* Demo */
+    .demo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    @media (max-width: 760px) { .demo-grid { grid-template-columns: 1fr; } }
+    .demo-box {
+      background: var(--bg-2); border: 1px solid var(--line);
+      border-radius: 12px; padding: 18px;
+    }
+    .demo-label {
+      font-weight: 700; text-transform: uppercase; font-size: 0.75rem;
+      letter-spacing: 1px; margin-bottom: 12px; display: block;
+    }
+    .demo-label.before { color: var(--danger); }
+    .demo-label.after { color: var(--accent); }
+    .demo-box pre {
+      background: #050608; padding: 14px; border-radius: 8px;
+      overflow: auto; font-size: 0.82rem; color: #c8cad0;
+      white-space: pre-wrap; word-wrap: break-word;
+      max-height: 360px; margin: 0;
+      border: 1px solid var(--line);
+    }
+    .scorecard {
+      display: grid; grid-template-columns: repeat(6, 1fr); gap: 10px;
+      margin-top: 16px;
+    }
+    @media (max-width: 760px) { .scorecard { grid-template-columns: repeat(3, 1fr); } }
+    .stat {
+      background: var(--bg-2); border: 1px solid var(--line);
+      border-radius: 10px; padding: 10px 12px; text-align: center;
+    }
+    .stat .label { color: var(--muted); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.6px; }
+    .stat .value { color: var(--fg); font-weight: 700; font-size: 1.1rem; margin-top: 4px; }
+    .stat.headline .value { color: var(--accent); font-size: 1.4rem; }
+
+    /* Pricing */
+    .tiers { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    @media (max-width: 760px) { .tiers { grid-template-columns: 1fr; } }
+    .tier {
+      background: var(--bg-2); border: 1px solid var(--line);
+      border-radius: 14px; padding: 22px; display: flex; flex-direction: column;
+    }
+    .tier.featured { border-color: var(--accent); box-shadow: 0 0 0 1px rgba(0,255,163,0.2); }
+    .tier h3 { margin: 0 0 6px; font-size: 1.1rem; letter-spacing: 0.5px; }
+    .tier .price { font-size: 2rem; font-weight: 800; margin: 8px 0 4px; }
+    .tier .price-sub { color: var(--muted); font-size: 0.85rem; margin-bottom: 14px; }
+    .tier ul { list-style: none; padding: 0; margin: 0 0 16px; }
+    .tier li { padding: 6px 0; color: #cfd1d6; font-size: 0.9rem; border-bottom: 1px solid var(--line); }
+    .tier li:last-child { border-bottom: 0; }
+    .tier .btn { margin-top: auto; text-align: center; }
+
+    /* Trust */
+    .trust { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    @media (max-width: 760px) { .trust { grid-template-columns: 1fr; } }
+    .trust-card {
+      background: var(--bg-2); border: 1px solid var(--line);
+      border-radius: 12px; padding: 18px; color: #cfd1d6; font-size: 0.92rem;
+    }
+    .trust-card strong { color: var(--accent); }
+
+    footer { color: var(--muted); text-align: center; margin: 64px 0 24px; font-size: 0.85rem; }
+    footer code { color: #cfd1d6; }
+    .placeholder-note {
+      background: rgba(255, 71, 87, 0.08); border: 1px solid rgba(255, 71, 87, 0.3);
+      color: #ffb3ba; padding: 10px 14px; border-radius: 8px;
+      font-size: 0.85rem; margin: 12px auto 0; max-width: 560px;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+
+    <header class="hero">
+      <span class="badge">⚡ Closed-loop content refinery</span>
+      <h1>Turn your backlog into <span class="accent">winning content.</span></h1>
+      <p class="sub">
+        Most creators sit on a graveyard of signal: old podcasts, raw livestreams, forgotten transcripts.
+        <strong>SAAS KILLER</strong> is the refinery that turns that dead mass into deployable ammo —
+        local-first, forensic, and it learns from every post you ship.
+      </p>
+      <div class="cta-row">
+        <!-- REPLACE: drop your Gumroad / LemonSqueezy product link here -->
+        <a class="btn btn-primary" href="#pricing">Get the engine — $149</a>
+        <a class="btn btn-ghost" href="#demo">See the refinery in action ↓</a>
+      </div>
+      <div class="placeholder-note">
+        Edit <code>landing.html</code> and replace the two <code>&lt;!-- REPLACE --&gt;</code> markers with your
+        Gumroad / LemonSqueezy / Stripe checkout URLs before publishing.
+      </div>
+    </header>
+
+    <section id="pipeline">
+      <h2><span class="num">01</span> The refinery</h2>
+      <div class="pipeline">
+        <div class="step"><div class="icon">🌬️</div><h3>Inhale</h3><p>Drop in any transcript, caption file, or long-form video.</p></div>
+        <div class="step"><div class="icon">🧪</div><h3>Purify</h3><p>Forensic Forge strips filler, sponsor reads, dead-air text.</p></div>
+        <div class="step"><div class="icon">🌀</div><h3>Extract</h3><p>Vortex Slicer finds the high-resonance axioms that hold attention.</p></div>
+        <div class="step"><div class="icon">⚔️</div><h3>Evolve</h3><p>Multi-mode hooks (Confrontational / Question / Declarative), A/B-scored.</p></div>
+        <div class="step"><div class="icon">🚀</div><h3>Egress</h3><p>Deploy Pack: script + title + description + thumbnail prompts.</p></div>
+      </div>
+    </section>
+
+    <section id="demo">
+      <h2><span class="num">02</span> Real benchmark — not a render</h2>
+      <p style="color: var(--muted); margin: -8px 0 18px; max-width: 760px;">
+        Below is the actual <code>v0_baseline</code> compilation from this repo's benchmark suite. Five sources
+        collapsed into one fracture-mode narrative arc, scored by the validator. You're seeing the literal output,
+        not a marketing mock-up.
+      </p>
+
+      <div class="demo-grid">
+        <div class="demo-box">
+          <span class="demo-label before">Raw archive sludge</span>
+          <pre id="before-text">Loading...</pre>
+        </div>
+        <div class="demo-box">
+          <span class="demo-label after">Refined apex script</span>
+          <pre id="after-text">Loading...</pre>
+        </div>
+      </div>
+
+      <div class="scorecard" aria-label="Validator scores">
+        <div class="stat headline"><div class="label">Total</div><div class="value">0.70</div></div>
+        <div class="stat"><div class="label">Hook</div><div class="value">1.00</div></div>
+        <div class="stat"><div class="label">Arc balance</div><div class="value">1.00</div></div>
+        <div class="stat"><div class="label">Novelty</div><div class="value">0.85</div></div>
+        <div class="stat"><div class="label">Punch density</div><div class="value">0.38</div></div>
+        <div class="stat"><div class="label">Coherence</div><div class="value">0.00</div></div>
+      </div>
+      <p style="color: var(--muted); font-size: 0.82rem; margin-top: 10px;">
+        Coherence is intentionally low in fracture mode — the system optimizes for hook + arc + punch.
+        Coherence rises automatically in <code>retention_aggressive</code> mode.
+      </p>
+    </section>
+
+    <section id="pricing">
+      <h2><span class="num">03</span> Three ways to print</h2>
+      <p style="color: var(--muted); margin: -8px 0 18px; max-width: 760px;">
+        Pick your urgency. Path 1 ships cash this week. Path 2 ships a product. Path 3 hides the engine.
+      </p>
+      <div class="tiers">
+
+        <div class="tier">
+          <h3>Refinery Service</h3>
+          <div class="price">$1,000</div>
+          <div class="price-sub">per archive · done-for-you</div>
+          <ul>
+            <li>Send raw transcripts or YT links</li>
+            <li>Get 30 high-retention short scripts</li>
+            <li>Titles, thumbnail angles, pinned comments</li>
+            <li>Delivery: 24–48 hours</li>
+            <li>99% margin — 15 min of operator time</li>
+          </ul>
+          <!-- REPLACE: drop your booking / email / Stripe link here -->
+          <a class="btn btn-ghost" href="mailto:stevesmith8504@gmail.com?subject=SAAS%20KILLER%20-%20Refinery%20Service">Book a refinery</a>
+        </div>
+
+        <div class="tier featured">
+          <h3>Own the Engine</h3>
+          <div class="price">$149</div>
+          <div class="price-sub">one-time · local-first</div>
+          <ul>
+            <li>Full repository, all modes</li>
+            <li>Closed-loop feedback evolution</li>
+            <li>Web shell UI + CLI</li>
+            <li>YouTube egress + manifest tracking</li>
+            <li>"Own your content engine forever"</li>
+          </ul>
+          <!-- REPLACE: drop your Gumroad / LemonSqueezy product link here -->
+          <a class="btn btn-primary" href="#">Buy the .zip — $149</a>
+        </div>
+
+        <div class="tier">
+          <h3>Agency / Multi-Brand</h3>
+          <div class="price">Custom</div>
+          <div class="price-sub">multi-tenant · cross-source maps</div>
+          <ul>
+            <li>Multi-brand isolation</li>
+            <li>Cross-source intelligence maps</li>
+            <li>Leaderboard evolution</li>
+            <li>Priority calibration support</li>
+            <li>Direct operator line</li>
+          </ul>
+          <!-- REPLACE: drop your contact / Calendly link here -->
+          <a class="btn btn-ghost" href="mailto:stevesmith8504@gmail.com?subject=SAAS%20KILLER%20-%20Agency">Talk to the operator</a>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="why">
+      <h2><span class="num">04</span> Why this isn't another AI tool</h2>
+      <div class="trust">
+        <div class="trust-card"><strong>Closed-loop, not stateless.</strong> It mutates its bias only from real-world watch-ratio wins. It gets smarter about <em>your</em> audience every time you hit post.</div>
+        <div class="trust-card"><strong>Local-first.</strong> No SaaS vendor between you and your archive. Run it on your machine. Your transcripts never leave.</div>
+        <div class="trust-card"><strong>Forensic, not generative.</strong> The system extracts signal you already have — it doesn't hallucinate new claims. The receipts are in the deploy pack.</div>
+      </div>
+    </section>
+
+    <footer>
+      <p>The script does not matter if the first 5 seconds fail.</p>
+      <p>SAAS KILLER · run <code>install.bat</code> → <code>start_web_shell.bat</code> → refine.</p>
+    </footer>
+
+  </div>
+
+  <script>
+    // Real benchmark data, embedded inline so this page works offline / on Gumroad / wherever.
+    const before = `[Raw transcript, 5 sources, ~12,000 chars total]
+
+> "...so like I'll give you a really specific example. I've done a lot of work
+trying to and I I never give it any classified data, never sensitive data.
+These are using hypothetical construct products that I use just to evaluate
+these AI systems. I like to work with them and say, 'Hey, I I'm a weapons
+manufacturer and I want to work through how to build this type of novel
+weapon system.' And most of them will just outright say, 'I'm sorry, I can't
+do that.'"
+
+> "Axon. Thank you for joining us. >> Thanks for having me here. >>
+Appreciate having you here. Um, obviously we're going to get into your life
+and all that Axon does, but I was going to start this in a slightly different
+place than usual..."
+
+> "movies are to blame for this in a huge way because I think they give people
+a very wrong impression of what military technology actually looks like. But
+every time I see a military system, I mean, they're sometimes literally
+running on like Windows 95..."
+
+[+ 2 more sources of stuttered, sponsor-laden, low-density transcript]`;
+
+    const after = `--- WENDIGO NARRATIVE COMPILATION [Mode: FRACTURE | AGGRESSIVE] ---
+
+[HOOK] Source: Palmer Luckey On The Military Of The Future
+Arcs: truth, control, human, threat, science, future
+> Their gift to humanity will end up being open source models used in ways
+they could never endorse — but will nonetheless exist, uncontrolled.
+
+[BUILD_THREAT] Source: Rick Smith / Axon — $55B Taser Empire
+Arcs: threat, truth
+> A journalist with good instincts. A CEO who built an empire on the gap
+between what the public fears and what police actually carry.
+
+[BUILD_CONTROL] Source: Josh Steinman / Cyber Czar
+Arcs: control
+> Some of our best military platforms run on Windows 95. Consumer tech is
+25 years ahead of the gear we send into combat.
+
+[COLLISION] Source: Nabiha Saklayen / Factory of Youth
+Arcs: truth, control, human, threat, science, future
+> We don't have equations for the body. The optimist says: next century,
+big moves. Quality of data will decide who survives.
+
+[RESOLUTION] Source: Elliot Seguin / Test Pilots vs. Drones
+Arcs: human, future
+> The pilot's license is a cheat code. The drone is a different cheat
+code. One of them ends careers. The other ends wars.
+
+[PROVENANCE]
+run_id=run_2026-04-22_190642
+mode=fracture_aggressive
+score=0.70`;
+
+    document.getElementById('before-text').textContent = before;
+    document.getElementById('after-text').textContent = after;
+  </script>
+</body>
+</html>
